@@ -1,0 +1,3600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TBTracingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Audit">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AuditType" Type="int" />
+    <Property Name="AuditTitle" Type="varchar" MaxLength="100" />
+    <Property Name="AuditDetails" Type="text" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="AuditDate" Type="datetime" />
+    <Property Name="AuditUser" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="AuditType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AuditType" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="client_BCG">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="StatusID" Type="int" />
+    <Property Name="ImmunizationDate" Type="datetime" />
+    <Property Name="ImmunizationYear" Type="char" MaxLength="4" />
+  </EntityType>
+  <EntityType Name="client_Bloodwork">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CollectedDate" Type="datetime" />
+    <Property Name="ResultDate" Type="datetime" />
+    <Property Name="CollectionMethodID" Type="int" />
+    <Property Name="CollectedBy" Type="int" />
+    <Property Name="Alt" Type="varchar" MaxLength="100" />
+    <Property Name="Ast" Type="varchar" MaxLength="100" />
+    <Property Name="SerumBilirubin" Type="varchar" MaxLength="100" />
+    <Property Name="Comments" Type="varchar" MaxLength="5000" />
+    <Property Name="ReasonForTestingID" Type="int" />
+    <Property Name="ReasonForTestingOther" Type="varchar" MaxLength="500" />
+    <Property Name="ClientID" Type="int" />
+  </EntityType>
+  <EntityType Name="client_Communication">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CommunicationDateTime" Type="datetime" />
+    <Property Name="MethodID" Type="int" />
+    <Property Name="ReasonID" Type="int" />
+    <Property Name="ContactedBy" Type="int" />
+    <Property Name="Comments" Type="varchar" MaxLength="1000" />
+    <Property Name="ClientID" Type="int" Nullable="false" />
+    <Property Name="ResultID" Type="int" />
+    <Property Name="ContactedByName" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="client_CommunicationBulletin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CommunicationBulletin" Type="varchar" MaxLength="5000" />
+    <Property Name="ClientID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="client_ContactNote">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" Nullable="false" />
+    <Property Name="Note" Type="varchar" MaxLength="1500" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="DateEntered" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="client_ContactTracing">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FromDate" Type="datetime" />
+    <Property Name="ToDate" Type="datetime" />
+    <Property Name="LastContact" Type="datetime" />
+    <Property Name="ContactTypeID" Type="int" />
+    <Property Name="ReasonTypeID" Type="int" />
+    <Property Name="RelationshipID" Type="int" />
+    <Property Name="CommunityID" Type="int" />
+    <Property Name="DiagnosisID" Type="int" />
+    <Property Name="PriorityID" Type="int" />
+    <Property Name="Comments" Type="varchar" MaxLength="5000" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="ContactClientID" Type="int" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="client_Demographic">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="100" />
+    <Property Name="LastName" Type="varchar" MaxLength="100" />
+    <Property Name="MiddleInitial" Type="varchar" MaxLength="5" />
+    <Property Name="Alias_MaidenName_Nickname" Type="varchar" MaxLength="200" />
+    <Property Name="SpeaksEN" Type="bit" />
+    <Property Name="SpeaksFR" Type="bit" />
+    <Property Name="SpeaksInnu" Type="bit" />
+    <Property Name="SpeaksInuttitut" Type="bit" />
+    <Property Name="HealthCareNumber" Type="varchar" MaxLength="50" />
+    <Property Name="StreetAddress" Type="varchar" MaxLength="50" />
+    <Property Name="Community" Type="varchar" MaxLength="50" />
+    <Property Name="PostalCode" Type="varchar" MaxLength="7" />
+    <Property Name="ProvinceID" Type="int" />
+    <Property Name="OtherProvinceStateIdentifier" Type="varchar" MaxLength="100" />
+    <Property Name="RhaEH" Type="bit" />
+    <Property Name="RhaCH" Type="bit" />
+    <Property Name="RhaWG" Type="bit" />
+    <Property Name="RhaLG" Type="bit" />
+    <Property Name="RhaOther" Type="bit" />
+    <Property Name="RhaOtherText" Type="varchar" MaxLength="50" />
+    <Property Name="MobilePhone" Type="varchar" MaxLength="25" />
+    <Property Name="HomePhone" Type="varchar" MaxLength="25" />
+    <Property Name="OtherPhone" Type="varchar" MaxLength="25" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="DateofBirth" Type="date" />
+    <Property Name="Occupation" Type="varchar" MaxLength="75" />
+    <Property Name="BodyWeight" Type="int" />
+    <Property Name="Comments" Type="varchar" MaxLength="5000" />
+    <Property Name="GenderID" Type="int" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="ActiveFrom" Type="date" />
+    <Property Name="ActiveTo" Type="date" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="PregnancyStatus" Type="int" />
+    <Property Name="OtherIdentifier" Type="varchar" MaxLength="200" />
+    <Property Name="EthnicityOther" Type="varchar" MaxLength="100" />
+    <Property Name="CommunityID" Type="int" />
+    <Property Name="CaseNumber" Type="varchar" MaxLength="25" />
+    <Property Name="CommunityOther" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="client_DemographicEthnicity">
+    <Key>
+      <PropertyRef Name="ClientID" />
+      <PropertyRef Name="EthnicityID" />
+    </Key>
+    <Property Name="ClientID" Type="int" Nullable="false" />
+    <Property Name="EthnicityID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="client_DiagnosticImage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ExamDate" Type="datetime" />
+    <Property Name="ViewID" Type="int" />
+    <Property Name="AreaID" Type="int" />
+    <Property Name="IndicationID" Type="int" />
+    <Property Name="ResultID" Type="int" />
+    <Property Name="Findings" Type="varchar" MaxLength="5000" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="ReasonForTesting" Type="int" />
+    <Property Name="OtherProcedure" Type="varchar" MaxLength="200" />
+    <Property Name="ReasonForTestingOther" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="client_Document">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DocumentType" Type="int" Nullable="false" />
+    <Property Name="DocumentName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DocumentContents" Type="varbinary(max)" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="DateAdded" Type="datetime" Nullable="false" />
+    <Property Name="ClientID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="client_Followup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientID" Type="int" Nullable="false" />
+    <Property Name="FollowupType" Type="int" Nullable="false" />
+    <Property Name="FollowupDate" Type="datetime" />
+    <Property Name="ReminderDate" Type="datetime" />
+    <Property Name="PhysicianID" Type="int" Nullable="false" />
+    <Property Name="CompletedDate" Type="datetime" />
+    <Property Name="Comments" Type="varchar" MaxLength="5000" />
+    <Property Name="Complete" Type="bit" />
+  </EntityType>
+  <EntityType Name="client_IGRA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ResultID" Type="int" />
+    <Property Name="CollectionDate" Type="datetime" />
+    <Property Name="ResultDate" Type="datetime" />
+    <Property Name="Comments" Type="varchar" MaxLength="5000" />
+    <Property Name="ReasonForTestingID" Type="int" />
+    <Property Name="ReasonForTestingOther" Type="varchar" MaxLength="500" />
+    <Property Name="CollectedByID" Type="int" />
+    <Property Name="ClientID" Type="int" />
+  </EntityType>
+  <EntityType Name="client_Investigation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CollectedDate" Type="datetime" />
+    <Property Name="ResultDate" Type="datetime" />
+    <Property Name="BranchialWashResult" Type="int" />
+    <Property Name="BranchialWashResultNotes" Type="varchar" MaxLength="500" />
+    <Property Name="GIWash" Type="int" />
+    <Property Name="GIWashNotes" Type="varchar" MaxLength="500" />
+    <Property Name="NodeBiopsy" Type="int" />
+    <Property Name="NodeBiopsyNotes" Type="varchar" MaxLength="500" />
+    <Property Name="Urine" Type="int" />
+    <Property Name="UrineNotes" Type="varchar" MaxLength="500" />
+    <Property Name="CSF" Type="int" />
+    <Property Name="CSFNotes" Type="varchar" MaxLength="500" />
+    <Property Name="Other" Type="int" />
+    <Property Name="OtherNotes" Type="varchar" MaxLength="500" />
+    <Property Name="Comments" Type="varchar" MaxLength="5000" />
+    <Property Name="InvestigationTypeID" Type="int" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="CollectedByID" Type="int" />
+  </EntityType>
+  <EntityType Name="client_Notes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NoteLabel" Type="varchar" MaxLength="50" />
+    <Property Name="NoteText" Type="text" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="DateAdded" Type="datetime" />
+    <Property Name="ClientID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="client_Outcome">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Outcome" Type="int" />
+    <Property Name="OutcomeDeterminationDate" Type="datetime" />
+    <Property Name="Comments" Type="varchar" MaxLength="5000" />
+    <Property Name="TBType" Type="int" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="DeterminedByID" Type="int" />
+    <Property Name="TreatmentID" Type="int" />
+    <Property Name="TransferDestination" Type="varchar" MaxLength="200" />
+    <Property Name="ClientDeathTBCause" Type="bit" Nullable="false" />
+    <Property Name="ClientDeathTBContribute" Type="bit" Nullable="false" />
+    <Property Name="ClientDeathTBNoContribute" Type="bit" Nullable="false" />
+    <Property Name="ClientDeathDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="client_OutcomeMedications">
+    <Key>
+      <PropertyRef Name="dotID" />
+      <PropertyRef Name="medID" />
+    </Key>
+    <Property Name="dotID" Type="int" Nullable="false" />
+    <Property Name="medID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="client_OutcomeTreatment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TreatmentModeID" Type="int" />
+    <Property Name="TransferedDestination" Type="varchar" MaxLength="100" />
+    <Property Name="AdherenceID" Type="int" />
+    <Property Name="Comments" Type="varchar" MaxLength="5000" />
+    <Property Name="OutcomeID" Type="int" />
+    <Property Name="ClientDeath" Type="bit" />
+    <Property Name="ClientDateDate" Type="datetime" />
+    <Property Name="ClientDeathTBCause" Type="bit" />
+    <Property Name="ClientDeathTBContribute" Type="bit" />
+    <Property Name="ClientDeathTBNoContribute" Type="bit" />
+  </EntityType>
+  <EntityType Name="client_OutcomeTreatmentDOT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DOTDate" Type="datetime" />
+    <Property Name="CompletedBy" Type="int" />
+    <Property Name="ClientNoShow" Type="bit" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="TreatmentID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="client_OutcomeTreatmentDOTSymptoms">
+    <Key>
+      <PropertyRef Name="dotID" />
+      <PropertyRef Name="symptomID" />
+    </Key>
+    <Property Name="dotID" Type="int" Nullable="false" />
+    <Property Name="symptomID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="client_OutcomeTreatmentRegimen">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="Doseage" Type="varchar" MaxLength="50" />
+    <Property Name="NumberDoses" Type="varchar" MaxLength="25" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="OutcomeID" Type="int" />
+    <Property Name="StatusID" Type="int" />
+    <Property Name="Notes" Type="varchar" MaxLength="250" />
+    <Property Name="FrequencyID" Type="int" />
+    <Property Name="MedicationID" Type="int" />
+  </EntityType>
+  <EntityType Name="client_Profile">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="LastUpdate" Type="datetime" />
+    <Property Name="LastStatus" Type="int" />
+    <Property Name="StatusID" Type="int" />
+    <Property Name="Employee" Type="bit" />
+    <Property Name="Confirmed" Type="bit" />
+  </EntityType>
+  <EntityType Name="client_RiskFactors">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InterviewByID" Type="int" Nullable="false" />
+    <Property Name="InterviewDate" Type="datetime" Nullable="false" />
+    <Property Name="FamilyHistory" Type="varchar" MaxLength="5000" />
+    <Property Name="ContactActiveTB2Yrs" Type="int" />
+    <Property Name="ContactActiveTB2YrsNotes" Type="varchar" MaxLength="500" />
+    <Property Name="DiabetesMellitusType1or2" Type="int" />
+    <Property Name="DiabetesMellitusType1or2Notes" Type="varchar" MaxLength="500" />
+    <Property Name="EndStageRenalDisease" Type="int" />
+    <Property Name="EndStageRenalDiseaseNotes" Type="varchar" MaxLength="500" />
+    <Property Name="UnderlyingMedicalonditions" Type="int" />
+    <Property Name="UnderlyingMedicalonditionsNotes" Type="varchar" MaxLength="500" />
+    <Property Name="Homeless" Type="int" />
+    <Property Name="HomelessNotes" Type="varchar" MaxLength="500" />
+    <Property Name="OverCrowdedHousing" Type="int" />
+    <Property Name="OverCrowdedHousingNotes" Type="varchar" MaxLength="500" />
+    <Property Name="CorrectionalFacilityAtTimeDiag" Type="int" />
+    <Property Name="CorrectionalFacilityAtTimeDiagNotes" Type="varchar" MaxLength="500" />
+    <Property Name="PreviousAbnormalChestXray" Type="int" />
+    <Property Name="PreviousAbnormalChestXrayNotes" Type="varchar" MaxLength="500" />
+    <Property Name="SubstanceAbuse" Type="int" />
+    <Property Name="SubstanceAbuseNotes" Type="varchar" MaxLength="500" />
+    <Property Name="TobaccoSmoker" Type="int" />
+    <Property Name="TobaccoSmokerNotes" Type="varchar" MaxLength="500" />
+    <Property Name="TransplantRelatedImmunosuppression" Type="int" />
+    <Property Name="TransplantRelatedImmunosuppressionNotes" Type="varchar" MaxLength="500" />
+    <Property Name="HIV" Type="int" />
+    <Property Name="HIVNotes" Type="varchar" MaxLength="500" />
+    <Property Name="AIDS" Type="int" />
+    <Property Name="AIDSNotes" Type="varchar" MaxLength="500" />
+    <Property Name="Cancer" Type="int" />
+    <Property Name="CancerNotes" Type="varchar" MaxLength="500" />
+    <Property Name="ImmunosuppressiveDrugs" Type="int" />
+    <Property Name="ImmunosuppressiveDrugsNotes" Type="varchar" MaxLength="500" />
+    <Property Name="TravelHighIncidenceCountry2yrs" Type="int" />
+    <Property Name="TravelHighIncidenceCountry2yrsNotes" Type="varchar" MaxLength="500" />
+    <Property Name="AgeWhenInfectedLessThanEqual5yrs" Type="int" />
+    <Property Name="AgeWhenInfectedLessThanEqual5yrsNotes" Type="varchar" MaxLength="500" />
+    <Property Name="InactiveDiseaseNotAdequatelyTreated" Type="int" />
+    <Property Name="InactiveDiseaseNotAdequatelyTreatedNotes" Type="varchar" MaxLength="500" />
+    <Property Name="LTBIRrefusedDOP" Type="int" />
+    <Property Name="LTBIRrefusedDOPNotes" Type="varchar" MaxLength="500" />
+    <Property Name="ClientID" Type="int" Nullable="false" />
+    <Property Name="CannabisUser" Type="int" />
+    <Property Name="CannabisNotes" Type="varchar" MaxLength="500" />
+    <Property Name="SmokingDeviceUse" Type="int" />
+    <Property Name="SmokingDeviceNotes" Type="varchar" MaxLength="500" />
+    <Property Name="TravelInuitNunaGutPrev2Years" Type="int" />
+    <Property Name="TravelInuitNunaGutPrev2YearsNotes" Type="varchar" MaxLength="500" />
+    <Property Name="VisitorsFrHighIncidenceRegion" Type="int" />
+    <Property Name="VisitorsFrHighIncidenceRegionNotes" Type="varchar" MaxLength="500" />
+    <Property Name="NotEligibleForTreatment" Type="int" />
+    <Property Name="NotEligibleForTreatmentNotes" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="client_SkinTest">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateRead" Type="datetime" />
+    <Property Name="DatePlaced" Type="datetime" />
+    <Property Name="Comments" Type="varchar" MaxLength="2000" />
+    <Property Name="CommentsResult" Type="varchar" MaxLength="2000" />
+    <Property Name="RouteID" Type="int" />
+    <Property Name="Iduration" Type="varchar" MaxLength="25" />
+    <Property Name="LotID" Type="int" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="AdministeredByID" Type="int" />
+    <Property Name="SiteAdministered" Type="int" />
+    <Property Name="SiteAdministeredOther" Type="varchar" MaxLength="100" />
+    <Property Name="SiteRead" Type="int" />
+    <Property Name="ResultID" Type="int" />
+    <Property Name="ReadBy" Type="int" />
+    <Property Name="InjectionSiteID" Type="int" />
+    <Property Name="XrayRecommended" Type="bit" />
+    <Property Name="IGRARecommended" Type="bit" />
+    <Property Name="ConsentFactSheetProvided" Type="bit" />
+    <Property Name="ConsentFactSheetProvidedNo" Type="bit" />
+    <Property Name="ConsentBenefitsRisksUnderstood" Type="bit" />
+    <Property Name="ConsentBenefitsRisksUnderstoodNo" Type="bit" />
+    <Property Name="Return4872Hours" Type="bit" />
+    <Property Name="Return4872HoursNo" Type="bit" />
+    <Property Name="ConsentDate" Type="date" />
+    <Property Name="FollowUpTestRequired" Type="bit" />
+    <Property Name="FollowUpTestNotRequired" Type="bit" />
+    <Property Name="FollowUpDate" Type="date" />
+    <Property Name="TestReasonID" Type="int" />
+    <Property Name="TestReasonOther" Type="varchar" MaxLength="500" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="PlacedBy" Type="int" />
+    <Property Name="Dose" Type="varchar" MaxLength="50" />
+    <Property Name="SiteID" Type="int" />
+    <Property Name="SiteOther" Type="varchar" MaxLength="100" />
+    <Property Name="ReadByText" Type="varchar" MaxLength="100" />
+    <Property Name="SputumRecommended" Type="bit" />
+    <Property Name="SymptomInquiryRecommended" Type="bit" />
+    <Property Name="ReadByID" Type="int" />
+  </EntityType>
+  <EntityType Name="client_Sputum">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CollectedDate" Type="datetime" />
+    <Property Name="ResultDate" Type="datetime" />
+    <Property Name="CompletedByID" Type="int" />
+    <Property Name="RequestedByID" Type="int" />
+    <Property Name="StatusRefused" Type="bit" />
+    <Property Name="StatusUnableToProduce" Type="bit" />
+    <Property Name="StatusCollected" Type="bit" />
+    <Property Name="StatusNotResulted" Type="bit" />
+    <Property Name="StatusSmearComplete" Type="bit" />
+    <Property Name="StatusPendingCulture" Type="bit" />
+    <Property Name="StatusComplete" Type="bit" />
+    <Property Name="StatusInduced" Type="bit" />
+    <Property Name="SmearResultID" Type="int" />
+    <Property Name="CultureResultID" Type="int" />
+    <Property Name="ReasonForTestingID" Type="int" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="Comments" Type="varchar" MaxLength="2000" />
+    <Property Name="ReasonForTestingOther" Type="varchar" MaxLength="500" />
+    <Property Name="CultureResultData" Type="datetime" />
+  </EntityType>
+  <EntityType Name="client_SputumResistence">
+    <Key>
+      <PropertyRef Name="SputumID" />
+      <PropertyRef Name="AntibioticID" />
+    </Key>
+    <Property Name="SputumID" Type="int" Nullable="false" />
+    <Property Name="AntibioticID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="client_Symptoms">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InterviewByID" Type="int" Nullable="false" />
+    <Property Name="InterviewDate" Type="datetime" Nullable="false" />
+    <Property Name="ClientID" Type="int" Nullable="false" />
+    <Property Name="CompletionMethod" Type="int" />
+    <Property Name="Comments" Type="varchar" MaxLength="5000" />
+    <Property Name="CoughGreat3Weeks" Type="int" />
+    <Property Name="CoughGreat3WeeksNotes" Type="varchar" MaxLength="500" />
+    <Property Name="CoughGreat3WeeksStart" Type="datetime" />
+    <Property Name="CoughGreat3WeeksEnd" Type="datetime" />
+    <Property Name="ShortnessBreath" Type="int" />
+    <Property Name="ShortnessBreathNotes" Type="varchar" MaxLength="500" />
+    <Property Name="ShortnessBreathStart" Type="datetime" />
+    <Property Name="ShortnessBreathEnd" Type="datetime" />
+    <Property Name="Fever" Type="int" />
+    <Property Name="FeverNotes" Type="varchar" MaxLength="500" />
+    <Property Name="FeverStart" Type="datetime" />
+    <Property Name="FeverEnd" Type="datetime" />
+    <Property Name="NightSweats" Type="int" />
+    <Property Name="NightSweatsNotes" Type="varchar" MaxLength="500" />
+    <Property Name="NightSweatsStart" Type="datetime" />
+    <Property Name="NightSweatsEnd" Type="datetime" />
+    <Property Name="Hemoptysis" Type="int" />
+    <Property Name="HemoptysisNotes" Type="varchar" MaxLength="500" />
+    <Property Name="HemoptysisStart" Type="datetime" />
+    <Property Name="HemoptysisEnd" Type="datetime" />
+    <Property Name="WeightLoss" Type="int" />
+    <Property Name="WeightLossNotes" Type="varchar" MaxLength="500" />
+    <Property Name="WeightLossStart" Type="datetime" />
+    <Property Name="WeightLossEnd" Type="datetime" />
+    <Property Name="LossAppetite" Type="int" />
+    <Property Name="LossAppetiteNotes" Type="varchar" MaxLength="500" />
+    <Property Name="LossAppetiteStart" Type="datetime" />
+    <Property Name="LossAppetiteEnd" Type="datetime" />
+    <Property Name="Fatigue" Type="int" />
+    <Property Name="FatigueNotes" Type="varchar" MaxLength="500" />
+    <Property Name="FatigueStart" Type="datetime" />
+    <Property Name="FatigueEnd" Type="datetime" />
+    <Property Name="Chestpain" Type="int" />
+    <Property Name="ChestpainNotes" Type="varchar" MaxLength="500" />
+    <Property Name="ChestpainStart" Type="datetime" />
+    <Property Name="ChestpainEnd" Type="datetime" />
+    <Property Name="FailureToThrive" Type="int" />
+    <Property Name="FailureToThriveNotes" Type="varchar" MaxLength="500" />
+    <Property Name="FailureToThriveStart" Type="datetime" />
+    <Property Name="FailureToThriveEnd" Type="datetime" />
+    <Property Name="Rash" Type="int" />
+    <Property Name="RashEnd" Type="datetime" />
+    <Property Name="RashNotes" Type="varchar" MaxLength="500" />
+    <Property Name="RashStart" Type="datetime" />
+  </EntityType>
+  <EntityType Name="client_Xray">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ExamDate" Type="datetime" />
+    <Property Name="ViewID" Type="int" />
+    <Property Name="AreaID" Type="int" />
+    <Property Name="IndicationID" Type="int" />
+    <Property Name="ResultID" Type="int" />
+    <Property Name="InfiltrateYesNo" Type="bit" />
+    <Property Name="InfiltrateYesNoNotes" Type="varchar" MaxLength="500" />
+    <Property Name="CavitaryLession" Type="bit" />
+    <Property Name="CavitaryLessionNotes" Type="varchar" MaxLength="500" />
+    <Property Name="Nodule" Type="bit" />
+    <Property Name="NoduleNotes" Type="varchar" MaxLength="500" />
+    <Property Name="PleuralEffusion" Type="bit" />
+    <Property Name="PleuralEffusionNotes" Type="varchar" MaxLength="500" />
+    <Property Name="HilarLymphadenopathy" Type="bit" />
+    <Property Name="HilarLymphadenopathyNotes" Type="varchar" MaxLength="500" />
+    <Property Name="LinearDisease" Type="bit" />
+    <Property Name="LinearDiseaseNotes" Type="varchar" MaxLength="500" />
+    <Property Name="Comments" Type="varchar" MaxLength="5000" />
+    <Property Name="ReasonForTestingID" Type="int" />
+    <Property Name="ReasonForTestingOther" Type="varchar" MaxLength="500" />
+    <Property Name="ClientID" Type="int" />
+  </EntityType>
+  <EntityType Name="clinic_TBClinic">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClinicDate" Type="datetime" />
+    <Property Name="StartTime" Type="time" Precision="7" />
+    <Property Name="EndTime" Type="time" Precision="7" />
+    <Property Name="PhysicianID" Type="int" />
+    <Property Name="MaxAppointments" Type="int" />
+    <Property Name="Comments" Type="varchar" MaxLength="5000" />
+  </EntityType>
+  <EntityType Name="clinic_TBClinicAppointments">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClinicID" Type="int" />
+    <Property Name="Time" Type="time" Precision="7" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="PhysicianID" Type="int" />
+    <Property Name="Reason" Type="int" />
+    <Property Name="ClientType" Type="int" />
+    <Property Name="Language" Type="int" />
+    <Property Name="Transportation" Type="bit" />
+    <Property Name="TaxiNumber" Type="varchar" MaxLength="25" />
+    <Property Name="TaxiPickup" Type="bit" />
+    <Property Name="Comments" Type="varchar" MaxLength="500" />
+    <Property Name="Complete" Type="bit" />
+    <Property Name="CompletedDate" Type="datetime" />
+    <Property Name="CompletedByID" Type="int" />
+  </EntityType>
+  <EntityType Name="common_Antibiotic">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AntibioticName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="common_BloodworkCollectionMethod">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CollectionMethod" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="common_Clinicians">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="75" />
+    <Property Name="Active" Type="bit" />
+  </EntityType>
+  <EntityType Name="common_ClinicReason">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClinicReason" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="common_CommunicationMethod">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContactMethod" Type="varchar" MaxLength="35" Nullable="false" />
+  </EntityType>
+  <EntityType Name="common_CommunicationReason">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CommunicationReason" Type="varchar" MaxLength="35" Nullable="false" />
+  </EntityType>
+  <EntityType Name="common_CommunicationResult">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CommunicationResult" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="common_Community">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Community" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="common_CompletionMethod">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompletionMethod" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="common_ContactPriority">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Priority" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="common_ContactReason">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContactReason" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="common_ContactRelationship">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RelationshipText" Type="varchar" MaxLength="50" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="common_ContactType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContactType" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="common_DocumentType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DocumentType" Type="varchar" MaxLength="50" />
+    <Property Name="DocumentTypeMime" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="common_Ethnicity">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ethnicity" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="common_Followup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FollowupType" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="common_Gender">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Gender" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="common_GeographicLocation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SiteName" Type="varchar" MaxLength="100" />
+    <Property Name="Active" Type="bit" />
+  </EntityType>
+  <EntityType Name="common_HivStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HIVStatus" Type="varchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="common_IGRAResult">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IGRATestResult" Type="varchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="common_InjectionBodySite">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BodyPart" Type="varchar" MaxLength="200" />
+    <Property Name="Active" Type="bit" />
+  </EntityType>
+  <EntityType Name="common_InjectionRoute">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Route" Type="varchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="common_InvestigationType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvestigationType" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="common_Language">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Language" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="common_MedicalLot">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LotNumber" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ExpDate" Type="date" />
+  </EntityType>
+  <EntityType Name="common_Medication">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MedicationName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="common_MedicationFrequency">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Frequency" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="common_MedicationStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MedicationStatus" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="common_PregnancyStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PregnantStatus" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="common_Product">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="common_Province">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProvinceMnemonic" Type="varchar" MaxLength="2" />
+    <Property Name="Province" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="common_SkinTestResult">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SkinTestResult" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="common_SkinTestSite">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SkinTestSite" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="common_SputumCultureResult">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CultureResult" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="common_SputumRequestBy">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RequestedBy" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="common_SputumSmearResult">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SmearResult" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="common_Status">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="common_Symptoms">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Symptom" Type="varchar" MaxLength="50" />
+    <Property Name="Active" Type="bit" />
+  </EntityType>
+  <EntityType Name="common_TBOutcome">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TBOutcome" Type="varchar" MaxLength="40" />
+    <Property Name="AssociatedStatus" Type="int" />
+    <Property Name="SortOrder" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="common_TBTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TBType" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="common_TBUser">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameLabel" Type="varchar" MaxLength="50" />
+    <Property Name="ClinicianID" Type="int" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="AspNetID" Type="nvarchar" MaxLength="128" />
+    <Property Name="AspNetUserID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="common_TestReason">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TestReason" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TypeID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="common_TestReasonType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReasonType" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="common_TreatmentAdherence">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Adherence" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="common_TreatmentMode">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ModeTreatment" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="common_XrayArea">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="XrayArea" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="common_XrayIndication">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="XrayIndication" Type="varchar" MaxLength="50" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="common_XrayResult">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="XrayResult" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="common_XrayView">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="XrayView" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="common_YesNoNotdoneUnknown">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AnswerText" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="common_YesNoUnknown">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StrValue" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="common_YesNoUnknownRefused">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Value" Type="varchar" MaxLength="10" />
+    <Property Name="Active" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TBTracing.dbo.vwClientList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwClientList">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="ProfileID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="100" />
+    <Property Name="LastName" Type="varchar" MaxLength="100" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="CaseNumber" Type="varchar" MaxLength="25" />
+    <Property Name="OtherIdentifier" Type="varchar" MaxLength="200" />
+    <Property Name="HealthCareNumber" Type="varchar" MaxLength="50" />
+    <Property Name="ProfileID" Type="int" Nullable="false" />
+    <Property Name="DateofBirth" Type="date" />
+    <Property Name="strDOB" Type="varchar" MaxLength="11" />
+    <Property Name="StatusID" Type="int" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TBTracing.dbo.vwClients' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwClients">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="ProfileID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="100" />
+    <Property Name="LastName" Type="varchar" MaxLength="100" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="HealthCareNumber" Type="varchar" MaxLength="50" />
+    <Property Name="ProfileID" Type="int" Nullable="false" />
+    <Property Name="DateofBirth" Type="date" />
+    <Property Name="Outcome" Type="int" />
+    <Property Name="TBOutcome" Type="varchar" MaxLength="40" />
+    <Property Name="strDOB" Type="varchar" MaxLength="11" />
+    <Property Name="StatusID" Type="int" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TBTracing.dbo.vwContactTracingConsolidated' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwContactTracingConsolidated">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="SourceFirstName" Type="varchar" MaxLength="100" />
+    <Property Name="SourceLastName" Type="varchar" MaxLength="100" />
+    <Property Name="SourceClientID" Type="int" />
+    <Property Name="IdentifiedFirstName" Type="varchar" MaxLength="100" />
+    <Property Name="IdentifiedLastName" Type="varchar" MaxLength="100" />
+    <Property Name="IdentifiedClientID" Type="int" />
+    <Property Name="ContactType" Type="varchar" MaxLength="50" />
+    <Property Name="ContactTypeID" Type="int" />
+    <Property Name="Priority" Type="varchar" MaxLength="20" />
+    <Property Name="PriorityID" Type="int" />
+    <Property Name="RelationshipText" Type="varchar" MaxLength="50" />
+    <Property Name="RelationshipID" Type="int" />
+    <Property Name="Community" Type="varchar" MaxLength="100" />
+    <Property Name="CommunityID" Type="int" />
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="FromDate" Type="datetime" />
+    <Property Name="ToDate" Type="datetime" />
+    <Property Name="ContactReason" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Audit_AuditType">
+    <End Role="AuditType" Type="Self.AuditType" Multiplicity="0..1" />
+    <End Role="Audit" Type="Self.Audit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AuditType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Audit">
+        <PropertyRef Name="AuditType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Audit_client_Profile">
+    <End Role="client_Profile" Type="Self.client_Profile" Multiplicity="0..1" />
+    <End Role="Audit" Type="Self.Audit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_Profile">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Audit">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_BCG_client_Profile">
+    <End Role="client_Profile" Type="Self.client_Profile" Multiplicity="0..1" />
+    <End Role="client_BCG" Type="Self.client_BCG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_Profile">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_BCG">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_BCG_common_YesNoUnknown">
+    <End Role="common_YesNoUnknown" Type="Self.common_YesNoUnknown" Multiplicity="0..1" />
+    <End Role="client_BCG" Type="Self.client_BCG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknown">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_BCG">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Bloodwork_client_Profile">
+    <End Role="client_Profile" Type="Self.client_Profile" Multiplicity="0..1" />
+    <End Role="client_Bloodwork" Type="Self.client_Bloodwork" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_Profile">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Bloodwork">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Bloodwork_common_BloodworkCollectionMethod">
+    <End Role="common_BloodworkCollectionMethod" Type="Self.common_BloodworkCollectionMethod" Multiplicity="0..1" />
+    <End Role="client_Bloodwork" Type="Self.client_Bloodwork" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_BloodworkCollectionMethod">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Bloodwork">
+        <PropertyRef Name="CollectionMethodID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Bloodwork_common_TBUser">
+    <End Role="common_Clinicians" Type="Self.common_Clinicians" Multiplicity="0..1" />
+    <End Role="client_Bloodwork" Type="Self.client_Bloodwork" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_Clinicians">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Bloodwork">
+        <PropertyRef Name="CollectedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Bloodwork_common_TestReason">
+    <End Role="common_TestReason" Type="Self.common_TestReason" Multiplicity="0..1" />
+    <End Role="client_Bloodwork" Type="Self.client_Bloodwork" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_TestReason">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Bloodwork">
+        <PropertyRef Name="ReasonForTestingID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Communication_client_Profile">
+    <End Role="client_Profile" Type="Self.client_Profile" Multiplicity="1" />
+    <End Role="client_Communication" Type="Self.client_Communication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_Profile">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Communication">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Communication_common_CommunicationMethod">
+    <End Role="common_CommunicationMethod" Type="Self.common_CommunicationMethod" Multiplicity="0..1" />
+    <End Role="client_Communication" Type="Self.client_Communication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_CommunicationMethod">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Communication">
+        <PropertyRef Name="MethodID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Communication_common_CommunicationReason">
+    <End Role="common_CommunicationReason" Type="Self.common_CommunicationReason" Multiplicity="0..1" />
+    <End Role="client_Communication" Type="Self.client_Communication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_CommunicationReason">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Communication">
+        <PropertyRef Name="ReasonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Communication_common_CommunicationResult">
+    <End Role="common_CommunicationResult" Type="Self.common_CommunicationResult" Multiplicity="0..1" />
+    <End Role="client_Communication" Type="Self.client_Communication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_CommunicationResult">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Communication">
+        <PropertyRef Name="ResultID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Communication_common_TBUser">
+    <End Role="common_TBUser" Type="Self.common_TBUser" Multiplicity="0..1" />
+    <End Role="client_Communication" Type="Self.client_Communication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_TBUser">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="client_Communication">
+        <PropertyRef Name="ContactedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_CommunicationBulletin_client_Profile">
+    <End Role="client_Profile" Type="Self.client_Profile" Multiplicity="1" />
+    <End Role="client_CommunicationBulletin" Type="Self.client_CommunicationBulletin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_Profile">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_CommunicationBulletin">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_ContactNote_client_Profile">
+    <End Role="client_Profile" Type="Self.client_Profile" Multiplicity="1" />
+    <End Role="client_ContactNote" Type="Self.client_ContactNote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_Profile">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_ContactNote">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_ContactTracing_client_Outcome">
+    <End Role="client_Outcome" Type="Self.client_Outcome" Multiplicity="0..1" />
+    <End Role="client_ContactTracing" Type="Self.client_ContactTracing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_Outcome">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_ContactTracing">
+        <PropertyRef Name="DiagnosisID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_ContactTracing_client_Profile">
+    <End Role="client_Profile" Type="Self.client_Profile" Multiplicity="0..1" />
+    <End Role="client_ContactTracing" Type="Self.client_ContactTracing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_Profile">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_ContactTracing">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_ContactTracing_client_Profile1">
+    <End Role="client_Profile" Type="Self.client_Profile" Multiplicity="0..1" />
+    <End Role="client_ContactTracing" Type="Self.client_ContactTracing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_Profile">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_ContactTracing">
+        <PropertyRef Name="ContactClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_ContactTracing_common_Community">
+    <End Role="common_Community" Type="Self.common_Community" Multiplicity="0..1" />
+    <End Role="client_ContactTracing" Type="Self.client_ContactTracing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_Community">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_ContactTracing">
+        <PropertyRef Name="CommunityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_ContactTracing_common_ContactPriority">
+    <End Role="common_ContactPriority" Type="Self.common_ContactPriority" Multiplicity="0..1" />
+    <End Role="client_ContactTracing" Type="Self.client_ContactTracing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_ContactPriority">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_ContactTracing">
+        <PropertyRef Name="PriorityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_ContactTracing_common_ContactReason">
+    <End Role="common_ContactReason" Type="Self.common_ContactReason" Multiplicity="0..1" />
+    <End Role="client_ContactTracing" Type="Self.client_ContactTracing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_ContactReason">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_ContactTracing">
+        <PropertyRef Name="ReasonTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_ContactTracing_common_ContactRelationship">
+    <End Role="common_ContactRelationship" Type="Self.common_ContactRelationship" Multiplicity="0..1" />
+    <End Role="client_ContactTracing" Type="Self.client_ContactTracing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_ContactRelationship">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_ContactTracing">
+        <PropertyRef Name="RelationshipID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_ContactTracing_common_ContactType">
+    <End Role="common_ContactType" Type="Self.common_ContactType" Multiplicity="0..1" />
+    <End Role="client_ContactTracing" Type="Self.client_ContactTracing" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_ContactType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_ContactTracing">
+        <PropertyRef Name="ContactTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Demographic_client_Profile">
+    <End Role="client_Profile" Type="Self.client_Profile" Multiplicity="0..1" />
+    <End Role="client_Demographic" Type="Self.client_Demographic" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_Profile">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Demographic">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Demographic_common_Community">
+    <End Role="common_Community" Type="Self.common_Community" Multiplicity="0..1" />
+    <End Role="client_Demographic" Type="Self.client_Demographic" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_Community">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Demographic">
+        <PropertyRef Name="CommunityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Demographic_common_PregnancyStatus">
+    <End Role="common_PregnancyStatus" Type="Self.common_PregnancyStatus" Multiplicity="0..1" />
+    <End Role="client_Demographic" Type="Self.client_Demographic" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_PregnancyStatus">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Demographic">
+        <PropertyRef Name="PregnancyStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_DiagnosticImage_client_Profile">
+    <End Role="client_Profile" Type="Self.client_Profile" Multiplicity="0..1" />
+    <End Role="client_DiagnosticImage" Type="Self.client_DiagnosticImage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_Profile">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_DiagnosticImage">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_DiagnosticImage_common_TestReason">
+    <End Role="common_TestReason" Type="Self.common_TestReason" Multiplicity="0..1" />
+    <End Role="client_DiagnosticImage" Type="Self.client_DiagnosticImage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_TestReason">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_DiagnosticImage">
+        <PropertyRef Name="ReasonForTesting" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_DiagnosticImage_common_XrayArea">
+    <End Role="common_XrayArea" Type="Self.common_XrayArea" Multiplicity="0..1" />
+    <End Role="client_DiagnosticImage" Type="Self.client_DiagnosticImage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_XrayArea">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_DiagnosticImage">
+        <PropertyRef Name="AreaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_DiagnosticImage_common_XrayIndication">
+    <End Role="common_XrayIndication" Type="Self.common_XrayIndication" Multiplicity="0..1" />
+    <End Role="client_DiagnosticImage" Type="Self.client_DiagnosticImage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_XrayIndication">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_DiagnosticImage">
+        <PropertyRef Name="IndicationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_DiagnosticImage_common_XrayResult">
+    <End Role="common_XrayResult" Type="Self.common_XrayResult" Multiplicity="0..1" />
+    <End Role="client_DiagnosticImage" Type="Self.client_DiagnosticImage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_XrayResult">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_DiagnosticImage">
+        <PropertyRef Name="ResultID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_DiagnosticImage_common_XrayView">
+    <End Role="common_XrayView" Type="Self.common_XrayView" Multiplicity="0..1" />
+    <End Role="client_DiagnosticImage" Type="Self.client_DiagnosticImage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_XrayView">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_DiagnosticImage">
+        <PropertyRef Name="ViewID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Document_client_Profile">
+    <End Role="client_Profile" Type="Self.client_Profile" Multiplicity="1" />
+    <End Role="client_Document" Type="Self.client_Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_Profile">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Document">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Document_common_DocumentType">
+    <End Role="common_DocumentType" Type="Self.common_DocumentType" Multiplicity="1" />
+    <End Role="client_Document" Type="Self.client_Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_DocumentType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Document">
+        <PropertyRef Name="DocumentType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Followup_client_Profile">
+    <End Role="client_Profile" Type="Self.client_Profile" Multiplicity="1" />
+    <End Role="client_Followup" Type="Self.client_Followup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_Profile">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Followup">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Followup_common_Followup">
+    <End Role="common_Followup" Type="Self.common_Followup" Multiplicity="1" />
+    <End Role="client_Followup" Type="Self.client_Followup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_Followup">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Followup">
+        <PropertyRef Name="FollowupType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Followup_common_TBUser">
+    <End Role="common_TBUser" Type="Self.common_TBUser" Multiplicity="1" />
+    <End Role="client_Followup" Type="Self.client_Followup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_TBUser">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="client_Followup">
+        <PropertyRef Name="PhysicianID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_IGRA_client_Profile">
+    <End Role="client_Profile" Type="Self.client_Profile" Multiplicity="0..1" />
+    <End Role="client_IGRA" Type="Self.client_IGRA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_Profile">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_IGRA">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_IGRA_common_IGRAResult">
+    <End Role="common_IGRAResult" Type="Self.common_IGRAResult" Multiplicity="0..1" />
+    <End Role="client_IGRA" Type="Self.client_IGRA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_IGRAResult">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_IGRA">
+        <PropertyRef Name="ResultID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_IGRA_common_TBUser">
+    <End Role="common_TBUser" Type="Self.common_TBUser" Multiplicity="0..1" />
+    <End Role="client_IGRA" Type="Self.client_IGRA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_TBUser">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="client_IGRA">
+        <PropertyRef Name="CollectedByID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_IGRA_common_TestReason">
+    <End Role="common_TestReason" Type="Self.common_TestReason" Multiplicity="0..1" />
+    <End Role="client_IGRA" Type="Self.client_IGRA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_TestReason">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_IGRA">
+        <PropertyRef Name="ReasonForTestingID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Investigation_client_Profile">
+    <End Role="client_Profile" Type="Self.client_Profile" Multiplicity="0..1" />
+    <End Role="client_Investigation" Type="Self.client_Investigation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_Profile">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Investigation">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Investigation_common_InvestigationType">
+    <End Role="common_InvestigationType" Type="Self.common_InvestigationType" Multiplicity="0..1" />
+    <End Role="client_Investigation" Type="Self.client_Investigation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_InvestigationType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Investigation">
+        <PropertyRef Name="InvestigationTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Investigation_common_TBUser">
+    <End Role="common_TBUser" Type="Self.common_TBUser" Multiplicity="0..1" />
+    <End Role="client_Investigation" Type="Self.client_Investigation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_TBUser">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="client_Investigation">
+        <PropertyRef Name="CollectedByID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Investigation_common_YesNoNotdoneUnknown">
+    <End Role="common_YesNoNotdoneUnknown" Type="Self.common_YesNoNotdoneUnknown" Multiplicity="0..1" />
+    <End Role="client_Investigation" Type="Self.client_Investigation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoNotdoneUnknown">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Investigation">
+        <PropertyRef Name="BranchialWashResult" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Investigation_common_YesNoNotdoneUnknown1">
+    <End Role="common_YesNoNotdoneUnknown" Type="Self.common_YesNoNotdoneUnknown" Multiplicity="0..1" />
+    <End Role="client_Investigation" Type="Self.client_Investigation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoNotdoneUnknown">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Investigation">
+        <PropertyRef Name="GIWash" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Investigation_common_YesNoNotdoneUnknown2">
+    <End Role="common_YesNoNotdoneUnknown" Type="Self.common_YesNoNotdoneUnknown" Multiplicity="0..1" />
+    <End Role="client_Investigation" Type="Self.client_Investigation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoNotdoneUnknown">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Investigation">
+        <PropertyRef Name="NodeBiopsy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Investigation_common_YesNoNotdoneUnknown3">
+    <End Role="common_YesNoNotdoneUnknown" Type="Self.common_YesNoNotdoneUnknown" Multiplicity="0..1" />
+    <End Role="client_Investigation" Type="Self.client_Investigation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoNotdoneUnknown">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Investigation">
+        <PropertyRef Name="Urine" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Investigation_common_YesNoNotdoneUnknown4">
+    <End Role="common_YesNoNotdoneUnknown" Type="Self.common_YesNoNotdoneUnknown" Multiplicity="0..1" />
+    <End Role="client_Investigation" Type="Self.client_Investigation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoNotdoneUnknown">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Investigation">
+        <PropertyRef Name="CSF" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Investigation_common_YesNoNotdoneUnknown5">
+    <End Role="common_YesNoNotdoneUnknown" Type="Self.common_YesNoNotdoneUnknown" Multiplicity="0..1" />
+    <End Role="client_Investigation" Type="Self.client_Investigation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoNotdoneUnknown">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Investigation">
+        <PropertyRef Name="Other" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Notes_client_Profile">
+    <End Role="client_Profile" Type="Self.client_Profile" Multiplicity="1" />
+    <End Role="client_Notes" Type="Self.client_Notes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_Profile">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Notes">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Outcome_client_OutcomeTreatment">
+    <End Role="client_OutcomeTreatment" Type="Self.client_OutcomeTreatment" Multiplicity="0..1" />
+    <End Role="client_Outcome" Type="Self.client_Outcome" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_OutcomeTreatment">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Outcome">
+        <PropertyRef Name="TreatmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Outcome_client_Profile">
+    <End Role="client_Profile" Type="Self.client_Profile" Multiplicity="0..1" />
+    <End Role="client_Outcome" Type="Self.client_Outcome" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_Profile">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Outcome">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Outcome_common_TBOutcome">
+    <End Role="common_TBOutcome" Type="Self.common_TBOutcome" Multiplicity="0..1" />
+    <End Role="client_Outcome" Type="Self.client_Outcome" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_TBOutcome">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Outcome">
+        <PropertyRef Name="Outcome" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Outcome_common_TBTypes">
+    <End Role="common_TBTypes" Type="Self.common_TBTypes" Multiplicity="0..1" />
+    <End Role="client_Outcome" Type="Self.client_Outcome" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_TBTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Outcome">
+        <PropertyRef Name="TBType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Outcome_common_TBUser">
+    <End Role="common_Clinicians" Type="Self.common_Clinicians" Multiplicity="0..1" />
+    <End Role="client_Outcome" Type="Self.client_Outcome" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_Clinicians">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Outcome">
+        <PropertyRef Name="DeterminedByID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_OutcomeMedications_client_OutcomeTreatmentDOT">
+    <End Role="client_OutcomeTreatmentDOT" Type="Self.client_OutcomeTreatmentDOT" Multiplicity="1" />
+    <End Role="client_OutcomeMedications" Type="Self.client_OutcomeMedications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_OutcomeTreatmentDOT">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_OutcomeMedications">
+        <PropertyRef Name="dotID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_OutcomeMedications_common_Medication">
+    <End Role="common_Medication" Type="Self.common_Medication" Multiplicity="1" />
+    <End Role="client_OutcomeMedications" Type="Self.client_OutcomeMedications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_Medication">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_OutcomeMedications">
+        <PropertyRef Name="medID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_OutcomeTreatment_common_TBOutcome">
+    <End Role="common_TBOutcome" Type="Self.common_TBOutcome" Multiplicity="0..1" />
+    <End Role="client_OutcomeTreatment" Type="Self.client_OutcomeTreatment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_TBOutcome">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_OutcomeTreatment">
+        <PropertyRef Name="OutcomeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_OutcomeTreatment_common_TreatmentAdherence">
+    <End Role="common_TreatmentAdherence" Type="Self.common_TreatmentAdherence" Multiplicity="0..1" />
+    <End Role="client_OutcomeTreatment" Type="Self.client_OutcomeTreatment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_TreatmentAdherence">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_OutcomeTreatment">
+        <PropertyRef Name="AdherenceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_OutcomeTreatment_common_TreatmentMode">
+    <End Role="common_TreatmentMode" Type="Self.common_TreatmentMode" Multiplicity="0..1" />
+    <End Role="client_OutcomeTreatment" Type="Self.client_OutcomeTreatment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_TreatmentMode">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_OutcomeTreatment">
+        <PropertyRef Name="TreatmentModeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_OutcomeTreatmentDOT_client_OutcomeTreatment">
+    <End Role="client_OutcomeTreatment" Type="Self.client_OutcomeTreatment" Multiplicity="1" />
+    <End Role="client_OutcomeTreatmentDOT" Type="Self.client_OutcomeTreatmentDOT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_OutcomeTreatment">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_OutcomeTreatmentDOT">
+        <PropertyRef Name="TreatmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_OutcomeTreatmentDOT_common_Clinicians">
+    <End Role="common_Clinicians" Type="Self.common_Clinicians" Multiplicity="0..1" />
+    <End Role="client_OutcomeTreatmentDOT" Type="Self.client_OutcomeTreatmentDOT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_Clinicians">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_OutcomeTreatmentDOT">
+        <PropertyRef Name="CompletedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_OutcomeTreatmentDOTSymptoms_client_OutcomeTreatmentDOT">
+    <End Role="client_OutcomeTreatmentDOT" Type="Self.client_OutcomeTreatmentDOT" Multiplicity="1" />
+    <End Role="client_OutcomeTreatmentDOTSymptoms" Type="Self.client_OutcomeTreatmentDOTSymptoms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_OutcomeTreatmentDOT">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_OutcomeTreatmentDOTSymptoms">
+        <PropertyRef Name="dotID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_OutcomeTreatmentDOTSymptoms_common_Symptoms">
+    <End Role="common_Symptoms" Type="Self.common_Symptoms" Multiplicity="1" />
+    <End Role="client_OutcomeTreatmentDOTSymptoms" Type="Self.client_OutcomeTreatmentDOTSymptoms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_Symptoms">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_OutcomeTreatmentDOTSymptoms">
+        <PropertyRef Name="symptomID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_OutcomeTreatmentRegimen_client_Outcome">
+    <End Role="client_Outcome" Type="Self.client_Outcome" Multiplicity="0..1" />
+    <End Role="client_OutcomeTreatmentRegimen" Type="Self.client_OutcomeTreatmentRegimen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_Outcome">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_OutcomeTreatmentRegimen">
+        <PropertyRef Name="OutcomeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_OutcomeTreatmentRegimen_common_Medication">
+    <End Role="common_Medication" Type="Self.common_Medication" Multiplicity="0..1" />
+    <End Role="client_OutcomeTreatmentRegimen" Type="Self.client_OutcomeTreatmentRegimen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_Medication">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_OutcomeTreatmentRegimen">
+        <PropertyRef Name="MedicationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_OutcomeTreatmentRegimen_common_MedicationFrequency">
+    <End Role="common_MedicationFrequency" Type="Self.common_MedicationFrequency" Multiplicity="0..1" />
+    <End Role="client_OutcomeTreatmentRegimen" Type="Self.client_OutcomeTreatmentRegimen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_MedicationFrequency">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_OutcomeTreatmentRegimen">
+        <PropertyRef Name="FrequencyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_OutcomeTreatmentRegimen_common_MedicationStatus">
+    <End Role="common_MedicationStatus" Type="Self.common_MedicationStatus" Multiplicity="0..1" />
+    <End Role="client_OutcomeTreatmentRegimen" Type="Self.client_OutcomeTreatmentRegimen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_MedicationStatus">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_OutcomeTreatmentRegimen">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Profile_common_Status">
+    <End Role="common_Status" Type="Self.common_Status" Multiplicity="0..1" />
+    <End Role="client_Profile" Type="Self.client_Profile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_Status">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Profile">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_RiskFactors_client_Profile">
+    <End Role="client_Profile" Type="Self.client_Profile" Multiplicity="1" />
+    <End Role="client_RiskFactors" Type="Self.client_RiskFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_Profile">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_RiskFactors">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_RiskFactors_common_TBUser">
+    <End Role="common_Clinicians" Type="Self.common_Clinicians" Multiplicity="1" />
+    <End Role="client_RiskFactors" Type="Self.client_RiskFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_Clinicians">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_RiskFactors">
+        <PropertyRef Name="InterviewByID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_RiskFactors_common_YesNoUnknownRefused">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_RiskFactors" Type="Self.client_RiskFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_RiskFactors">
+        <PropertyRef Name="AgeWhenInfectedLessThanEqual5yrs" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_RiskFactors_common_YesNoUnknownRefused1">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_RiskFactors" Type="Self.client_RiskFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_RiskFactors">
+        <PropertyRef Name="AIDS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_RiskFactors_common_YesNoUnknownRefused10">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_RiskFactors" Type="Self.client_RiskFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_RiskFactors">
+        <PropertyRef Name="PreviousAbnormalChestXray" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_RiskFactors_common_YesNoUnknownRefused11">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_RiskFactors" Type="Self.client_RiskFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_RiskFactors">
+        <PropertyRef Name="SubstanceAbuse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_RiskFactors_common_YesNoUnknownRefused12">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_RiskFactors" Type="Self.client_RiskFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_RiskFactors">
+        <PropertyRef Name="TobaccoSmoker" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_RiskFactors_common_YesNoUnknownRefused13">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_RiskFactors" Type="Self.client_RiskFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_RiskFactors">
+        <PropertyRef Name="TransplantRelatedImmunosuppression" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_RiskFactors_common_YesNoUnknownRefused14">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_RiskFactors" Type="Self.client_RiskFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_RiskFactors">
+        <PropertyRef Name="HIV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_RiskFactors_common_YesNoUnknownRefused15">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_RiskFactors" Type="Self.client_RiskFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_RiskFactors">
+        <PropertyRef Name="ImmunosuppressiveDrugs" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_RiskFactors_common_YesNoUnknownRefused16">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_RiskFactors" Type="Self.client_RiskFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_RiskFactors">
+        <PropertyRef Name="TravelHighIncidenceCountry2yrs" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_RiskFactors_common_YesNoUnknownRefused17">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_RiskFactors" Type="Self.client_RiskFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_RiskFactors">
+        <PropertyRef Name="InactiveDiseaseNotAdequatelyTreated" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_RiskFactors_common_YesNoUnknownRefused18">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_RiskFactors" Type="Self.client_RiskFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_RiskFactors">
+        <PropertyRef Name="LTBIRrefusedDOP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_RiskFactors_common_YesNoUnknownRefused19">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_RiskFactors" Type="Self.client_RiskFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_RiskFactors">
+        <PropertyRef Name="CannabisUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_RiskFactors_common_YesNoUnknownRefused2">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_RiskFactors" Type="Self.client_RiskFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_RiskFactors">
+        <PropertyRef Name="Cancer" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_RiskFactors_common_YesNoUnknownRefused20">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_RiskFactors" Type="Self.client_RiskFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_RiskFactors">
+        <PropertyRef Name="SmokingDeviceUse" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_RiskFactors_common_YesNoUnknownRefused21">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_RiskFactors" Type="Self.client_RiskFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_RiskFactors">
+        <PropertyRef Name="TravelInuitNunaGutPrev2Years" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_RiskFactors_common_YesNoUnknownRefused22">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_RiskFactors" Type="Self.client_RiskFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_RiskFactors">
+        <PropertyRef Name="VisitorsFrHighIncidenceRegion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_RiskFactors_common_YesNoUnknownRefused23">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_RiskFactors" Type="Self.client_RiskFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_RiskFactors">
+        <PropertyRef Name="NotEligibleForTreatment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_RiskFactors_common_YesNoUnknownRefused3">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_RiskFactors" Type="Self.client_RiskFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_RiskFactors">
+        <PropertyRef Name="ContactActiveTB2Yrs" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_RiskFactors_common_YesNoUnknownRefused4">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_RiskFactors" Type="Self.client_RiskFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_RiskFactors">
+        <PropertyRef Name="DiabetesMellitusType1or2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_RiskFactors_common_YesNoUnknownRefused5">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_RiskFactors" Type="Self.client_RiskFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_RiskFactors">
+        <PropertyRef Name="EndStageRenalDisease" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_RiskFactors_common_YesNoUnknownRefused6">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_RiskFactors" Type="Self.client_RiskFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_RiskFactors">
+        <PropertyRef Name="UnderlyingMedicalonditions" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_RiskFactors_common_YesNoUnknownRefused7">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_RiskFactors" Type="Self.client_RiskFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_RiskFactors">
+        <PropertyRef Name="Homeless" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_RiskFactors_common_YesNoUnknownRefused8">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_RiskFactors" Type="Self.client_RiskFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_RiskFactors">
+        <PropertyRef Name="OverCrowdedHousing" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_RiskFactors_common_YesNoUnknownRefused9">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_RiskFactors" Type="Self.client_RiskFactors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_RiskFactors">
+        <PropertyRef Name="CorrectionalFacilityAtTimeDiag" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_SkinTest_client_Profile">
+    <End Role="client_Profile" Type="Self.client_Profile" Multiplicity="0..1" />
+    <End Role="client_SkinTest" Type="Self.client_SkinTest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_Profile">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_SkinTest">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_SkinTest_client_SkinTest">
+    <End Role="common_GeographicLocation" Type="Self.common_GeographicLocation" Multiplicity="0..1" />
+    <End Role="client_SkinTest" Type="Self.client_SkinTest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_GeographicLocation">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_SkinTest">
+        <PropertyRef Name="SiteAdministered" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_SkinTest_common_Clinicians">
+    <End Role="common_Clinicians" Type="Self.common_Clinicians" Multiplicity="0..1" />
+    <End Role="client_SkinTest" Type="Self.client_SkinTest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_Clinicians">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_SkinTest">
+        <PropertyRef Name="ReadByID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_SkinTest_common_GeographicLocation">
+    <End Role="common_GeographicLocation" Type="Self.common_GeographicLocation" Multiplicity="0..1" />
+    <End Role="client_SkinTest" Type="Self.client_SkinTest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_GeographicLocation">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_SkinTest">
+        <PropertyRef Name="SiteRead" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_SkinTest_common_InjectionBodySite">
+    <End Role="common_InjectionBodySite" Type="Self.common_InjectionBodySite" Multiplicity="0..1" />
+    <End Role="client_SkinTest" Type="Self.client_SkinTest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_InjectionBodySite">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_SkinTest">
+        <PropertyRef Name="InjectionSiteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_SkinTest_common_InjectionRoute">
+    <End Role="common_InjectionRoute" Type="Self.common_InjectionRoute" Multiplicity="0..1" />
+    <End Role="client_SkinTest" Type="Self.client_SkinTest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_InjectionRoute">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_SkinTest">
+        <PropertyRef Name="RouteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_SkinTest_common_MedicalLot">
+    <End Role="common_MedicalLot" Type="Self.common_MedicalLot" Multiplicity="0..1" />
+    <End Role="client_SkinTest" Type="Self.client_SkinTest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_MedicalLot">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_SkinTest">
+        <PropertyRef Name="LotID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_SkinTest_common_Product">
+    <End Role="common_Product" Type="Self.common_Product" Multiplicity="0..1" />
+    <End Role="client_SkinTest" Type="Self.client_SkinTest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_Product">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_SkinTest">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_SkinTest_common_SkinTestResult">
+    <End Role="common_SkinTestResult" Type="Self.common_SkinTestResult" Multiplicity="0..1" />
+    <End Role="client_SkinTest" Type="Self.client_SkinTest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_SkinTestResult">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_SkinTest">
+        <PropertyRef Name="ResultID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_SkinTest_common_SkinTestSite">
+    <End Role="common_SkinTestSite" Type="Self.common_SkinTestSite" Multiplicity="0..1" />
+    <End Role="client_SkinTest" Type="Self.client_SkinTest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_SkinTestSite">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_SkinTest">
+        <PropertyRef Name="SiteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_SkinTest_common_TBUser">
+    <End Role="common_Clinicians" Type="Self.common_Clinicians" Multiplicity="0..1" />
+    <End Role="client_SkinTest" Type="Self.client_SkinTest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_Clinicians">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_SkinTest">
+        <PropertyRef Name="AdministeredByID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_SkinTest_common_TBUser1">
+    <End Role="common_TBUser" Type="Self.common_TBUser" Multiplicity="0..1" />
+    <End Role="client_SkinTest" Type="Self.client_SkinTest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_TBUser">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="client_SkinTest">
+        <PropertyRef Name="ReadBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_SkinTest_common_TBUser2">
+    <End Role="common_TBUser" Type="Self.common_TBUser" Multiplicity="0..1" />
+    <End Role="client_SkinTest" Type="Self.client_SkinTest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_TBUser">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="client_SkinTest">
+        <PropertyRef Name="PlacedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_SkinTest_common_TestReason">
+    <End Role="common_TestReason" Type="Self.common_TestReason" Multiplicity="0..1" />
+    <End Role="client_SkinTest" Type="Self.client_SkinTest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_TestReason">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_SkinTest">
+        <PropertyRef Name="TestReasonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Sputum_client_Profile">
+    <End Role="client_Profile" Type="Self.client_Profile" Multiplicity="0..1" />
+    <End Role="client_Sputum" Type="Self.client_Sputum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_Profile">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Sputum">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Sputum_client_Sputum">
+    <End Role="common_SputumSmearResult" Type="Self.common_SputumSmearResult" Multiplicity="0..1" />
+    <End Role="client_Sputum" Type="Self.client_Sputum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_SputumSmearResult">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Sputum">
+        <PropertyRef Name="SmearResultID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Sputum_common_SputumCultureResult">
+    <End Role="common_SputumCultureResult" Type="Self.common_SputumCultureResult" Multiplicity="0..1" />
+    <End Role="client_Sputum" Type="Self.client_Sputum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_SputumCultureResult">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Sputum">
+        <PropertyRef Name="CultureResultID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Sputum_common_SputumSmeanResult">
+    <End Role="common_SputumSmearResult" Type="Self.common_SputumSmearResult" Multiplicity="0..1" />
+    <End Role="client_Sputum" Type="Self.client_Sputum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_SputumSmearResult">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Sputum">
+        <PropertyRef Name="SmearResultID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Sputum_common_TBUser">
+    <End Role="common_SputumRequestBy" Type="Self.common_SputumRequestBy" Multiplicity="0..1" />
+    <End Role="client_Sputum" Type="Self.client_Sputum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_SputumRequestBy">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Sputum">
+        <PropertyRef Name="RequestedByID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Sputum_common_TBUser1">
+    <End Role="common_Clinicians" Type="Self.common_Clinicians" Multiplicity="0..1" />
+    <End Role="client_Sputum" Type="Self.client_Sputum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_Clinicians">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Sputum">
+        <PropertyRef Name="CompletedByID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Sputum_common_TestReason">
+    <End Role="common_TestReason" Type="Self.common_TestReason" Multiplicity="0..1" />
+    <End Role="client_Sputum" Type="Self.client_Sputum" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_TestReason">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Sputum">
+        <PropertyRef Name="ReasonForTestingID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_SputumResistence_client_Sputum">
+    <End Role="client_Sputum" Type="Self.client_Sputum" Multiplicity="1" />
+    <End Role="client_SputumResistence" Type="Self.client_SputumResistence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_Sputum">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_SputumResistence">
+        <PropertyRef Name="SputumID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_SputumResistence_common_Antibiotic">
+    <End Role="common_Antibiotic" Type="Self.common_Antibiotic" Multiplicity="1" />
+    <End Role="client_SputumResistence" Type="Self.client_SputumResistence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_Antibiotic">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_SputumResistence">
+        <PropertyRef Name="AntibioticID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Symptoms_client_Profile">
+    <End Role="client_Profile" Type="Self.client_Profile" Multiplicity="1" />
+    <End Role="client_Symptoms" Type="Self.client_Symptoms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_Profile">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Symptoms">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Symptoms_common_CompletionMethod">
+    <End Role="common_CompletionMethod" Type="Self.common_CompletionMethod" Multiplicity="0..1" />
+    <End Role="client_Symptoms" Type="Self.client_Symptoms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_CompletionMethod">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Symptoms">
+        <PropertyRef Name="CompletionMethod" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Symptoms_common_TBUser">
+    <End Role="common_Clinicians" Type="Self.common_Clinicians" Multiplicity="1" />
+    <End Role="client_Symptoms" Type="Self.client_Symptoms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_Clinicians">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Symptoms">
+        <PropertyRef Name="InterviewByID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Symptoms_common_YesNoUnknownRefused">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_Symptoms" Type="Self.client_Symptoms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Symptoms">
+        <PropertyRef Name="CoughGreat3Weeks" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Symptoms_common_YesNoUnknownRefused1">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_Symptoms" Type="Self.client_Symptoms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Symptoms">
+        <PropertyRef Name="ShortnessBreath" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Symptoms_common_YesNoUnknownRefused2">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_Symptoms" Type="Self.client_Symptoms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Symptoms">
+        <PropertyRef Name="Fever" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Symptoms_common_YesNoUnknownRefused3">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_Symptoms" Type="Self.client_Symptoms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Symptoms">
+        <PropertyRef Name="NightSweats" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Symptoms_common_YesNoUnknownRefused4">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_Symptoms" Type="Self.client_Symptoms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Symptoms">
+        <PropertyRef Name="Hemoptysis" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Symptoms_common_YesNoUnknownRefused5">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_Symptoms" Type="Self.client_Symptoms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Symptoms">
+        <PropertyRef Name="WeightLoss" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Symptoms_common_YesNoUnknownRefused6">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_Symptoms" Type="Self.client_Symptoms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Symptoms">
+        <PropertyRef Name="LossAppetite" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Symptoms_common_YesNoUnknownRefused7">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_Symptoms" Type="Self.client_Symptoms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Symptoms">
+        <PropertyRef Name="Fatigue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Symptoms_common_YesNoUnknownRefused8">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_Symptoms" Type="Self.client_Symptoms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Symptoms">
+        <PropertyRef Name="Chestpain" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Symptoms_common_YesNoUnknownRefused9">
+    <End Role="common_YesNoUnknownRefused" Type="Self.common_YesNoUnknownRefused" Multiplicity="0..1" />
+    <End Role="client_Symptoms" Type="Self.client_Symptoms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_YesNoUnknownRefused">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Symptoms">
+        <PropertyRef Name="FailureToThrive" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Xray_client_Profile">
+    <End Role="client_Profile" Type="Self.client_Profile" Multiplicity="0..1" />
+    <End Role="client_Xray" Type="Self.client_Xray" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_Profile">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Xray">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Xray_common_TestReason">
+    <End Role="common_TestReason" Type="Self.common_TestReason" Multiplicity="0..1" />
+    <End Role="client_Xray" Type="Self.client_Xray" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_TestReason">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Xray">
+        <PropertyRef Name="ReasonForTestingID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Xray_common_XrayArea">
+    <End Role="common_XrayArea" Type="Self.common_XrayArea" Multiplicity="0..1" />
+    <End Role="client_Xray" Type="Self.client_Xray" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_XrayArea">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Xray">
+        <PropertyRef Name="AreaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Xray_common_XrayIndication">
+    <End Role="common_XrayIndication" Type="Self.common_XrayIndication" Multiplicity="0..1" />
+    <End Role="client_Xray" Type="Self.client_Xray" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_XrayIndication">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Xray">
+        <PropertyRef Name="IndicationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Xray_common_XrayResult">
+    <End Role="common_XrayResult" Type="Self.common_XrayResult" Multiplicity="0..1" />
+    <End Role="client_Xray" Type="Self.client_Xray" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_XrayResult">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Xray">
+        <PropertyRef Name="ResultID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_client_Xray_common_XrayView">
+    <End Role="common_XrayView" Type="Self.common_XrayView" Multiplicity="0..1" />
+    <End Role="client_Xray" Type="Self.client_Xray" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_XrayView">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Xray">
+        <PropertyRef Name="ViewID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_clientDemographic_commonGender">
+    <End Role="common_Gender" Type="Self.common_Gender" Multiplicity="0..1" />
+    <End Role="client_Demographic" Type="Self.client_Demographic" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_Gender">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Demographic">
+        <PropertyRef Name="GenderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_clientDemographic_commonProvince">
+    <End Role="common_Province" Type="Self.common_Province" Multiplicity="0..1" />
+    <End Role="client_Demographic" Type="Self.client_Demographic" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_Province">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_Demographic">
+        <PropertyRef Name="ProvinceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_clientDemographicEthnicity_clientDemographic">
+    <End Role="client_Demographic" Type="Self.client_Demographic" Multiplicity="1" />
+    <End Role="client_DemographicEthnicity" Type="Self.client_DemographicEthnicity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_Demographic">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_DemographicEthnicity">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_clientDemographicEthnicity_commonEthnicity">
+    <End Role="common_Ethnicity" Type="Self.common_Ethnicity" Multiplicity="1" />
+    <End Role="client_DemographicEthnicity" Type="Self.client_DemographicEthnicity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_Ethnicity">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="client_DemographicEthnicity">
+        <PropertyRef Name="EthnicityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_clinic_TBClinic_common_TBUser">
+    <End Role="common_TBUser" Type="Self.common_TBUser" Multiplicity="0..1" />
+    <End Role="clinic_TBClinic" Type="Self.clinic_TBClinic" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_TBUser">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="clinic_TBClinic">
+        <PropertyRef Name="PhysicianID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_clinic_TBClinicAppointments_client_Profile">
+    <End Role="client_Profile" Type="Self.client_Profile" Multiplicity="0..1" />
+    <End Role="clinic_TBClinicAppointments" Type="Self.clinic_TBClinicAppointments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client_Profile">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="clinic_TBClinicAppointments">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_clinic_TBClinicAppointments_clinic_TBClinic">
+    <End Role="clinic_TBClinic" Type="Self.clinic_TBClinic" Multiplicity="0..1" />
+    <End Role="clinic_TBClinicAppointments" Type="Self.clinic_TBClinicAppointments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clinic_TBClinic">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="clinic_TBClinicAppointments">
+        <PropertyRef Name="ClinicID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_clinic_TBClinicAppointments_common_ClinicReason">
+    <End Role="common_ClinicReason" Type="Self.common_ClinicReason" Multiplicity="0..1" />
+    <End Role="clinic_TBClinicAppointments" Type="Self.clinic_TBClinicAppointments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_ClinicReason">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="clinic_TBClinicAppointments">
+        <PropertyRef Name="Reason" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_clinic_TBClinicAppointments_common_Language">
+    <End Role="common_Language" Type="Self.common_Language" Multiplicity="0..1" />
+    <End Role="clinic_TBClinicAppointments" Type="Self.clinic_TBClinicAppointments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_Language">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="clinic_TBClinicAppointments">
+        <PropertyRef Name="Language" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_clinic_TBClinicAppointments_common_TBUser">
+    <End Role="common_TBUser" Type="Self.common_TBUser" Multiplicity="0..1" />
+    <End Role="clinic_TBClinicAppointments" Type="Self.clinic_TBClinicAppointments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_TBUser">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="clinic_TBClinicAppointments">
+        <PropertyRef Name="PhysicianID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_clinic_TBClinicAppointments_common_TBUser1">
+    <End Role="common_TBUser" Type="Self.common_TBUser" Multiplicity="0..1" />
+    <End Role="clinic_TBClinicAppointments" Type="Self.clinic_TBClinicAppointments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_TBUser">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="clinic_TBClinicAppointments">
+        <PropertyRef Name="CompletedByID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_common_TBOutcome_common_Status">
+    <End Role="common_Status" Type="Self.common_Status" Multiplicity="0..1" />
+    <End Role="common_TBOutcome" Type="Self.common_TBOutcome" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_Status">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="common_TBOutcome">
+        <PropertyRef Name="AssociatedStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_common_TBUser_common_Clinicians">
+    <End Role="common_Clinicians" Type="Self.common_Clinicians" Multiplicity="0..1" />
+    <End Role="common_TBUser" Type="Self.common_TBUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_Clinicians">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="common_TBUser">
+        <PropertyRef Name="ClinicianID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_common_TestReason_common_TestReasonType">
+    <End Role="common_TestReasonType" Type="Self.common_TestReasonType" Multiplicity="1" />
+    <End Role="common_TestReason" Type="Self.common_TestReason" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="common_TestReasonType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="common_TestReason">
+        <PropertyRef Name="TypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TBTracingModelStoreContainer">
+    <EntitySet Name="Audit" EntityType="Self.Audit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AuditType" EntityType="Self.AuditType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_BCG" EntityType="Self.client_BCG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_Bloodwork" EntityType="Self.client_Bloodwork" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_Communication" EntityType="Self.client_Communication" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_CommunicationBulletin" EntityType="Self.client_CommunicationBulletin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_ContactNote" EntityType="Self.client_ContactNote" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_ContactTracing" EntityType="Self.client_ContactTracing" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_Demographic" EntityType="Self.client_Demographic" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_DemographicEthnicity" EntityType="Self.client_DemographicEthnicity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_DiagnosticImage" EntityType="Self.client_DiagnosticImage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_Document" EntityType="Self.client_Document" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_Followup" EntityType="Self.client_Followup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_IGRA" EntityType="Self.client_IGRA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_Investigation" EntityType="Self.client_Investigation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_Notes" EntityType="Self.client_Notes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_Outcome" EntityType="Self.client_Outcome" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_OutcomeMedications" EntityType="Self.client_OutcomeMedications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_OutcomeTreatment" EntityType="Self.client_OutcomeTreatment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_OutcomeTreatmentDOT" EntityType="Self.client_OutcomeTreatmentDOT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_OutcomeTreatmentDOTSymptoms" EntityType="Self.client_OutcomeTreatmentDOTSymptoms" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_OutcomeTreatmentRegimen" EntityType="Self.client_OutcomeTreatmentRegimen" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_Profile" EntityType="Self.client_Profile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_RiskFactors" EntityType="Self.client_RiskFactors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_SkinTest" EntityType="Self.client_SkinTest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_Sputum" EntityType="Self.client_Sputum" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_SputumResistence" EntityType="Self.client_SputumResistence" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_Symptoms" EntityType="Self.client_Symptoms" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="client_Xray" EntityType="Self.client_Xray" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="clinic_TBClinic" EntityType="Self.clinic_TBClinic" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="clinic_TBClinicAppointments" EntityType="Self.clinic_TBClinicAppointments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_Antibiotic" EntityType="Self.common_Antibiotic" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_BloodworkCollectionMethod" EntityType="Self.common_BloodworkCollectionMethod" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_Clinicians" EntityType="Self.common_Clinicians" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_ClinicReason" EntityType="Self.common_ClinicReason" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_CommunicationMethod" EntityType="Self.common_CommunicationMethod" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_CommunicationReason" EntityType="Self.common_CommunicationReason" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_CommunicationResult" EntityType="Self.common_CommunicationResult" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_Community" EntityType="Self.common_Community" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_CompletionMethod" EntityType="Self.common_CompletionMethod" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_ContactPriority" EntityType="Self.common_ContactPriority" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_ContactReason" EntityType="Self.common_ContactReason" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_ContactRelationship" EntityType="Self.common_ContactRelationship" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_ContactType" EntityType="Self.common_ContactType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_DocumentType" EntityType="Self.common_DocumentType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_Ethnicity" EntityType="Self.common_Ethnicity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_Followup" EntityType="Self.common_Followup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_Gender" EntityType="Self.common_Gender" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_GeographicLocation" EntityType="Self.common_GeographicLocation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_HivStatus" EntityType="Self.common_HivStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_IGRAResult" EntityType="Self.common_IGRAResult" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_InjectionBodySite" EntityType="Self.common_InjectionBodySite" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_InjectionRoute" EntityType="Self.common_InjectionRoute" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_InvestigationType" EntityType="Self.common_InvestigationType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_Language" EntityType="Self.common_Language" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_MedicalLot" EntityType="Self.common_MedicalLot" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_Medication" EntityType="Self.common_Medication" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_MedicationFrequency" EntityType="Self.common_MedicationFrequency" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_MedicationStatus" EntityType="Self.common_MedicationStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_PregnancyStatus" EntityType="Self.common_PregnancyStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_Product" EntityType="Self.common_Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_Province" EntityType="Self.common_Province" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_SkinTestResult" EntityType="Self.common_SkinTestResult" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_SkinTestSite" EntityType="Self.common_SkinTestSite" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_SputumCultureResult" EntityType="Self.common_SputumCultureResult" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_SputumRequestBy" EntityType="Self.common_SputumRequestBy" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_SputumSmearResult" EntityType="Self.common_SputumSmearResult" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_Status" EntityType="Self.common_Status" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_Symptoms" EntityType="Self.common_Symptoms" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_TBOutcome" EntityType="Self.common_TBOutcome" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_TBTypes" EntityType="Self.common_TBTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_TBUser" EntityType="Self.common_TBUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_TestReason" EntityType="Self.common_TestReason" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_TestReasonType" EntityType="Self.common_TestReasonType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_TreatmentAdherence" EntityType="Self.common_TreatmentAdherence" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_TreatmentMode" EntityType="Self.common_TreatmentMode" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_XrayArea" EntityType="Self.common_XrayArea" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_XrayIndication" EntityType="Self.common_XrayIndication" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_XrayResult" EntityType="Self.common_XrayResult" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_XrayView" EntityType="Self.common_XrayView" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_YesNoNotdoneUnknown" EntityType="Self.common_YesNoNotdoneUnknown" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_YesNoUnknown" EntityType="Self.common_YesNoUnknown" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="common_YesNoUnknownRefused" EntityType="Self.common_YesNoUnknownRefused" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="vwClientList" EntityType="Self.vwClientList" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vwClientList].[ID] AS [ID], 
+    [vwClientList].[FirstName] AS [FirstName], 
+    [vwClientList].[LastName] AS [LastName], 
+    [vwClientList].[ClientID] AS [ClientID], 
+    [vwClientList].[CaseNumber] AS [CaseNumber], 
+    [vwClientList].[OtherIdentifier] AS [OtherIdentifier], 
+    [vwClientList].[HealthCareNumber] AS [HealthCareNumber], 
+    [vwClientList].[ProfileID] AS [ProfileID], 
+    [vwClientList].[DateofBirth] AS [DateofBirth], 
+    [vwClientList].[strDOB] AS [strDOB], 
+    [vwClientList].[StatusID] AS [StatusID], 
+    [vwClientList].[Status] AS [Status]
+    FROM [dbo].[vwClientList] AS [vwClientList]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwClients" EntityType="Self.vwClients" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vwClients].[ID] AS [ID], 
+    [vwClients].[FirstName] AS [FirstName], 
+    [vwClients].[LastName] AS [LastName], 
+    [vwClients].[ClientID] AS [ClientID], 
+    [vwClients].[HealthCareNumber] AS [HealthCareNumber], 
+    [vwClients].[ProfileID] AS [ProfileID], 
+    [vwClients].[DateofBirth] AS [DateofBirth], 
+    [vwClients].[Outcome] AS [Outcome], 
+    [vwClients].[TBOutcome] AS [TBOutcome], 
+    [vwClients].[strDOB] AS [strDOB], 
+    [vwClients].[StatusID] AS [StatusID], 
+    [vwClients].[Status] AS [Status]
+    FROM [dbo].[vwClients] AS [vwClients]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwContactTracingConsolidated" EntityType="Self.vwContactTracingConsolidated" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vwContactTracingConsolidated].[SourceFirstName] AS [SourceFirstName], 
+    [vwContactTracingConsolidated].[SourceLastName] AS [SourceLastName], 
+    [vwContactTracingConsolidated].[SourceClientID] AS [SourceClientID], 
+    [vwContactTracingConsolidated].[IdentifiedFirstName] AS [IdentifiedFirstName], 
+    [vwContactTracingConsolidated].[IdentifiedLastName] AS [IdentifiedLastName], 
+    [vwContactTracingConsolidated].[IdentifiedClientID] AS [IdentifiedClientID], 
+    [vwContactTracingConsolidated].[ContactType] AS [ContactType], 
+    [vwContactTracingConsolidated].[ContactTypeID] AS [ContactTypeID], 
+    [vwContactTracingConsolidated].[Priority] AS [Priority], 
+    [vwContactTracingConsolidated].[PriorityID] AS [PriorityID], 
+    [vwContactTracingConsolidated].[RelationshipText] AS [RelationshipText], 
+    [vwContactTracingConsolidated].[RelationshipID] AS [RelationshipID], 
+    [vwContactTracingConsolidated].[Community] AS [Community], 
+    [vwContactTracingConsolidated].[CommunityID] AS [CommunityID], 
+    [vwContactTracingConsolidated].[ID] AS [ID], 
+    [vwContactTracingConsolidated].[FromDate] AS [FromDate], 
+    [vwContactTracingConsolidated].[ToDate] AS [ToDate], 
+    [vwContactTracingConsolidated].[ContactReason] AS [ContactReason]
+    FROM [dbo].[vwContactTracingConsolidated] AS [vwContactTracingConsolidated]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Audit_AuditType" Association="Self.FK_Audit_AuditType">
+      <End Role="AuditType" EntitySet="AuditType" />
+      <End Role="Audit" EntitySet="Audit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Audit_client_Profile" Association="Self.FK_Audit_client_Profile">
+      <End Role="client_Profile" EntitySet="client_Profile" />
+      <End Role="Audit" EntitySet="Audit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_BCG_client_Profile" Association="Self.FK_client_BCG_client_Profile">
+      <End Role="client_Profile" EntitySet="client_Profile" />
+      <End Role="client_BCG" EntitySet="client_BCG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_BCG_common_YesNoUnknown" Association="Self.FK_client_BCG_common_YesNoUnknown">
+      <End Role="common_YesNoUnknown" EntitySet="common_YesNoUnknown" />
+      <End Role="client_BCG" EntitySet="client_BCG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Bloodwork_client_Profile" Association="Self.FK_client_Bloodwork_client_Profile">
+      <End Role="client_Profile" EntitySet="client_Profile" />
+      <End Role="client_Bloodwork" EntitySet="client_Bloodwork" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Bloodwork_common_BloodworkCollectionMethod" Association="Self.FK_client_Bloodwork_common_BloodworkCollectionMethod">
+      <End Role="common_BloodworkCollectionMethod" EntitySet="common_BloodworkCollectionMethod" />
+      <End Role="client_Bloodwork" EntitySet="client_Bloodwork" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Bloodwork_common_TBUser" Association="Self.FK_client_Bloodwork_common_TBUser">
+      <End Role="common_Clinicians" EntitySet="common_Clinicians" />
+      <End Role="client_Bloodwork" EntitySet="client_Bloodwork" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Bloodwork_common_TestReason" Association="Self.FK_client_Bloodwork_common_TestReason">
+      <End Role="common_TestReason" EntitySet="common_TestReason" />
+      <End Role="client_Bloodwork" EntitySet="client_Bloodwork" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Communication_client_Profile" Association="Self.FK_client_Communication_client_Profile">
+      <End Role="client_Profile" EntitySet="client_Profile" />
+      <End Role="client_Communication" EntitySet="client_Communication" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Communication_common_CommunicationMethod" Association="Self.FK_client_Communication_common_CommunicationMethod">
+      <End Role="common_CommunicationMethod" EntitySet="common_CommunicationMethod" />
+      <End Role="client_Communication" EntitySet="client_Communication" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Communication_common_CommunicationReason" Association="Self.FK_client_Communication_common_CommunicationReason">
+      <End Role="common_CommunicationReason" EntitySet="common_CommunicationReason" />
+      <End Role="client_Communication" EntitySet="client_Communication" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Communication_common_CommunicationResult" Association="Self.FK_client_Communication_common_CommunicationResult">
+      <End Role="common_CommunicationResult" EntitySet="common_CommunicationResult" />
+      <End Role="client_Communication" EntitySet="client_Communication" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Communication_common_TBUser" Association="Self.FK_client_Communication_common_TBUser">
+      <End Role="common_TBUser" EntitySet="common_TBUser" />
+      <End Role="client_Communication" EntitySet="client_Communication" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_CommunicationBulletin_client_Profile" Association="Self.FK_client_CommunicationBulletin_client_Profile">
+      <End Role="client_Profile" EntitySet="client_Profile" />
+      <End Role="client_CommunicationBulletin" EntitySet="client_CommunicationBulletin" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_ContactNote_client_Profile" Association="Self.FK_client_ContactNote_client_Profile">
+      <End Role="client_Profile" EntitySet="client_Profile" />
+      <End Role="client_ContactNote" EntitySet="client_ContactNote" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_ContactTracing_client_Outcome" Association="Self.FK_client_ContactTracing_client_Outcome">
+      <End Role="client_Outcome" EntitySet="client_Outcome" />
+      <End Role="client_ContactTracing" EntitySet="client_ContactTracing" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_ContactTracing_client_Profile" Association="Self.FK_client_ContactTracing_client_Profile">
+      <End Role="client_Profile" EntitySet="client_Profile" />
+      <End Role="client_ContactTracing" EntitySet="client_ContactTracing" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_ContactTracing_client_Profile1" Association="Self.FK_client_ContactTracing_client_Profile1">
+      <End Role="client_Profile" EntitySet="client_Profile" />
+      <End Role="client_ContactTracing" EntitySet="client_ContactTracing" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_ContactTracing_common_Community" Association="Self.FK_client_ContactTracing_common_Community">
+      <End Role="common_Community" EntitySet="common_Community" />
+      <End Role="client_ContactTracing" EntitySet="client_ContactTracing" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_ContactTracing_common_ContactPriority" Association="Self.FK_client_ContactTracing_common_ContactPriority">
+      <End Role="common_ContactPriority" EntitySet="common_ContactPriority" />
+      <End Role="client_ContactTracing" EntitySet="client_ContactTracing" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_ContactTracing_common_ContactReason" Association="Self.FK_client_ContactTracing_common_ContactReason">
+      <End Role="common_ContactReason" EntitySet="common_ContactReason" />
+      <End Role="client_ContactTracing" EntitySet="client_ContactTracing" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_ContactTracing_common_ContactRelationship" Association="Self.FK_client_ContactTracing_common_ContactRelationship">
+      <End Role="common_ContactRelationship" EntitySet="common_ContactRelationship" />
+      <End Role="client_ContactTracing" EntitySet="client_ContactTracing" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_ContactTracing_common_ContactType" Association="Self.FK_client_ContactTracing_common_ContactType">
+      <End Role="common_ContactType" EntitySet="common_ContactType" />
+      <End Role="client_ContactTracing" EntitySet="client_ContactTracing" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Demographic_client_Profile" Association="Self.FK_client_Demographic_client_Profile">
+      <End Role="client_Profile" EntitySet="client_Profile" />
+      <End Role="client_Demographic" EntitySet="client_Demographic" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Demographic_common_Community" Association="Self.FK_client_Demographic_common_Community">
+      <End Role="common_Community" EntitySet="common_Community" />
+      <End Role="client_Demographic" EntitySet="client_Demographic" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Demographic_common_PregnancyStatus" Association="Self.FK_client_Demographic_common_PregnancyStatus">
+      <End Role="common_PregnancyStatus" EntitySet="common_PregnancyStatus" />
+      <End Role="client_Demographic" EntitySet="client_Demographic" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_DiagnosticImage_client_Profile" Association="Self.FK_client_DiagnosticImage_client_Profile">
+      <End Role="client_Profile" EntitySet="client_Profile" />
+      <End Role="client_DiagnosticImage" EntitySet="client_DiagnosticImage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_DiagnosticImage_common_TestReason" Association="Self.FK_client_DiagnosticImage_common_TestReason">
+      <End Role="common_TestReason" EntitySet="common_TestReason" />
+      <End Role="client_DiagnosticImage" EntitySet="client_DiagnosticImage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_DiagnosticImage_common_XrayArea" Association="Self.FK_client_DiagnosticImage_common_XrayArea">
+      <End Role="common_XrayArea" EntitySet="common_XrayArea" />
+      <End Role="client_DiagnosticImage" EntitySet="client_DiagnosticImage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_DiagnosticImage_common_XrayIndication" Association="Self.FK_client_DiagnosticImage_common_XrayIndication">
+      <End Role="common_XrayIndication" EntitySet="common_XrayIndication" />
+      <End Role="client_DiagnosticImage" EntitySet="client_DiagnosticImage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_DiagnosticImage_common_XrayResult" Association="Self.FK_client_DiagnosticImage_common_XrayResult">
+      <End Role="common_XrayResult" EntitySet="common_XrayResult" />
+      <End Role="client_DiagnosticImage" EntitySet="client_DiagnosticImage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_DiagnosticImage_common_XrayView" Association="Self.FK_client_DiagnosticImage_common_XrayView">
+      <End Role="common_XrayView" EntitySet="common_XrayView" />
+      <End Role="client_DiagnosticImage" EntitySet="client_DiagnosticImage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Document_client_Profile" Association="Self.FK_client_Document_client_Profile">
+      <End Role="client_Profile" EntitySet="client_Profile" />
+      <End Role="client_Document" EntitySet="client_Document" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Document_common_DocumentType" Association="Self.FK_client_Document_common_DocumentType">
+      <End Role="common_DocumentType" EntitySet="common_DocumentType" />
+      <End Role="client_Document" EntitySet="client_Document" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Followup_client_Profile" Association="Self.FK_client_Followup_client_Profile">
+      <End Role="client_Profile" EntitySet="client_Profile" />
+      <End Role="client_Followup" EntitySet="client_Followup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Followup_common_Followup" Association="Self.FK_client_Followup_common_Followup">
+      <End Role="common_Followup" EntitySet="common_Followup" />
+      <End Role="client_Followup" EntitySet="client_Followup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Followup_common_TBUser" Association="Self.FK_client_Followup_common_TBUser">
+      <End Role="common_TBUser" EntitySet="common_TBUser" />
+      <End Role="client_Followup" EntitySet="client_Followup" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_IGRA_client_Profile" Association="Self.FK_client_IGRA_client_Profile">
+      <End Role="client_Profile" EntitySet="client_Profile" />
+      <End Role="client_IGRA" EntitySet="client_IGRA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_IGRA_common_IGRAResult" Association="Self.FK_client_IGRA_common_IGRAResult">
+      <End Role="common_IGRAResult" EntitySet="common_IGRAResult" />
+      <End Role="client_IGRA" EntitySet="client_IGRA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_IGRA_common_TBUser" Association="Self.FK_client_IGRA_common_TBUser">
+      <End Role="common_TBUser" EntitySet="common_TBUser" />
+      <End Role="client_IGRA" EntitySet="client_IGRA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_IGRA_common_TestReason" Association="Self.FK_client_IGRA_common_TestReason">
+      <End Role="common_TestReason" EntitySet="common_TestReason" />
+      <End Role="client_IGRA" EntitySet="client_IGRA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Investigation_client_Profile" Association="Self.FK_client_Investigation_client_Profile">
+      <End Role="client_Profile" EntitySet="client_Profile" />
+      <End Role="client_Investigation" EntitySet="client_Investigation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Investigation_common_InvestigationType" Association="Self.FK_client_Investigation_common_InvestigationType">
+      <End Role="common_InvestigationType" EntitySet="common_InvestigationType" />
+      <End Role="client_Investigation" EntitySet="client_Investigation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Investigation_common_TBUser" Association="Self.FK_client_Investigation_common_TBUser">
+      <End Role="common_TBUser" EntitySet="common_TBUser" />
+      <End Role="client_Investigation" EntitySet="client_Investigation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Investigation_common_YesNoNotdoneUnknown" Association="Self.FK_client_Investigation_common_YesNoNotdoneUnknown">
+      <End Role="common_YesNoNotdoneUnknown" EntitySet="common_YesNoNotdoneUnknown" />
+      <End Role="client_Investigation" EntitySet="client_Investigation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Investigation_common_YesNoNotdoneUnknown1" Association="Self.FK_client_Investigation_common_YesNoNotdoneUnknown1">
+      <End Role="common_YesNoNotdoneUnknown" EntitySet="common_YesNoNotdoneUnknown" />
+      <End Role="client_Investigation" EntitySet="client_Investigation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Investigation_common_YesNoNotdoneUnknown2" Association="Self.FK_client_Investigation_common_YesNoNotdoneUnknown2">
+      <End Role="common_YesNoNotdoneUnknown" EntitySet="common_YesNoNotdoneUnknown" />
+      <End Role="client_Investigation" EntitySet="client_Investigation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Investigation_common_YesNoNotdoneUnknown3" Association="Self.FK_client_Investigation_common_YesNoNotdoneUnknown3">
+      <End Role="common_YesNoNotdoneUnknown" EntitySet="common_YesNoNotdoneUnknown" />
+      <End Role="client_Investigation" EntitySet="client_Investigation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Investigation_common_YesNoNotdoneUnknown4" Association="Self.FK_client_Investigation_common_YesNoNotdoneUnknown4">
+      <End Role="common_YesNoNotdoneUnknown" EntitySet="common_YesNoNotdoneUnknown" />
+      <End Role="client_Investigation" EntitySet="client_Investigation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Investigation_common_YesNoNotdoneUnknown5" Association="Self.FK_client_Investigation_common_YesNoNotdoneUnknown5">
+      <End Role="common_YesNoNotdoneUnknown" EntitySet="common_YesNoNotdoneUnknown" />
+      <End Role="client_Investigation" EntitySet="client_Investigation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Notes_client_Profile" Association="Self.FK_client_Notes_client_Profile">
+      <End Role="client_Profile" EntitySet="client_Profile" />
+      <End Role="client_Notes" EntitySet="client_Notes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Outcome_client_OutcomeTreatment" Association="Self.FK_client_Outcome_client_OutcomeTreatment">
+      <End Role="client_OutcomeTreatment" EntitySet="client_OutcomeTreatment" />
+      <End Role="client_Outcome" EntitySet="client_Outcome" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Outcome_client_Profile" Association="Self.FK_client_Outcome_client_Profile">
+      <End Role="client_Profile" EntitySet="client_Profile" />
+      <End Role="client_Outcome" EntitySet="client_Outcome" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Outcome_common_TBOutcome" Association="Self.FK_client_Outcome_common_TBOutcome">
+      <End Role="common_TBOutcome" EntitySet="common_TBOutcome" />
+      <End Role="client_Outcome" EntitySet="client_Outcome" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Outcome_common_TBTypes" Association="Self.FK_client_Outcome_common_TBTypes">
+      <End Role="common_TBTypes" EntitySet="common_TBTypes" />
+      <End Role="client_Outcome" EntitySet="client_Outcome" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Outcome_common_TBUser" Association="Self.FK_client_Outcome_common_TBUser">
+      <End Role="common_Clinicians" EntitySet="common_Clinicians" />
+      <End Role="client_Outcome" EntitySet="client_Outcome" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_OutcomeMedications_client_OutcomeTreatmentDOT" Association="Self.FK_client_OutcomeMedications_client_OutcomeTreatmentDOT">
+      <End Role="client_OutcomeTreatmentDOT" EntitySet="client_OutcomeTreatmentDOT" />
+      <End Role="client_OutcomeMedications" EntitySet="client_OutcomeMedications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_OutcomeMedications_common_Medication" Association="Self.FK_client_OutcomeMedications_common_Medication">
+      <End Role="common_Medication" EntitySet="common_Medication" />
+      <End Role="client_OutcomeMedications" EntitySet="client_OutcomeMedications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_OutcomeTreatment_common_TBOutcome" Association="Self.FK_client_OutcomeTreatment_common_TBOutcome">
+      <End Role="common_TBOutcome" EntitySet="common_TBOutcome" />
+      <End Role="client_OutcomeTreatment" EntitySet="client_OutcomeTreatment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_OutcomeTreatment_common_TreatmentAdherence" Association="Self.FK_client_OutcomeTreatment_common_TreatmentAdherence">
+      <End Role="common_TreatmentAdherence" EntitySet="common_TreatmentAdherence" />
+      <End Role="client_OutcomeTreatment" EntitySet="client_OutcomeTreatment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_OutcomeTreatment_common_TreatmentMode" Association="Self.FK_client_OutcomeTreatment_common_TreatmentMode">
+      <End Role="common_TreatmentMode" EntitySet="common_TreatmentMode" />
+      <End Role="client_OutcomeTreatment" EntitySet="client_OutcomeTreatment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_OutcomeTreatmentDOT_client_OutcomeTreatment" Association="Self.FK_client_OutcomeTreatmentDOT_client_OutcomeTreatment">
+      <End Role="client_OutcomeTreatment" EntitySet="client_OutcomeTreatment" />
+      <End Role="client_OutcomeTreatmentDOT" EntitySet="client_OutcomeTreatmentDOT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_OutcomeTreatmentDOT_common_Clinicians" Association="Self.FK_client_OutcomeTreatmentDOT_common_Clinicians">
+      <End Role="common_Clinicians" EntitySet="common_Clinicians" />
+      <End Role="client_OutcomeTreatmentDOT" EntitySet="client_OutcomeTreatmentDOT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_OutcomeTreatmentDOTSymptoms_client_OutcomeTreatmentDOT" Association="Self.FK_client_OutcomeTreatmentDOTSymptoms_client_OutcomeTreatmentDOT">
+      <End Role="client_OutcomeTreatmentDOT" EntitySet="client_OutcomeTreatmentDOT" />
+      <End Role="client_OutcomeTreatmentDOTSymptoms" EntitySet="client_OutcomeTreatmentDOTSymptoms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_OutcomeTreatmentDOTSymptoms_common_Symptoms" Association="Self.FK_client_OutcomeTreatmentDOTSymptoms_common_Symptoms">
+      <End Role="common_Symptoms" EntitySet="common_Symptoms" />
+      <End Role="client_OutcomeTreatmentDOTSymptoms" EntitySet="client_OutcomeTreatmentDOTSymptoms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_OutcomeTreatmentRegimen_client_Outcome" Association="Self.FK_client_OutcomeTreatmentRegimen_client_Outcome">
+      <End Role="client_Outcome" EntitySet="client_Outcome" />
+      <End Role="client_OutcomeTreatmentRegimen" EntitySet="client_OutcomeTreatmentRegimen" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_OutcomeTreatmentRegimen_common_Medication" Association="Self.FK_client_OutcomeTreatmentRegimen_common_Medication">
+      <End Role="common_Medication" EntitySet="common_Medication" />
+      <End Role="client_OutcomeTreatmentRegimen" EntitySet="client_OutcomeTreatmentRegimen" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_OutcomeTreatmentRegimen_common_MedicationFrequency" Association="Self.FK_client_OutcomeTreatmentRegimen_common_MedicationFrequency">
+      <End Role="common_MedicationFrequency" EntitySet="common_MedicationFrequency" />
+      <End Role="client_OutcomeTreatmentRegimen" EntitySet="client_OutcomeTreatmentRegimen" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_OutcomeTreatmentRegimen_common_MedicationStatus" Association="Self.FK_client_OutcomeTreatmentRegimen_common_MedicationStatus">
+      <End Role="common_MedicationStatus" EntitySet="common_MedicationStatus" />
+      <End Role="client_OutcomeTreatmentRegimen" EntitySet="client_OutcomeTreatmentRegimen" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Profile_common_Status" Association="Self.FK_client_Profile_common_Status">
+      <End Role="common_Status" EntitySet="common_Status" />
+      <End Role="client_Profile" EntitySet="client_Profile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_RiskFactors_client_Profile" Association="Self.FK_client_RiskFactors_client_Profile">
+      <End Role="client_Profile" EntitySet="client_Profile" />
+      <End Role="client_RiskFactors" EntitySet="client_RiskFactors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_RiskFactors_common_TBUser" Association="Self.FK_client_RiskFactors_common_TBUser">
+      <End Role="common_Clinicians" EntitySet="common_Clinicians" />
+      <End Role="client_RiskFactors" EntitySet="client_RiskFactors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_RiskFactors_common_YesNoUnknownRefused" Association="Self.FK_client_RiskFactors_common_YesNoUnknownRefused">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_RiskFactors" EntitySet="client_RiskFactors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_RiskFactors_common_YesNoUnknownRefused1" Association="Self.FK_client_RiskFactors_common_YesNoUnknownRefused1">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_RiskFactors" EntitySet="client_RiskFactors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_RiskFactors_common_YesNoUnknownRefused10" Association="Self.FK_client_RiskFactors_common_YesNoUnknownRefused10">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_RiskFactors" EntitySet="client_RiskFactors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_RiskFactors_common_YesNoUnknownRefused11" Association="Self.FK_client_RiskFactors_common_YesNoUnknownRefused11">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_RiskFactors" EntitySet="client_RiskFactors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_RiskFactors_common_YesNoUnknownRefused12" Association="Self.FK_client_RiskFactors_common_YesNoUnknownRefused12">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_RiskFactors" EntitySet="client_RiskFactors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_RiskFactors_common_YesNoUnknownRefused13" Association="Self.FK_client_RiskFactors_common_YesNoUnknownRefused13">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_RiskFactors" EntitySet="client_RiskFactors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_RiskFactors_common_YesNoUnknownRefused14" Association="Self.FK_client_RiskFactors_common_YesNoUnknownRefused14">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_RiskFactors" EntitySet="client_RiskFactors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_RiskFactors_common_YesNoUnknownRefused15" Association="Self.FK_client_RiskFactors_common_YesNoUnknownRefused15">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_RiskFactors" EntitySet="client_RiskFactors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_RiskFactors_common_YesNoUnknownRefused16" Association="Self.FK_client_RiskFactors_common_YesNoUnknownRefused16">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_RiskFactors" EntitySet="client_RiskFactors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_RiskFactors_common_YesNoUnknownRefused17" Association="Self.FK_client_RiskFactors_common_YesNoUnknownRefused17">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_RiskFactors" EntitySet="client_RiskFactors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_RiskFactors_common_YesNoUnknownRefused18" Association="Self.FK_client_RiskFactors_common_YesNoUnknownRefused18">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_RiskFactors" EntitySet="client_RiskFactors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_RiskFactors_common_YesNoUnknownRefused19" Association="Self.FK_client_RiskFactors_common_YesNoUnknownRefused19">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_RiskFactors" EntitySet="client_RiskFactors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_RiskFactors_common_YesNoUnknownRefused2" Association="Self.FK_client_RiskFactors_common_YesNoUnknownRefused2">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_RiskFactors" EntitySet="client_RiskFactors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_RiskFactors_common_YesNoUnknownRefused20" Association="Self.FK_client_RiskFactors_common_YesNoUnknownRefused20">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_RiskFactors" EntitySet="client_RiskFactors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_RiskFactors_common_YesNoUnknownRefused21" Association="Self.FK_client_RiskFactors_common_YesNoUnknownRefused21">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_RiskFactors" EntitySet="client_RiskFactors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_RiskFactors_common_YesNoUnknownRefused22" Association="Self.FK_client_RiskFactors_common_YesNoUnknownRefused22">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_RiskFactors" EntitySet="client_RiskFactors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_RiskFactors_common_YesNoUnknownRefused23" Association="Self.FK_client_RiskFactors_common_YesNoUnknownRefused23">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_RiskFactors" EntitySet="client_RiskFactors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_RiskFactors_common_YesNoUnknownRefused3" Association="Self.FK_client_RiskFactors_common_YesNoUnknownRefused3">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_RiskFactors" EntitySet="client_RiskFactors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_RiskFactors_common_YesNoUnknownRefused4" Association="Self.FK_client_RiskFactors_common_YesNoUnknownRefused4">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_RiskFactors" EntitySet="client_RiskFactors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_RiskFactors_common_YesNoUnknownRefused5" Association="Self.FK_client_RiskFactors_common_YesNoUnknownRefused5">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_RiskFactors" EntitySet="client_RiskFactors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_RiskFactors_common_YesNoUnknownRefused6" Association="Self.FK_client_RiskFactors_common_YesNoUnknownRefused6">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_RiskFactors" EntitySet="client_RiskFactors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_RiskFactors_common_YesNoUnknownRefused7" Association="Self.FK_client_RiskFactors_common_YesNoUnknownRefused7">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_RiskFactors" EntitySet="client_RiskFactors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_RiskFactors_common_YesNoUnknownRefused8" Association="Self.FK_client_RiskFactors_common_YesNoUnknownRefused8">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_RiskFactors" EntitySet="client_RiskFactors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_RiskFactors_common_YesNoUnknownRefused9" Association="Self.FK_client_RiskFactors_common_YesNoUnknownRefused9">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_RiskFactors" EntitySet="client_RiskFactors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_SkinTest_client_Profile" Association="Self.FK_client_SkinTest_client_Profile">
+      <End Role="client_Profile" EntitySet="client_Profile" />
+      <End Role="client_SkinTest" EntitySet="client_SkinTest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_SkinTest_client_SkinTest" Association="Self.FK_client_SkinTest_client_SkinTest">
+      <End Role="common_GeographicLocation" EntitySet="common_GeographicLocation" />
+      <End Role="client_SkinTest" EntitySet="client_SkinTest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_SkinTest_common_Clinicians" Association="Self.FK_client_SkinTest_common_Clinicians">
+      <End Role="common_Clinicians" EntitySet="common_Clinicians" />
+      <End Role="client_SkinTest" EntitySet="client_SkinTest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_SkinTest_common_GeographicLocation" Association="Self.FK_client_SkinTest_common_GeographicLocation">
+      <End Role="common_GeographicLocation" EntitySet="common_GeographicLocation" />
+      <End Role="client_SkinTest" EntitySet="client_SkinTest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_SkinTest_common_InjectionBodySite" Association="Self.FK_client_SkinTest_common_InjectionBodySite">
+      <End Role="common_InjectionBodySite" EntitySet="common_InjectionBodySite" />
+      <End Role="client_SkinTest" EntitySet="client_SkinTest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_SkinTest_common_InjectionRoute" Association="Self.FK_client_SkinTest_common_InjectionRoute">
+      <End Role="common_InjectionRoute" EntitySet="common_InjectionRoute" />
+      <End Role="client_SkinTest" EntitySet="client_SkinTest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_SkinTest_common_MedicalLot" Association="Self.FK_client_SkinTest_common_MedicalLot">
+      <End Role="common_MedicalLot" EntitySet="common_MedicalLot" />
+      <End Role="client_SkinTest" EntitySet="client_SkinTest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_SkinTest_common_Product" Association="Self.FK_client_SkinTest_common_Product">
+      <End Role="common_Product" EntitySet="common_Product" />
+      <End Role="client_SkinTest" EntitySet="client_SkinTest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_SkinTest_common_SkinTestResult" Association="Self.FK_client_SkinTest_common_SkinTestResult">
+      <End Role="common_SkinTestResult" EntitySet="common_SkinTestResult" />
+      <End Role="client_SkinTest" EntitySet="client_SkinTest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_SkinTest_common_SkinTestSite" Association="Self.FK_client_SkinTest_common_SkinTestSite">
+      <End Role="common_SkinTestSite" EntitySet="common_SkinTestSite" />
+      <End Role="client_SkinTest" EntitySet="client_SkinTest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_SkinTest_common_TBUser" Association="Self.FK_client_SkinTest_common_TBUser">
+      <End Role="common_Clinicians" EntitySet="common_Clinicians" />
+      <End Role="client_SkinTest" EntitySet="client_SkinTest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_SkinTest_common_TBUser1" Association="Self.FK_client_SkinTest_common_TBUser1">
+      <End Role="common_TBUser" EntitySet="common_TBUser" />
+      <End Role="client_SkinTest" EntitySet="client_SkinTest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_SkinTest_common_TBUser2" Association="Self.FK_client_SkinTest_common_TBUser2">
+      <End Role="common_TBUser" EntitySet="common_TBUser" />
+      <End Role="client_SkinTest" EntitySet="client_SkinTest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_SkinTest_common_TestReason" Association="Self.FK_client_SkinTest_common_TestReason">
+      <End Role="common_TestReason" EntitySet="common_TestReason" />
+      <End Role="client_SkinTest" EntitySet="client_SkinTest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Sputum_client_Profile" Association="Self.FK_client_Sputum_client_Profile">
+      <End Role="client_Profile" EntitySet="client_Profile" />
+      <End Role="client_Sputum" EntitySet="client_Sputum" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Sputum_client_Sputum" Association="Self.FK_client_Sputum_client_Sputum">
+      <End Role="common_SputumSmearResult" EntitySet="common_SputumSmearResult" />
+      <End Role="client_Sputum" EntitySet="client_Sputum" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Sputum_common_SputumCultureResult" Association="Self.FK_client_Sputum_common_SputumCultureResult">
+      <End Role="common_SputumCultureResult" EntitySet="common_SputumCultureResult" />
+      <End Role="client_Sputum" EntitySet="client_Sputum" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Sputum_common_SputumSmeanResult" Association="Self.FK_client_Sputum_common_SputumSmeanResult">
+      <End Role="common_SputumSmearResult" EntitySet="common_SputumSmearResult" />
+      <End Role="client_Sputum" EntitySet="client_Sputum" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Sputum_common_TBUser" Association="Self.FK_client_Sputum_common_TBUser">
+      <End Role="common_SputumRequestBy" EntitySet="common_SputumRequestBy" />
+      <End Role="client_Sputum" EntitySet="client_Sputum" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Sputum_common_TBUser1" Association="Self.FK_client_Sputum_common_TBUser1">
+      <End Role="common_Clinicians" EntitySet="common_Clinicians" />
+      <End Role="client_Sputum" EntitySet="client_Sputum" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Sputum_common_TestReason" Association="Self.FK_client_Sputum_common_TestReason">
+      <End Role="common_TestReason" EntitySet="common_TestReason" />
+      <End Role="client_Sputum" EntitySet="client_Sputum" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_SputumResistence_client_Sputum" Association="Self.FK_client_SputumResistence_client_Sputum">
+      <End Role="client_Sputum" EntitySet="client_Sputum" />
+      <End Role="client_SputumResistence" EntitySet="client_SputumResistence" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_SputumResistence_common_Antibiotic" Association="Self.FK_client_SputumResistence_common_Antibiotic">
+      <End Role="common_Antibiotic" EntitySet="common_Antibiotic" />
+      <End Role="client_SputumResistence" EntitySet="client_SputumResistence" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Symptoms_client_Profile" Association="Self.FK_client_Symptoms_client_Profile">
+      <End Role="client_Profile" EntitySet="client_Profile" />
+      <End Role="client_Symptoms" EntitySet="client_Symptoms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Symptoms_common_CompletionMethod" Association="Self.FK_client_Symptoms_common_CompletionMethod">
+      <End Role="common_CompletionMethod" EntitySet="common_CompletionMethod" />
+      <End Role="client_Symptoms" EntitySet="client_Symptoms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Symptoms_common_TBUser" Association="Self.FK_client_Symptoms_common_TBUser">
+      <End Role="common_Clinicians" EntitySet="common_Clinicians" />
+      <End Role="client_Symptoms" EntitySet="client_Symptoms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Symptoms_common_YesNoUnknownRefused" Association="Self.FK_client_Symptoms_common_YesNoUnknownRefused">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_Symptoms" EntitySet="client_Symptoms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Symptoms_common_YesNoUnknownRefused1" Association="Self.FK_client_Symptoms_common_YesNoUnknownRefused1">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_Symptoms" EntitySet="client_Symptoms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Symptoms_common_YesNoUnknownRefused2" Association="Self.FK_client_Symptoms_common_YesNoUnknownRefused2">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_Symptoms" EntitySet="client_Symptoms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Symptoms_common_YesNoUnknownRefused3" Association="Self.FK_client_Symptoms_common_YesNoUnknownRefused3">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_Symptoms" EntitySet="client_Symptoms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Symptoms_common_YesNoUnknownRefused4" Association="Self.FK_client_Symptoms_common_YesNoUnknownRefused4">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_Symptoms" EntitySet="client_Symptoms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Symptoms_common_YesNoUnknownRefused5" Association="Self.FK_client_Symptoms_common_YesNoUnknownRefused5">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_Symptoms" EntitySet="client_Symptoms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Symptoms_common_YesNoUnknownRefused6" Association="Self.FK_client_Symptoms_common_YesNoUnknownRefused6">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_Symptoms" EntitySet="client_Symptoms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Symptoms_common_YesNoUnknownRefused7" Association="Self.FK_client_Symptoms_common_YesNoUnknownRefused7">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_Symptoms" EntitySet="client_Symptoms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Symptoms_common_YesNoUnknownRefused8" Association="Self.FK_client_Symptoms_common_YesNoUnknownRefused8">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_Symptoms" EntitySet="client_Symptoms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Symptoms_common_YesNoUnknownRefused9" Association="Self.FK_client_Symptoms_common_YesNoUnknownRefused9">
+      <End Role="common_YesNoUnknownRefused" EntitySet="common_YesNoUnknownRefused" />
+      <End Role="client_Symptoms" EntitySet="client_Symptoms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Xray_client_Profile" Association="Self.FK_client_Xray_client_Profile">
+      <End Role="client_Profile" EntitySet="client_Profile" />
+      <End Role="client_Xray" EntitySet="client_Xray" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Xray_common_TestReason" Association="Self.FK_client_Xray_common_TestReason">
+      <End Role="common_TestReason" EntitySet="common_TestReason" />
+      <End Role="client_Xray" EntitySet="client_Xray" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Xray_common_XrayArea" Association="Self.FK_client_Xray_common_XrayArea">
+      <End Role="common_XrayArea" EntitySet="common_XrayArea" />
+      <End Role="client_Xray" EntitySet="client_Xray" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Xray_common_XrayIndication" Association="Self.FK_client_Xray_common_XrayIndication">
+      <End Role="common_XrayIndication" EntitySet="common_XrayIndication" />
+      <End Role="client_Xray" EntitySet="client_Xray" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Xray_common_XrayResult" Association="Self.FK_client_Xray_common_XrayResult">
+      <End Role="common_XrayResult" EntitySet="common_XrayResult" />
+      <End Role="client_Xray" EntitySet="client_Xray" />
+    </AssociationSet>
+    <AssociationSet Name="FK_client_Xray_common_XrayView" Association="Self.FK_client_Xray_common_XrayView">
+      <End Role="common_XrayView" EntitySet="common_XrayView" />
+      <End Role="client_Xray" EntitySet="client_Xray" />
+    </AssociationSet>
+    <AssociationSet Name="FK_clientDemographic_commonGender" Association="Self.FK_clientDemographic_commonGender">
+      <End Role="common_Gender" EntitySet="common_Gender" />
+      <End Role="client_Demographic" EntitySet="client_Demographic" />
+    </AssociationSet>
+    <AssociationSet Name="FK_clientDemographic_commonProvince" Association="Self.FK_clientDemographic_commonProvince">
+      <End Role="common_Province" EntitySet="common_Province" />
+      <End Role="client_Demographic" EntitySet="client_Demographic" />
+    </AssociationSet>
+    <AssociationSet Name="FK_clientDemographicEthnicity_clientDemographic" Association="Self.FK_clientDemographicEthnicity_clientDemographic">
+      <End Role="client_Demographic" EntitySet="client_Demographic" />
+      <End Role="client_DemographicEthnicity" EntitySet="client_DemographicEthnicity" />
+    </AssociationSet>
+    <AssociationSet Name="FK_clientDemographicEthnicity_commonEthnicity" Association="Self.FK_clientDemographicEthnicity_commonEthnicity">
+      <End Role="common_Ethnicity" EntitySet="common_Ethnicity" />
+      <End Role="client_DemographicEthnicity" EntitySet="client_DemographicEthnicity" />
+    </AssociationSet>
+    <AssociationSet Name="FK_clinic_TBClinic_common_TBUser" Association="Self.FK_clinic_TBClinic_common_TBUser">
+      <End Role="common_TBUser" EntitySet="common_TBUser" />
+      <End Role="clinic_TBClinic" EntitySet="clinic_TBClinic" />
+    </AssociationSet>
+    <AssociationSet Name="FK_clinic_TBClinicAppointments_client_Profile" Association="Self.FK_clinic_TBClinicAppointments_client_Profile">
+      <End Role="client_Profile" EntitySet="client_Profile" />
+      <End Role="clinic_TBClinicAppointments" EntitySet="clinic_TBClinicAppointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_clinic_TBClinicAppointments_clinic_TBClinic" Association="Self.FK_clinic_TBClinicAppointments_clinic_TBClinic">
+      <End Role="clinic_TBClinic" EntitySet="clinic_TBClinic" />
+      <End Role="clinic_TBClinicAppointments" EntitySet="clinic_TBClinicAppointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_clinic_TBClinicAppointments_common_ClinicReason" Association="Self.FK_clinic_TBClinicAppointments_common_ClinicReason">
+      <End Role="common_ClinicReason" EntitySet="common_ClinicReason" />
+      <End Role="clinic_TBClinicAppointments" EntitySet="clinic_TBClinicAppointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_clinic_TBClinicAppointments_common_Language" Association="Self.FK_clinic_TBClinicAppointments_common_Language">
+      <End Role="common_Language" EntitySet="common_Language" />
+      <End Role="clinic_TBClinicAppointments" EntitySet="clinic_TBClinicAppointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_clinic_TBClinicAppointments_common_TBUser" Association="Self.FK_clinic_TBClinicAppointments_common_TBUser">
+      <End Role="common_TBUser" EntitySet="common_TBUser" />
+      <End Role="clinic_TBClinicAppointments" EntitySet="clinic_TBClinicAppointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_clinic_TBClinicAppointments_common_TBUser1" Association="Self.FK_clinic_TBClinicAppointments_common_TBUser1">
+      <End Role="common_TBUser" EntitySet="common_TBUser" />
+      <End Role="clinic_TBClinicAppointments" EntitySet="clinic_TBClinicAppointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_common_TBOutcome_common_Status" Association="Self.FK_common_TBOutcome_common_Status">
+      <End Role="common_Status" EntitySet="common_Status" />
+      <End Role="common_TBOutcome" EntitySet="common_TBOutcome" />
+    </AssociationSet>
+    <AssociationSet Name="FK_common_TBUser_common_Clinicians" Association="Self.FK_common_TBUser_common_Clinicians">
+      <End Role="common_Clinicians" EntitySet="common_Clinicians" />
+      <End Role="common_TBUser" EntitySet="common_TBUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_common_TestReason_common_TestReasonType" Association="Self.FK_common_TestReason_common_TestReasonType">
+      <End Role="common_TestReasonType" EntitySet="common_TestReasonType" />
+      <End Role="common_TestReason" EntitySet="common_TestReason" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

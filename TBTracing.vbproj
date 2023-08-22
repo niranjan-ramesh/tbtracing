@@ -1,0 +1,1316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{CD8E53D2-B177-494B-AE08-1CEEF98E43D7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TBTracing</RootNamespace>
+    <AssemblyName>TBTracing</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebForms_Basic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebForms_Basic.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML">
+      <HintPath>.\packages\ClosedXML.0.87.1\lib\net40\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>.\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ExtLib\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ExtLib\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ExtLib\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging.Database, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ExtLib\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ExtLib\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ExtLib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ExtLib\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ExtLib\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>.\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>.\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>.\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>.\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>.\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>.\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>.\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>.\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>.\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>.\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.1\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>.\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>.\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>.\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>.\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>.\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>.\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>.\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>.\packages\Microsoft.Owin.2.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>.\packages\Microsoft.Owin.Host.SystemWeb.2.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>.\packages\Microsoft.Owin.Security.2.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>.\packages\Microsoft.Owin.Security.Facebook.2.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>.\packages\Microsoft.Owin.Security.Cookies.2.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>.\packages\Microsoft.Owin.Security.Google.2.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>.\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>.\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>.\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>.\packages\Microsoft.Owin.Security.OAuth.2.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.Routing" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Admin\AddEditLot.aspx" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\UserAdministration.aspx" />
+    <Content Include="AppPages\AllFollowups.aspx" />
+    <Content Include="ClientPages\AddOutcome.aspx" />
+    <Content Include="ClientPages\Bloodwork.aspx" />
+    <Content Include="ClientPages\ClientDemographic.aspx" />
+    <Content Include="ClientPages\ClientDemographicHistory.aspx" />
+    <Content Include="ClientPages\ClientInfoControl.ascx" />
+    <Content Include="ClientPages\ClientTabsControl.ascx" />
+    <Content Include="ClientPages\Communication.aspx" />
+    <Content Include="ClientPages\CommunicationHistory.aspx" />
+    <Content Include="ClientPages\ContactHistory.aspx" />
+    <Content Include="ClientPages\ContactTracingAdd.aspx" />
+    <Content Include="ClientPages\ContactTracingSearch.aspx" />
+    <Content Include="ClientPages\DiagnosticImage.aspx" />
+    <Content Include="ClientPages\DocsNotes.aspx" />
+    <Content Include="ClientPages\Followups.aspx" />
+    <Content Include="ClientPages\IGRA.aspx" />
+    <Content Include="ClientPages\InvestigationHistory.aspx" />
+    <Content Include="ClientPages\Notes.aspx" />
+    <Content Include="ClientPages\OutcomeHistory.aspx" />
+    <Content Include="ClientPages\OutcomeTreatment.aspx" />
+    <Content Include="ClientPages\OutcomeTreatmentAddDOT.aspx" />
+    <Content Include="ClientPages\OutcomeTreatmentSchedule.aspx" />
+    <Content Include="ClientPages\RiskHistory.aspx" />
+    <Content Include="ClientPages\Risks.aspx" />
+    <Content Include="AppPages\SeachClient.aspx" />
+    <Content Include="ClientPages\SkinTest.aspx" />
+    <Content Include="ClientPages\SkinTestHistory.aspx" />
+    <Content Include="ClientPages\Sputum.aspx" />
+    <Content Include="ClientPages\SputumXRayHistory.aspx" />
+    <Content Include="ClientPages\SymptomHistory.aspx" />
+    <Content Include="ClientPages\Symptoms.aspx" />
+    <Content Include="ClientPages\TreatmentHistory.aspx" />
+    <Content Include="ClientPages\XRay.aspx" />
+    <Content Include="AppPages\Clinic.aspx" />
+    <Content Include="AppPages\ClinicAppointments.aspx" />
+    <Content Include="AppPages\ClinicList.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\Images\logo_full.png" />
+    <Content Include="Content\Images\logo - Copy.gif" />
+    <Content Include="Content\Images\logo.gif" />
+    <Content Include="Content\Images\logo_icon.png" />
+    <Content Include="Content\Images\main-logo.gif" />
+    <Content Include="Content\Images\main-logo.png" />
+    <Content Include="Content\Images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\Images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\Images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\Images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\Images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\Images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\Images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\Images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\Images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\Images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\Images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\Images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\Images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\Images\white-logo.png" />
+    <Content Include="Content\jquery-ui.min.css" />
+    <Content Include="Content\jquery-ui.structure.min.css" />
+    <Content Include="Content\jquery-ui.theme.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\skins\skin-tb-test.css" />
+    <Content Include="Content\skins\skin-tb.css" />
+    <Content Include="Content\skins\_all-skins.min.css" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="ExtLib\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="ExtLib\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="ExtLib\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll" />
+    <Content Include="ExtLib\Microsoft.Practices.EnterpriseLibrary.Logging.dll" />
+    <Content Include="ExtLib\Microsoft.Practices.ServiceLocation.dll" />
+    <Content Include="ExtLib\Microsoft.Practices.Unity.Configuration.dll" />
+    <Content Include="ExtLib\Microsoft.Practices.Unity.dll" />
+    <Content Include="ExtLib\Microsoft.Practices.Unity.Interception.dll" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\NotoSans-Regular-webfont.svg" />
+    <Content Include="fonts\OpenSans-Light-webfont.svg" />
+    <Content Include="fonts\OpenSans-Regular-webfont.svg" />
+    <Content Include="Mocks\003-ClientList.aspx" />
+    <Content Include="Mocks\004a-AddClinic.aspx" />
+    <Content Include="Mocks\005-demo_Contact.aspx" />
+    <Content Include="Mocks\006a-contactattempts_Contact.aspx" />
+    <Content Include="Mocks\007a-skintest_Contact.aspx" />
+    <Content Include="Mocks\007b-skintest_new_Contact.aspx" />
+    <Content Include="Mocks\009d-investigations_sputum_Contact.aspx" />
+    <Content Include="Mocks\010b-symptoms_addedit_Contact.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Account\Web.config" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\NotoSans-Regular-webfont.eot" />
+    <Content Include="fonts\NotoSans-Regular-webfont.ttf" />
+    <Content Include="fonts\NotoSans-Regular-webfont.woff" />
+    <Content Include="fonts\OpenSans-Light-webfont.eot" />
+    <Content Include="fonts\OpenSans-Light-webfont.ttf" />
+    <Content Include="fonts\OpenSans-Light-webfont.woff" />
+    <Content Include="fonts\OpenSans-Regular-webfont.eot" />
+    <Content Include="fonts\OpenSans-Regular-webfont.ttf" />
+    <Content Include="fonts\OpenSans-Regular-webfont.woff" />
+    <Content Include="Admin\Web.config" />
+    <Content Include="Admin\DataExtractHandler.ashx" />
+    <Content Include="Admin\Handler1.ashx" />
+    <Content Include="Admin\ClientExcelExtract.ashx" />
+    <Content Include="Admin\Handler2.ashx" />
+    <None Include="My Project\PublishProfiles\FileSystemBuild.pubxml" />
+    <Content Include="Reports\DiagnosisHome.aspx" />
+    <Content Include="Reports\ReportHome.aspx" />
+    <Content Include="Reports\Web.config" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Mocks\Demographics.aspx" />
+    <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Content\jquery.datetimepicker.css" />
+    <Content Include="Scripts\jquery.datetimepicker.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\scripts.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="UserControls\ClientTabControl.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bundle.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <EntityDeploy Include="SRC\DataAccess\EnitityModel\TBTracingCtx.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TBTracingCtx.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="SRC\DataAccess\EnitityModel\TBTracingCtx.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TBTracingCtx.edmx</DependentUpon>
+      <LastGenOutput>TBTracingCtx.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="SRC\DataAccess\EnitityModel\TBTracingCtx.edmx.diagram">
+      <DependentUpon>TBTracingCtx.edmx</DependentUpon>
+    </Content>
+    <Content Include="SRC\DataAccess\EnitityModel\TBTracingCtx.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TBTracingCtx.edmx</DependentUpon>
+      <LastGenOutput>TBTracingCtx.vb</LastGenOutput>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.vb">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.vb">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.vb">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.vb">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddEditLot.aspx.designer.vb">
+      <DependentUpon>AddEditLot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddEditLot.aspx.vb">
+      <DependentUpon>AddEditLot.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ClientExcelExtract.ashx.vb">
+      <DependentUpon>ClientExcelExtract.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\DataExtractHandler.ashx.vb">
+      <DependentUpon>DataExtractHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ExcelExtract.vb" />
+    <Compile Include="Admin\Handler1.ashx.vb">
+      <DependentUpon>Handler1.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Handler2.ashx.vb">
+      <DependentUpon>Handler2.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserAdministration.aspx.designer.vb">
+      <DependentUpon>UserAdministration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserAdministration.aspx.vb">
+      <DependentUpon>UserAdministration.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\AllFollowups.aspx.designer.vb">
+      <DependentUpon>AllFollowups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\AllFollowups.aspx.vb">
+      <DependentUpon>AllFollowups.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.vb" />
+    <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="About.aspx.designer.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About.aspx.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="App_Start\Startup.Auth.vb" />
+    <Compile Include="ClientPages\AddOutcome.aspx.designer.vb">
+      <DependentUpon>AddOutcome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\AddOutcome.aspx.vb">
+      <DependentUpon>AddOutcome.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\Bloodwork.aspx.designer.vb">
+      <DependentUpon>Bloodwork.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\Bloodwork.aspx.vb">
+      <DependentUpon>Bloodwork.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\ClientDemographic.aspx.designer.vb">
+      <DependentUpon>ClientDemographic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\ClientDemographic.aspx.vb">
+      <DependentUpon>ClientDemographic.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\ClientDemographicHistory.aspx.designer.vb">
+      <DependentUpon>ClientDemographicHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\ClientDemographicHistory.aspx.vb">
+      <DependentUpon>ClientDemographicHistory.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\ClientInfoControl.ascx.designer.vb">
+      <DependentUpon>ClientInfoControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\ClientInfoControl.ascx.vb">
+      <DependentUpon>ClientInfoControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\ClientTabsControl.ascx.designer.vb">
+      <DependentUpon>ClientTabsControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\ClientTabsControl.ascx.vb">
+      <DependentUpon>ClientTabsControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\Communication.aspx.designer.vb">
+      <DependentUpon>Communication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\Communication.aspx.vb">
+      <DependentUpon>Communication.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\CommunicationHistory.aspx.designer.vb">
+      <DependentUpon>CommunicationHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\CommunicationHistory.aspx.vb">
+      <DependentUpon>CommunicationHistory.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\ContactHistory.aspx.designer.vb">
+      <DependentUpon>ContactHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\ContactHistory.aspx.vb">
+      <DependentUpon>ContactHistory.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\ContactTracingAdd.aspx.designer.vb">
+      <DependentUpon>ContactTracingAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\ContactTracingAdd.aspx.vb">
+      <DependentUpon>ContactTracingAdd.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\ContactTracingSearch.aspx.designer.vb">
+      <DependentUpon>ContactTracingSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\ContactTracingSearch.aspx.vb">
+      <DependentUpon>ContactTracingSearch.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\DiagnosticImage.aspx.designer.vb">
+      <DependentUpon>DiagnosticImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\DiagnosticImage.aspx.vb">
+      <DependentUpon>DiagnosticImage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\DocsNotes.aspx.designer.vb">
+      <DependentUpon>DocsNotes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\DocsNotes.aspx.vb">
+      <DependentUpon>DocsNotes.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\Followups.aspx.designer.vb">
+      <DependentUpon>Followups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\Followups.aspx.vb">
+      <DependentUpon>Followups.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\IGRA.aspx.designer.vb">
+      <DependentUpon>IGRA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\IGRA.aspx.vb">
+      <DependentUpon>IGRA.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\InvestigationHistory.aspx.designer.vb">
+      <DependentUpon>InvestigationHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\InvestigationHistory.aspx.vb">
+      <DependentUpon>InvestigationHistory.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\Notes.aspx.designer.vb">
+      <DependentUpon>Notes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\Notes.aspx.vb">
+      <DependentUpon>Notes.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\OutcomeHistory.aspx.designer.vb">
+      <DependentUpon>OutcomeHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\OutcomeHistory.aspx.vb">
+      <DependentUpon>OutcomeHistory.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\OutcomeTreatment.aspx.designer.vb">
+      <DependentUpon>OutcomeTreatment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\OutcomeTreatment.aspx.vb">
+      <DependentUpon>OutcomeTreatment.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\OutcomeTreatmentAddDOT.aspx.designer.vb">
+      <DependentUpon>OutcomeTreatmentAddDOT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\OutcomeTreatmentAddDOT.aspx.vb">
+      <DependentUpon>OutcomeTreatmentAddDOT.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\OutcomeTreatmentSchedule.aspx.designer.vb">
+      <DependentUpon>OutcomeTreatmentSchedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\OutcomeTreatmentSchedule.aspx.vb">
+      <DependentUpon>OutcomeTreatmentSchedule.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\RiskHistory.aspx.designer.vb">
+      <DependentUpon>RiskHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\RiskHistory.aspx.vb">
+      <DependentUpon>RiskHistory.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\Risks.aspx.designer.vb">
+      <DependentUpon>Risks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\Risks.aspx.vb">
+      <DependentUpon>Risks.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\SeachClient.aspx.designer.vb">
+      <DependentUpon>SeachClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\SeachClient.aspx.vb">
+      <DependentUpon>SeachClient.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\SkinTest.aspx.designer.vb">
+      <DependentUpon>SkinTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\SkinTest.aspx.vb">
+      <DependentUpon>SkinTest.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\Sputum.aspx.designer.vb">
+      <DependentUpon>Sputum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\Sputum.aspx.vb">
+      <DependentUpon>Sputum.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\SkinTestHistory.aspx.designer.vb">
+      <DependentUpon>SkinTestHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\SkinTestHistory.aspx.vb">
+      <DependentUpon>SkinTestHistory.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\SputumXRayHistory.aspx.designer.vb">
+      <DependentUpon>SputumXRayHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\SputumXRayHistory.aspx.vb">
+      <DependentUpon>SputumXRayHistory.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\SymptomHistory.aspx.designer.vb">
+      <DependentUpon>SymptomHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\SymptomHistory.aspx.vb">
+      <DependentUpon>SymptomHistory.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\Symptoms.aspx.designer.vb">
+      <DependentUpon>Symptoms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\Symptoms.aspx.vb">
+      <DependentUpon>Symptoms.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\TreatmentHistory.aspx.designer.vb">
+      <DependentUpon>TreatmentHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\TreatmentHistory.aspx.vb">
+      <DependentUpon>TreatmentHistory.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClientPages\XRay.aspx.designer.vb">
+      <DependentUpon>XRay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientPages\XRay.aspx.vb">
+      <DependentUpon>XRay.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\Clinic.aspx.designer.vb">
+      <DependentUpon>Clinic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\Clinic.aspx.vb">
+      <DependentUpon>Clinic.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\ClinicAppointments.aspx.designer.vb">
+      <DependentUpon>ClinicAppointments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\ClinicAppointments.aspx.vb">
+      <DependentUpon>ClinicAppointments.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AppPages\ClinicList.aspx.designer.vb">
+      <DependentUpon>ClinicList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AppPages\ClinicList.aspx.vb">
+      <DependentUpon>ClinicList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.vb">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.vb">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.vb">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.vb">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Mocks\003-ClientList.aspx.designer.vb">
+      <DependentUpon>003-ClientList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mocks\003-ClientList.aspx.vb">
+      <DependentUpon>003-ClientList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mocks\004a-AddClinic.aspx.designer.vb">
+      <DependentUpon>004a-AddClinic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mocks\004a-AddClinic.aspx.vb">
+      <DependentUpon>004a-AddClinic.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mocks\005-demo_Contact.aspx.designer.vb">
+      <DependentUpon>005-demo_Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mocks\005-demo_Contact.aspx.vb">
+      <DependentUpon>005-demo_Contact.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mocks\006a-contactattempts_Contact.aspx.designer.vb">
+      <DependentUpon>006a-contactattempts_Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mocks\006a-contactattempts_Contact.aspx.vb">
+      <DependentUpon>006a-contactattempts_Contact.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mocks\007a-skintest_Contact.aspx.designer.vb">
+      <DependentUpon>007a-skintest_Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mocks\007a-skintest_Contact.aspx.vb">
+      <DependentUpon>007a-skintest_Contact.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mocks\007b-skintest_new_Contact.aspx.designer.vb">
+      <DependentUpon>007b-skintest_new_Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mocks\007b-skintest_new_Contact.aspx.vb">
+      <DependentUpon>007b-skintest_new_Contact.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mocks\009d-investigations_sputum_Contact.aspx.designer.vb">
+      <DependentUpon>009d-investigations_sputum_Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mocks\009d-investigations_sputum_Contact.aspx.vb">
+      <DependentUpon>009d-investigations_sputum_Contact.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Mocks\010b-symptoms_addedit_Contact.aspx.designer.vb">
+      <DependentUpon>010b-symptoms_addedit_Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mocks\010b-symptoms_addedit_Contact.aspx.vb">
+      <DependentUpon>010b-symptoms_addedit_Contact.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Models\IdentityModels.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Mocks\Demographics.aspx.designer.vb">
+      <DependentUpon>Demographics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mocks\Demographics.aspx.vb">
+      <DependentUpon>Demographics.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Reports\DiagnosisHome.aspx.designer.vb">
+      <DependentUpon>DiagnosisHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DiagnosisHome.aspx.vb">
+      <DependentUpon>DiagnosisHome.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportHome.aspx.designer.vb">
+      <DependentUpon>ReportHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportHome.aspx.vb">
+      <DependentUpon>ReportHome.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SRC\Audit\AuditHelper.vb" />
+    <Compile Include="SRC\Audit\TBAudit.vb" />
+    <Compile Include="SRC\DataAccess\ClientDA\ClientDAImpl.vb" />
+    <Compile Include="SRC\DataAccess\ClientDA\IClientDA.vb" />
+    <Compile Include="SRC\DataAccess\ClientDA\TBDataAccessException.vb" />
+    <Compile Include="SRC\DataAccess\ClinicDA\ClinicDAImpl.vb" />
+    <Compile Include="SRC\DataAccess\ClinicDA\IClinicDA.vb" />
+    <Compile Include="SRC\DataAccess\EnitityModel\Audit.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\AuditType.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\client_BCG.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\client_Bloodwork.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\client_Communication.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\client_CommunicationBulletin.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\client_ContactNote.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\client_ContactTracing.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\client_Demographic.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\client_DiagnosticImage.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\client_Document.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\client_Followup.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\client_IGRA.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\client_Investigation.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\client_Notes.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\client_Outcome.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\client_OutcomeTreatment.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\client_OutcomeTreatmentDOT.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\client_OutcomeTreatmentRegimen.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\client_Profile.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\client_RiskFactors.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\client_SkinTest.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\client_Sputum.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\client_Symptoms.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\client_Xray.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\clinic_TBClinic.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\clinic_TBClinicAppointments.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_Antibiotic.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_BloodworkCollectionMethod.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_Clinicians.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_ClinicReason.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_CommunicationMethod.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_CommunicationReason.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_CommunicationResult.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_Community.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_CompletionMethod.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_ContactPriority.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_ContactReason.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_ContactRelationship.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_ContactType.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_DocumentType.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_Ethnicity.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_Followup.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_Gender.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_GeographicLocation.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_HivStatus.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_IGRAResult.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_InjectionBodySite.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_InjectionRoute.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_InvestigationType.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_Language.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_MedicalLot.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_Medication.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_MedicationFrequency.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_MedicationStatus.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_PregnancyStatus.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_Product.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_Province.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_SkinTestResult.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_SkinTestSite.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_SputumCultureResult.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_SputumRequestBy.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_SputumSmearResult.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_Status.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_Symptoms.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_TBOutcome.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_TBTypes.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_TBUser.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_TestReason.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_TestReasonType.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_TreatmentAdherence.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_TreatmentMode.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_XrayArea.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_XrayIndication.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_XrayResult.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_XrayView.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_YesNoNotdoneUnknown.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_YesNoUnknown.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\common_YesNoUnknownRefused.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\TBTracingCtx.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TBTracingCtx.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\TBTracingCtx.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TBTracingCtx.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\TBTracingCtx.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\vwClientList.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\vwClients.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EnitityModel\vwContactTracingConsolidated.vb">
+      <DependentUpon>TBTracingCtx.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SRC\DataAccess\EntityModelMetaData\client_BloodworkMeta.vb" />
+    <Compile Include="SRC\DataAccess\EntityModelMetaData\client_CommunicationBulletinMeta.vb" />
+    <Compile Include="SRC\DataAccess\EntityModelMetaData\client_CommunicationMeta.vb" />
+    <Compile Include="SRC\DataAccess\EntityModelMetaData\client_ContactTracingMeta.vb" />
+    <Compile Include="SRC\DataAccess\EntityModelMetaData\client_DemographicMeta.vb" />
+    <Compile Include="SRC\DataAccess\EntityModelMetaData\client_DiagnosticImageMeta.vb" />
+    <Compile Include="SRC\DataAccess\EntityModelMetaData\client_FollowupMeta.vb" />
+    <Compile Include="SRC\DataAccess\EntityModelMetaData\client_IGRAMeta.vb" />
+    <Compile Include="SRC\DataAccess\EntityModelMetaData\client_NotesMeta.vb" />
+    <Compile Include="SRC\DataAccess\EntityModelMetaData\client_OutcomeMeta.vb" />
+    <Compile Include="SRC\DataAccess\EntityModelMetaData\client_OutcomeTreatmentDOTMeta.vb" />
+    <Compile Include="SRC\DataAccess\EntityModelMetaData\client_OutcomeTreatmentRegimenMeta.vb" />
+    <Compile Include="SRC\DataAccess\EntityModelMetaData\client_RiskFactorsMeta.vb" />
+    <Compile Include="SRC\DataAccess\EntityModelMetaData\client_SputumMeta.vb" />
+    <Compile Include="SRC\DataAccess\EntityModelMetaData\client_SkinTestMeta.vb" />
+    <Compile Include="SRC\DataAccess\EntityModelMetaData\client_SymptomsMeta.vb" />
+    <Compile Include="SRC\DataAccess\EntityModelMetaData\client_XRayMeta.vb" />
+    <Compile Include="SRC\DataAccess\EntityModelMetaData\clinic_TBClinicAppointmentsMeta.vb" />
+    <Compile Include="SRC\DataAccess\EntityModelMetaData\clinic_TBClinicMeta.vb" />
+    <Compile Include="SRC\Helper\Data\DataConstants.vb" />
+    <Compile Include="SRC\Helper\Data\DataHelper.vb" />
+    <Compile Include="SRC\Helper\Data\DataHelperException.vb" />
+    <Compile Include="SRC\Helper\Security\RestrictXSS.vb" />
+    <Compile Include="SRC\Helper\Validation\EntityValidationException.vb" />
+    <Compile Include="SRC\Helper\Validation\EntityValidator.vb" />
+    <Compile Include="SRC\Logging\LogHelper.vb" />
+    <Compile Include="SRC\Model\GridModel\BloodworkGridLineItem.vb" />
+    <Compile Include="SRC\Model\GridModel\ClinicAppointmentGridLineItem.vb" />
+    <Compile Include="SRC\Model\GridModel\ClinicListGridLineItem.vb" />
+    <Compile Include="SRC\Model\GridModel\ContactTracingHistoryGrid.vb" />
+    <Compile Include="SRC\Model\GridModel\DocumentsGridLineItem.vb" />
+    <Compile Include="SRC\Model\GridModel\FollowUpGridLineItem.vb" />
+    <Compile Include="SRC\Model\GridModel\IGRAGridLineItem.vb" />
+    <Compile Include="SRC\Model\GridModel\CommunicationGridLineItem.vb" />
+    <Compile Include="SRC\Model\GridModel\NotesGridLineItem.vb" />
+    <Compile Include="SRC\Model\GridModel\OutcomeGridLineItem.vb" />
+    <Compile Include="SRC\Model\GridModel\OutcomeTreatmentGridLineItem.vb" />
+    <Compile Include="SRC\Model\GridModel\QuestionaireItem.vb" />
+    <Compile Include="SRC\Model\GridModel\RisksItem.vb" />
+    <Compile Include="SRC\Model\GridModel\SkinTestGridLineItem.vb" />
+    <Compile Include="SRC\Model\GridModel\SymptomsItem.vb" />
+    <Compile Include="SRC\Model\GridModel\XRayGridLineItem.vb" />
+    <Compile Include="SRC\Model\PageModel\client_DemographicModel.vb" />
+    <Compile Include="SRC\Model\GridModel\SputumGridLineItem.vb" />
+    <Compile Include="SRC\Model\PageModel\client_DotModel.vb" />
+    <Compile Include="SRC\Model\PageModel\client_InformationModel.vb" />
+    <Compile Include="SRC\Model\PageModel\client_SputumModel.vb" />
+    <Compile Include="Startup.vb" />
+    <Compile Include="UserControls\ClientTabControl.ascx.designer.vb">
+      <DependentUpon>ClientTabControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ClientTabControl.ascx.vb">
+      <DependentUpon>ClientTabControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.vb">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.vb">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.vb">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.vb">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ClientPages\AddOutcome.aspx.resx">
+      <DependentUpon>AddOutcome.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientPages\ClientDemographic.aspx.resx">
+      <DependentUpon>ClientDemographic.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientPages\Communication.aspx.resx">
+      <DependentUpon>Communication.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientPages\SkinTest.aspx.resx">
+      <DependentUpon>SkinTest.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Site.Master" />
+    <Content Include="Site.Mobile.Master" />
+    <Content Include="ViewSwitcher.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53079</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53079/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

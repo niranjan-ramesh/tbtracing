@@ -1,0 +1,141 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="InternallXSSCheck" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="audit_Login" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="audit_Logout" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="audit_AddEditDemographic" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="audit_AddClient" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">4</Value>
+    </Setting>
+    <Setting Name="audit_AddEditSkinTest" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="audit_AddEditSputum" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">7</Value>
+    </Setting>
+    <Setting Name="audit_AddEditCommunication" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">6</Value>
+    </Setting>
+    <Setting Name="audit_AddEditIGRA" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">16</Value>
+    </Setting>
+    <Setting Name="audit_AddEditBloodwork" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">15</Value>
+    </Setting>
+    <Setting Name="audit_AddEditNote" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">17</Value>
+    </Setting>
+    <Setting Name="DateFormat" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">dd-MMM-yyyy</Value>
+    </Setting>
+    <Setting Name="audit_AddEditSymptoms" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">8</Value>
+    </Setting>
+    <Setting Name="audit_AddEditRisks" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">9</Value>
+    </Setting>
+    <Setting Name="audit_AddEditFollowup" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="audit_AddEditContactTracing" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">11</Value>
+    </Setting>
+    <Setting Name="defaultStatus" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="activeTBOutcome" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="audit_AddEditOutcome" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">13</Value>
+    </Setting>
+    <Setting Name="audit_AddEditTreatment" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">14</Value>
+    </Setting>
+    <Setting Name="audit_AddEditClinic" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">12</Value>
+    </Setting>
+    <Setting Name="ActiveTreatmentStatus" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="reason_for_testing_bloodwork" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="reason_for_testing_igra" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="reason_for_testing_skintest" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="reason_for_testing_sputum" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">4</Value>
+    </Setting>
+    <Setting Name="reason_for_testing_xray" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="xray_Chest" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">4</Value>
+    </Setting>
+    <Setting Name="xray_AreaChest" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">4</Value>
+    </Setting>
+    <Setting Name="xray_AreaChestPortable" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="audit_AddEditXrayImagine" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">19</Value>
+    </Setting>
+    <Setting Name="RepeatTSTFollowup" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">12</Value>
+    </Setting>
+    <Setting Name="latentTBOutcome" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">4</Value>
+    </Setting>
+    <Setting Name="audit_PageView" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="LiveTestHeader" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">&lt;b&gt;Test Test Test Test Test Test Test&lt;/b&gt;</Value>
+    </Setting>
+    <Setting Name="LiveTestStyle" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">hold-transition skin-tb-test sidebar-mini</Value>
+    </Setting>
+    <Setting Name="OtherTestReasonSputum" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">18</Value>
+    </Setting>
+    <Setting Name="OtherTestReadonXray" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">22</Value>
+    </Setting>
+    <Setting Name="OtherTestReasonIGRA" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">33</Value>
+    </Setting>
+    <Setting Name="OtherTestReasonBloodwork" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">34</Value>
+    </Setting>
+    <Setting Name="reason_for_testing_diagnosticImage" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">6</Value>
+    </Setting>
+    <Setting Name="OtherTestReasonDI" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">36</Value>
+    </Setting>
+    <Setting Name="DefaultProvince" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="transTBOutcome" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">12</Value>
+    </Setting>
+    <Setting Name="activeTBOutcomearray" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">3,6,11,15,16,17,18</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

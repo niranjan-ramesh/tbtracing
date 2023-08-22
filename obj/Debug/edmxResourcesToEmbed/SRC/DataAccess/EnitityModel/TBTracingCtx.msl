@@ -1,0 +1,1105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TBTracingModelStoreContainer" CdmEntityContainer="TBTracingEntities">
+    <EntitySetMapping Name="client_Bloodwork">
+      <EntityTypeMapping TypeName="TBTracingModel.client_Bloodwork">
+        <MappingFragment StoreEntitySet="client_Bloodwork">
+          <ScalarProperty Name="ReasonForTestingOther" ColumnName="ReasonForTestingOther" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CollectedDate" ColumnName="CollectedDate" />
+          <ScalarProperty Name="ResultDate" ColumnName="ResultDate" />
+          <ScalarProperty Name="CollectionMethodID" ColumnName="CollectionMethodID" />
+          <ScalarProperty Name="CollectedBy" ColumnName="CollectedBy" />
+          <ScalarProperty Name="Alt" ColumnName="Alt" />
+          <ScalarProperty Name="Ast" ColumnName="Ast" />
+          <ScalarProperty Name="SerumBilirubin" ColumnName="SerumBilirubin" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="ReasonForTestingID" ColumnName="ReasonForTestingID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="client_BCG">
+      <EntityTypeMapping TypeName="TBTracingModel.client_BCG">
+        <MappingFragment StoreEntitySet="client_BCG">
+          <ScalarProperty Name="ImmunizationYear" ColumnName="ImmunizationYear" />
+          <ScalarProperty Name="ImmunizationDate" ColumnName="ImmunizationDate" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="client_ContactNote">
+      <EntityTypeMapping TypeName="TBTracingModel.client_ContactNote">
+        <MappingFragment StoreEntitySet="client_ContactNote">
+          <ScalarProperty Name="DateEntered" ColumnName="DateEntered" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="client_Demographic">
+      <EntityTypeMapping TypeName="TBTracingModel.client_Demographic">
+        <MappingFragment StoreEntitySet="client_Demographic">
+          <ScalarProperty Name="CommunityOther" ColumnName="CommunityOther" />
+          <ScalarProperty Name="CaseNumber" ColumnName="CaseNumber" />
+          <ScalarProperty Name="CommunityID" ColumnName="CommunityID" />
+          <ScalarProperty Name="EthnicityOther" ColumnName="EthnicityOther" />
+          <ScalarProperty Name="OtherIdentifier" ColumnName="OtherIdentifier" />
+          <ScalarProperty Name="PregnancyStatus" ColumnName="PregnancyStatus" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ActiveTo" ColumnName="ActiveTo" />
+          <ScalarProperty Name="ActiveFrom" ColumnName="ActiveFrom" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="BodyWeight" ColumnName="BodyWeight" />
+          <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+          <ScalarProperty Name="DateofBirth" ColumnName="DateofBirth" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="OtherPhone" ColumnName="OtherPhone" />
+          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+          <ScalarProperty Name="MobilePhone" ColumnName="MobilePhone" />
+          <ScalarProperty Name="RhaOtherText" ColumnName="RhaOtherText" />
+          <ScalarProperty Name="RhaOther" ColumnName="RhaOther" />
+          <ScalarProperty Name="RhaLG" ColumnName="RhaLG" />
+          <ScalarProperty Name="RhaWG" ColumnName="RhaWG" />
+          <ScalarProperty Name="RhaCH" ColumnName="RhaCH" />
+          <ScalarProperty Name="RhaEH" ColumnName="RhaEH" />
+          <ScalarProperty Name="OtherProvinceStateIdentifier" ColumnName="OtherProvinceStateIdentifier" />
+          <ScalarProperty Name="ProvinceID" ColumnName="ProvinceID" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Community" ColumnName="Community" />
+          <ScalarProperty Name="StreetAddress" ColumnName="StreetAddress" />
+          <ScalarProperty Name="HealthCareNumber" ColumnName="HealthCareNumber" />
+          <ScalarProperty Name="SpeaksInuttitut" ColumnName="SpeaksInuttitut" />
+          <ScalarProperty Name="SpeaksInnu" ColumnName="SpeaksInnu" />
+          <ScalarProperty Name="SpeaksFR" ColumnName="SpeaksFR" />
+          <ScalarProperty Name="SpeaksEN" ColumnName="SpeaksEN" />
+          <ScalarProperty Name="Alias_MaidenName_Nickname" ColumnName="Alias_MaidenName_Nickname" />
+          <ScalarProperty Name="MiddleInitial" ColumnName="MiddleInitial" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="client_Profile">
+      <EntityTypeMapping TypeName="TBTracingModel.client_Profile">
+        <MappingFragment StoreEntitySet="client_Profile">
+          <ScalarProperty Name="Confirmed" ColumnName="Confirmed" />
+          <ScalarProperty Name="Employee" ColumnName="Employee" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="LastStatus" ColumnName="LastStatus" />
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="client_IGRA">
+      <EntityTypeMapping TypeName="TBTracingModel.client_IGRA">
+        <MappingFragment StoreEntitySet="client_IGRA">
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="CollectedByID" ColumnName="CollectedByID" />
+          <ScalarProperty Name="ReasonForTestingOther" ColumnName="ReasonForTestingOther" />
+          <ScalarProperty Name="ReasonForTestingID" ColumnName="ReasonForTestingID" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="ResultDate" ColumnName="ResultDate" />
+          <ScalarProperty Name="CollectionDate" ColumnName="CollectionDate" />
+          <ScalarProperty Name="ResultID" ColumnName="ResultID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="client_Investigation">
+      <EntityTypeMapping TypeName="TBTracingModel.client_Investigation">
+        <MappingFragment StoreEntitySet="client_Investigation">
+          <ScalarProperty Name="CollectedByID" ColumnName="CollectedByID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="InvestigationTypeID" ColumnName="InvestigationTypeID" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="OtherNotes" ColumnName="OtherNotes" />
+          <ScalarProperty Name="Other" ColumnName="Other" />
+          <ScalarProperty Name="CSFNotes" ColumnName="CSFNotes" />
+          <ScalarProperty Name="CSF" ColumnName="CSF" />
+          <ScalarProperty Name="UrineNotes" ColumnName="UrineNotes" />
+          <ScalarProperty Name="Urine" ColumnName="Urine" />
+          <ScalarProperty Name="NodeBiopsyNotes" ColumnName="NodeBiopsyNotes" />
+          <ScalarProperty Name="NodeBiopsy" ColumnName="NodeBiopsy" />
+          <ScalarProperty Name="GIWashNotes" ColumnName="GIWashNotes" />
+          <ScalarProperty Name="GIWash" ColumnName="GIWash" />
+          <ScalarProperty Name="BranchialWashResultNotes" ColumnName="BranchialWashResultNotes" />
+          <ScalarProperty Name="BranchialWashResult" ColumnName="BranchialWashResult" />
+          <ScalarProperty Name="ResultDate" ColumnName="ResultDate" />
+          <ScalarProperty Name="CollectedDate" ColumnName="CollectedDate" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="client_RiskFactors">
+      <EntityTypeMapping TypeName="TBTracingModel.client_RiskFactors">
+        <MappingFragment StoreEntitySet="client_RiskFactors">
+          <ScalarProperty Name="NotEligibleForTreatmentNotes" ColumnName="NotEligibleForTreatmentNotes" />
+          <ScalarProperty Name="NotEligibleForTreatment" ColumnName="NotEligibleForTreatment" />
+          <ScalarProperty Name="VisitorsFrHighIncidenceRegionNotes" ColumnName="VisitorsFrHighIncidenceRegionNotes" />
+          <ScalarProperty Name="VisitorsFrHighIncidenceRegion" ColumnName="VisitorsFrHighIncidenceRegion" />
+          <ScalarProperty Name="TravelInuitNunaGutPrev2YearsNotes" ColumnName="TravelInuitNunaGutPrev2YearsNotes" />
+          <ScalarProperty Name="TravelInuitNunaGutPrev2Years" ColumnName="TravelInuitNunaGutPrev2Years" />
+          <ScalarProperty Name="SmokingDeviceNotes" ColumnName="SmokingDeviceNotes" />
+          <ScalarProperty Name="SmokingDeviceUse" ColumnName="SmokingDeviceUse" />
+          <ScalarProperty Name="CannabisNotes" ColumnName="CannabisNotes" />
+          <ScalarProperty Name="CannabisUser" ColumnName="CannabisUser" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="LTBIRrefusedDOPNotes" ColumnName="LTBIRrefusedDOPNotes" />
+          <ScalarProperty Name="LTBIRrefusedDOP" ColumnName="LTBIRrefusedDOP" />
+          <ScalarProperty Name="InactiveDiseaseNotAdequatelyTreatedNotes" ColumnName="InactiveDiseaseNotAdequatelyTreatedNotes" />
+          <ScalarProperty Name="InactiveDiseaseNotAdequatelyTreated" ColumnName="InactiveDiseaseNotAdequatelyTreated" />
+          <ScalarProperty Name="AgeWhenInfectedLessThanEqual5yrsNotes" ColumnName="AgeWhenInfectedLessThanEqual5yrsNotes" />
+          <ScalarProperty Name="AgeWhenInfectedLessThanEqual5yrs" ColumnName="AgeWhenInfectedLessThanEqual5yrs" />
+          <ScalarProperty Name="TravelHighIncidenceCountry2yrsNotes" ColumnName="TravelHighIncidenceCountry2yrsNotes" />
+          <ScalarProperty Name="TravelHighIncidenceCountry2yrs" ColumnName="TravelHighIncidenceCountry2yrs" />
+          <ScalarProperty Name="ImmunosuppressiveDrugsNotes" ColumnName="ImmunosuppressiveDrugsNotes" />
+          <ScalarProperty Name="ImmunosuppressiveDrugs" ColumnName="ImmunosuppressiveDrugs" />
+          <ScalarProperty Name="CancerNotes" ColumnName="CancerNotes" />
+          <ScalarProperty Name="Cancer" ColumnName="Cancer" />
+          <ScalarProperty Name="AIDSNotes" ColumnName="AIDSNotes" />
+          <ScalarProperty Name="AIDS" ColumnName="AIDS" />
+          <ScalarProperty Name="HIVNotes" ColumnName="HIVNotes" />
+          <ScalarProperty Name="HIV" ColumnName="HIV" />
+          <ScalarProperty Name="TransplantRelatedImmunosuppressionNotes" ColumnName="TransplantRelatedImmunosuppressionNotes" />
+          <ScalarProperty Name="TransplantRelatedImmunosuppression" ColumnName="TransplantRelatedImmunosuppression" />
+          <ScalarProperty Name="TobaccoSmokerNotes" ColumnName="TobaccoSmokerNotes" />
+          <ScalarProperty Name="TobaccoSmoker" ColumnName="TobaccoSmoker" />
+          <ScalarProperty Name="SubstanceAbuseNotes" ColumnName="SubstanceAbuseNotes" />
+          <ScalarProperty Name="SubstanceAbuse" ColumnName="SubstanceAbuse" />
+          <ScalarProperty Name="PreviousAbnormalChestXrayNotes" ColumnName="PreviousAbnormalChestXrayNotes" />
+          <ScalarProperty Name="PreviousAbnormalChestXray" ColumnName="PreviousAbnormalChestXray" />
+          <ScalarProperty Name="CorrectionalFacilityAtTimeDiagNotes" ColumnName="CorrectionalFacilityAtTimeDiagNotes" />
+          <ScalarProperty Name="CorrectionalFacilityAtTimeDiag" ColumnName="CorrectionalFacilityAtTimeDiag" />
+          <ScalarProperty Name="OverCrowdedHousingNotes" ColumnName="OverCrowdedHousingNotes" />
+          <ScalarProperty Name="OverCrowdedHousing" ColumnName="OverCrowdedHousing" />
+          <ScalarProperty Name="HomelessNotes" ColumnName="HomelessNotes" />
+          <ScalarProperty Name="Homeless" ColumnName="Homeless" />
+          <ScalarProperty Name="UnderlyingMedicalonditionsNotes" ColumnName="UnderlyingMedicalonditionsNotes" />
+          <ScalarProperty Name="UnderlyingMedicalonditions" ColumnName="UnderlyingMedicalonditions" />
+          <ScalarProperty Name="EndStageRenalDiseaseNotes" ColumnName="EndStageRenalDiseaseNotes" />
+          <ScalarProperty Name="EndStageRenalDisease" ColumnName="EndStageRenalDisease" />
+          <ScalarProperty Name="DiabetesMellitusType1or2Notes" ColumnName="DiabetesMellitusType1or2Notes" />
+          <ScalarProperty Name="DiabetesMellitusType1or2" ColumnName="DiabetesMellitusType1or2" />
+          <ScalarProperty Name="ContactActiveTB2YrsNotes" ColumnName="ContactActiveTB2YrsNotes" />
+          <ScalarProperty Name="ContactActiveTB2Yrs" ColumnName="ContactActiveTB2Yrs" />
+          <ScalarProperty Name="FamilyHistory" ColumnName="FamilyHistory" />
+          <ScalarProperty Name="InterviewDate" ColumnName="InterviewDate" />
+          <ScalarProperty Name="InterviewByID" ColumnName="InterviewByID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="client_SkinTest">
+      <EntityTypeMapping TypeName="TBTracingModel.client_SkinTest">
+        <MappingFragment StoreEntitySet="client_SkinTest">
+          <ScalarProperty Name="ReadByID" ColumnName="ReadByID" />
+          <ScalarProperty Name="SymptomInquiryRecommended" ColumnName="SymptomInquiryRecommended" />
+          <ScalarProperty Name="SputumRecommended" ColumnName="SputumRecommended" />
+          <ScalarProperty Name="ReadByText" ColumnName="ReadByText" />
+          <ScalarProperty Name="SiteOther" ColumnName="SiteOther" />
+          <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+          <ScalarProperty Name="Dose" ColumnName="Dose" />
+          <ScalarProperty Name="PlacedBy" ColumnName="PlacedBy" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="TestReasonOther" ColumnName="TestReasonOther" />
+          <ScalarProperty Name="TestReasonID" ColumnName="TestReasonID" />
+          <ScalarProperty Name="FollowUpDate" ColumnName="FollowUpDate" />
+          <ScalarProperty Name="FollowUpTestNotRequired" ColumnName="FollowUpTestNotRequired" />
+          <ScalarProperty Name="FollowUpTestRequired" ColumnName="FollowUpTestRequired" />
+          <ScalarProperty Name="ConsentDate" ColumnName="ConsentDate" />
+          <ScalarProperty Name="Return4872HoursNo" ColumnName="Return4872HoursNo" />
+          <ScalarProperty Name="Return4872Hours" ColumnName="Return4872Hours" />
+          <ScalarProperty Name="ConsentBenefitsRisksUnderstoodNo" ColumnName="ConsentBenefitsRisksUnderstoodNo" />
+          <ScalarProperty Name="ConsentBenefitsRisksUnderstood" ColumnName="ConsentBenefitsRisksUnderstood" />
+          <ScalarProperty Name="ConsentFactSheetProvidedNo" ColumnName="ConsentFactSheetProvidedNo" />
+          <ScalarProperty Name="ConsentFactSheetProvided" ColumnName="ConsentFactSheetProvided" />
+          <ScalarProperty Name="IGRARecommended" ColumnName="IGRARecommended" />
+          <ScalarProperty Name="XrayRecommended" ColumnName="XrayRecommended" />
+          <ScalarProperty Name="InjectionSiteID" ColumnName="InjectionSiteID" />
+          <ScalarProperty Name="ReadBy" ColumnName="ReadBy" />
+          <ScalarProperty Name="ResultID" ColumnName="ResultID" />
+          <ScalarProperty Name="SiteRead" ColumnName="SiteRead" />
+          <ScalarProperty Name="SiteAdministeredOther" ColumnName="SiteAdministeredOther" />
+          <ScalarProperty Name="SiteAdministered" ColumnName="SiteAdministered" />
+          <ScalarProperty Name="AdministeredByID" ColumnName="AdministeredByID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="LotID" ColumnName="LotID" />
+          <ScalarProperty Name="Iduration" ColumnName="Iduration" />
+          <ScalarProperty Name="RouteID" ColumnName="RouteID" />
+          <ScalarProperty Name="CommentsResult" ColumnName="CommentsResult" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="DatePlaced" ColumnName="DatePlaced" />
+          <ScalarProperty Name="DateRead" ColumnName="DateRead" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="client_Sputum">
+      <EntityTypeMapping TypeName="TBTracingModel.client_Sputum">
+        <MappingFragment StoreEntitySet="client_Sputum">
+          <ScalarProperty Name="CultureResultData" ColumnName="CultureResultData" />
+          <ScalarProperty Name="ReasonForTestingOther" ColumnName="ReasonForTestingOther" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ReasonForTestingID" ColumnName="ReasonForTestingID" />
+          <ScalarProperty Name="CultureResultID" ColumnName="CultureResultID" />
+          <ScalarProperty Name="SmearResultID" ColumnName="SmearResultID" />
+          <ScalarProperty Name="StatusInduced" ColumnName="StatusInduced" />
+          <ScalarProperty Name="StatusComplete" ColumnName="StatusComplete" />
+          <ScalarProperty Name="StatusPendingCulture" ColumnName="StatusPendingCulture" />
+          <ScalarProperty Name="StatusSmearComplete" ColumnName="StatusSmearComplete" />
+          <ScalarProperty Name="StatusNotResulted" ColumnName="StatusNotResulted" />
+          <ScalarProperty Name="StatusCollected" ColumnName="StatusCollected" />
+          <ScalarProperty Name="StatusUnableToProduce" ColumnName="StatusUnableToProduce" />
+          <ScalarProperty Name="StatusRefused" ColumnName="StatusRefused" />
+          <ScalarProperty Name="RequestedByID" ColumnName="RequestedByID" />
+          <ScalarProperty Name="CompletedByID" ColumnName="CompletedByID" />
+          <ScalarProperty Name="ResultDate" ColumnName="ResultDate" />
+          <ScalarProperty Name="CollectedDate" ColumnName="CollectedDate" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="client_Symptoms">
+      <EntityTypeMapping TypeName="TBTracingModel.client_Symptoms">
+        <MappingFragment StoreEntitySet="client_Symptoms">
+          <ScalarProperty Name="RashStart" ColumnName="RashStart" />
+          <ScalarProperty Name="RashNotes" ColumnName="RashNotes" />
+          <ScalarProperty Name="RashEnd" ColumnName="RashEnd" />
+          <ScalarProperty Name="Rash" ColumnName="Rash" />
+          <ScalarProperty Name="FailureToThriveEnd" ColumnName="FailureToThriveEnd" />
+          <ScalarProperty Name="FailureToThriveStart" ColumnName="FailureToThriveStart" />
+          <ScalarProperty Name="FailureToThriveNotes" ColumnName="FailureToThriveNotes" />
+          <ScalarProperty Name="FailureToThrive" ColumnName="FailureToThrive" />
+          <ScalarProperty Name="ChestpainEnd" ColumnName="ChestpainEnd" />
+          <ScalarProperty Name="ChestpainStart" ColumnName="ChestpainStart" />
+          <ScalarProperty Name="ChestpainNotes" ColumnName="ChestpainNotes" />
+          <ScalarProperty Name="Chestpain" ColumnName="Chestpain" />
+          <ScalarProperty Name="FatigueEnd" ColumnName="FatigueEnd" />
+          <ScalarProperty Name="FatigueStart" ColumnName="FatigueStart" />
+          <ScalarProperty Name="FatigueNotes" ColumnName="FatigueNotes" />
+          <ScalarProperty Name="Fatigue" ColumnName="Fatigue" />
+          <ScalarProperty Name="LossAppetiteEnd" ColumnName="LossAppetiteEnd" />
+          <ScalarProperty Name="LossAppetiteStart" ColumnName="LossAppetiteStart" />
+          <ScalarProperty Name="LossAppetiteNotes" ColumnName="LossAppetiteNotes" />
+          <ScalarProperty Name="LossAppetite" ColumnName="LossAppetite" />
+          <ScalarProperty Name="WeightLossEnd" ColumnName="WeightLossEnd" />
+          <ScalarProperty Name="WeightLossStart" ColumnName="WeightLossStart" />
+          <ScalarProperty Name="WeightLossNotes" ColumnName="WeightLossNotes" />
+          <ScalarProperty Name="WeightLoss" ColumnName="WeightLoss" />
+          <ScalarProperty Name="HemoptysisEnd" ColumnName="HemoptysisEnd" />
+          <ScalarProperty Name="HemoptysisStart" ColumnName="HemoptysisStart" />
+          <ScalarProperty Name="HemoptysisNotes" ColumnName="HemoptysisNotes" />
+          <ScalarProperty Name="Hemoptysis" ColumnName="Hemoptysis" />
+          <ScalarProperty Name="NightSweatsEnd" ColumnName="NightSweatsEnd" />
+          <ScalarProperty Name="NightSweatsStart" ColumnName="NightSweatsStart" />
+          <ScalarProperty Name="NightSweatsNotes" ColumnName="NightSweatsNotes" />
+          <ScalarProperty Name="NightSweats" ColumnName="NightSweats" />
+          <ScalarProperty Name="FeverEnd" ColumnName="FeverEnd" />
+          <ScalarProperty Name="FeverStart" ColumnName="FeverStart" />
+          <ScalarProperty Name="FeverNotes" ColumnName="FeverNotes" />
+          <ScalarProperty Name="Fever" ColumnName="Fever" />
+          <ScalarProperty Name="ShortnessBreathEnd" ColumnName="ShortnessBreathEnd" />
+          <ScalarProperty Name="ShortnessBreathStart" ColumnName="ShortnessBreathStart" />
+          <ScalarProperty Name="ShortnessBreathNotes" ColumnName="ShortnessBreathNotes" />
+          <ScalarProperty Name="ShortnessBreath" ColumnName="ShortnessBreath" />
+          <ScalarProperty Name="CoughGreat3WeeksEnd" ColumnName="CoughGreat3WeeksEnd" />
+          <ScalarProperty Name="CoughGreat3WeeksStart" ColumnName="CoughGreat3WeeksStart" />
+          <ScalarProperty Name="CoughGreat3WeeksNotes" ColumnName="CoughGreat3WeeksNotes" />
+          <ScalarProperty Name="CoughGreat3Weeks" ColumnName="CoughGreat3Weeks" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="CompletionMethod" ColumnName="CompletionMethod" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="InterviewDate" ColumnName="InterviewDate" />
+          <ScalarProperty Name="InterviewByID" ColumnName="InterviewByID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="client_Xray">
+      <EntityTypeMapping TypeName="TBTracingModel.client_Xray">
+        <MappingFragment StoreEntitySet="client_Xray">
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ReasonForTestingOther" ColumnName="ReasonForTestingOther" />
+          <ScalarProperty Name="ReasonForTestingID" ColumnName="ReasonForTestingID" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="LinearDiseaseNotes" ColumnName="LinearDiseaseNotes" />
+          <ScalarProperty Name="LinearDisease" ColumnName="LinearDisease" />
+          <ScalarProperty Name="HilarLymphadenopathyNotes" ColumnName="HilarLymphadenopathyNotes" />
+          <ScalarProperty Name="HilarLymphadenopathy" ColumnName="HilarLymphadenopathy" />
+          <ScalarProperty Name="PleuralEffusionNotes" ColumnName="PleuralEffusionNotes" />
+          <ScalarProperty Name="PleuralEffusion" ColumnName="PleuralEffusion" />
+          <ScalarProperty Name="NoduleNotes" ColumnName="NoduleNotes" />
+          <ScalarProperty Name="Nodule" ColumnName="Nodule" />
+          <ScalarProperty Name="CavitaryLessionNotes" ColumnName="CavitaryLessionNotes" />
+          <ScalarProperty Name="CavitaryLession" ColumnName="CavitaryLession" />
+          <ScalarProperty Name="InfiltrateYesNoNotes" ColumnName="InfiltrateYesNoNotes" />
+          <ScalarProperty Name="InfiltrateYesNo" ColumnName="InfiltrateYesNo" />
+          <ScalarProperty Name="ResultID" ColumnName="ResultID" />
+          <ScalarProperty Name="IndicationID" ColumnName="IndicationID" />
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="ViewID" ColumnName="ViewID" />
+          <ScalarProperty Name="ExamDate" ColumnName="ExamDate" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clinic_TBClinic">
+      <EntityTypeMapping TypeName="TBTracingModel.clinic_TBClinic">
+        <MappingFragment StoreEntitySet="clinic_TBClinic">
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="MaxAppointments" ColumnName="MaxAppointments" />
+          <ScalarProperty Name="PhysicianID" ColumnName="PhysicianID" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="ClinicDate" ColumnName="ClinicDate" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clinic_TBClinicAppointments">
+      <EntityTypeMapping TypeName="TBTracingModel.clinic_TBClinicAppointments">
+        <MappingFragment StoreEntitySet="clinic_TBClinicAppointments">
+          <ScalarProperty Name="CompletedByID" ColumnName="CompletedByID" />
+          <ScalarProperty Name="CompletedDate" ColumnName="CompletedDate" />
+          <ScalarProperty Name="Complete" ColumnName="Complete" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="TaxiPickup" ColumnName="TaxiPickup" />
+          <ScalarProperty Name="TaxiNumber" ColumnName="TaxiNumber" />
+          <ScalarProperty Name="Transportation" ColumnName="Transportation" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="ClientType" ColumnName="ClientType" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="PhysicianID" ColumnName="PhysicianID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="ClinicID" ColumnName="ClinicID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="client_DiagnosticImage">
+      <EntityTypeMapping TypeName="TBTracingModel.client_DiagnosticImage">
+        <MappingFragment StoreEntitySet="client_DiagnosticImage">
+          <ScalarProperty Name="ReasonForTestingOther" ColumnName="ReasonForTestingOther" />
+          <ScalarProperty Name="OtherProcedure" ColumnName="OtherProcedure" />
+          <ScalarProperty Name="ReasonForTesting" ColumnName="ReasonForTesting" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="Findings" ColumnName="Findings" />
+          <ScalarProperty Name="ResultID" ColumnName="ResultID" />
+          <ScalarProperty Name="IndicationID" ColumnName="IndicationID" />
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="ViewID" ColumnName="ViewID" />
+          <ScalarProperty Name="ExamDate" ColumnName="ExamDate" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="client_Communication">
+      <EntityTypeMapping TypeName="TBTracingModel.client_Communication">
+        <MappingFragment StoreEntitySet="client_Communication">
+          <ScalarProperty Name="ContactedByName" ColumnName="ContactedByName" />
+          <ScalarProperty Name="ResultID" ColumnName="ResultID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="ContactedBy" ColumnName="ContactedBy" />
+          <ScalarProperty Name="ReasonID" ColumnName="ReasonID" />
+          <ScalarProperty Name="MethodID" ColumnName="MethodID" />
+          <ScalarProperty Name="CommunicationDateTime" ColumnName="CommunicationDateTime" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="client_CommunicationBulletin">
+      <EntityTypeMapping TypeName="TBTracingModel.client_CommunicationBulletin">
+        <MappingFragment StoreEntitySet="client_CommunicationBulletin">
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="CommunicationBulletin" ColumnName="CommunicationBulletin" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="client_Document">
+      <EntityTypeMapping TypeName="TBTracingModel.client_Document">
+        <MappingFragment StoreEntitySet="client_Document">
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DocumentContents" ColumnName="DocumentContents" />
+          <ScalarProperty Name="DocumentName" ColumnName="DocumentName" />
+          <ScalarProperty Name="DocumentType" ColumnName="DocumentType" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="client_Followup">
+      <EntityTypeMapping TypeName="TBTracingModel.client_Followup">
+        <MappingFragment StoreEntitySet="client_Followup">
+          <ScalarProperty Name="Complete" ColumnName="Complete" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="CompletedDate" ColumnName="CompletedDate" />
+          <ScalarProperty Name="PhysicianID" ColumnName="PhysicianID" />
+          <ScalarProperty Name="ReminderDate" ColumnName="ReminderDate" />
+          <ScalarProperty Name="FollowupDate" ColumnName="FollowupDate" />
+          <ScalarProperty Name="FollowupType" ColumnName="FollowupType" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="client_Notes">
+      <EntityTypeMapping TypeName="TBTracingModel.client_Notes">
+        <MappingFragment StoreEntitySet="client_Notes">
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="NoteText" ColumnName="NoteText" />
+          <ScalarProperty Name="NoteLabel" ColumnName="NoteLabel" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="client_ContactTracing">
+      <EntityTypeMapping TypeName="TBTracingModel.client_ContactTracing">
+        <MappingFragment StoreEntitySet="client_ContactTracing">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ContactClientID" ColumnName="ContactClientID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="PriorityID" ColumnName="PriorityID" />
+          <ScalarProperty Name="DiagnosisID" ColumnName="DiagnosisID" />
+          <ScalarProperty Name="CommunityID" ColumnName="CommunityID" />
+          <ScalarProperty Name="RelationshipID" ColumnName="RelationshipID" />
+          <ScalarProperty Name="ReasonTypeID" ColumnName="ReasonTypeID" />
+          <ScalarProperty Name="ContactTypeID" ColumnName="ContactTypeID" />
+          <ScalarProperty Name="LastContact" ColumnName="LastContact" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_Antibiotic">
+      <EntityTypeMapping TypeName="TBTracingModel.common_Antibiotic">
+        <MappingFragment StoreEntitySet="common_Antibiotic">
+          <ScalarProperty Name="AntibioticName" ColumnName="AntibioticName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_BloodworkCollectionMethod">
+      <EntityTypeMapping TypeName="TBTracingModel.common_BloodworkCollectionMethod">
+        <MappingFragment StoreEntitySet="common_BloodworkCollectionMethod">
+          <ScalarProperty Name="CollectionMethod" ColumnName="CollectionMethod" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_Clinicians">
+      <EntityTypeMapping TypeName="TBTracingModel.common_Clinicians">
+        <MappingFragment StoreEntitySet="common_Clinicians">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_ClinicReason">
+      <EntityTypeMapping TypeName="TBTracingModel.common_ClinicReason">
+        <MappingFragment StoreEntitySet="common_ClinicReason">
+          <ScalarProperty Name="ClinicReason" ColumnName="ClinicReason" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_CommunicationMethod">
+      <EntityTypeMapping TypeName="TBTracingModel.common_CommunicationMethod">
+        <MappingFragment StoreEntitySet="common_CommunicationMethod">
+          <ScalarProperty Name="ContactMethod" ColumnName="ContactMethod" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_CommunicationReason">
+      <EntityTypeMapping TypeName="TBTracingModel.common_CommunicationReason">
+        <MappingFragment StoreEntitySet="common_CommunicationReason">
+          <ScalarProperty Name="CommunicationReason" ColumnName="CommunicationReason" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_CommunicationResult">
+      <EntityTypeMapping TypeName="TBTracingModel.common_CommunicationResult">
+        <MappingFragment StoreEntitySet="common_CommunicationResult">
+          <ScalarProperty Name="CommunicationResult" ColumnName="CommunicationResult" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_Community">
+      <EntityTypeMapping TypeName="TBTracingModel.common_Community">
+        <MappingFragment StoreEntitySet="common_Community">
+          <ScalarProperty Name="Community" ColumnName="Community" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_CompletionMethod">
+      <EntityTypeMapping TypeName="TBTracingModel.common_CompletionMethod">
+        <MappingFragment StoreEntitySet="common_CompletionMethod">
+          <ScalarProperty Name="CompletionMethod" ColumnName="CompletionMethod" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_ContactPriority">
+      <EntityTypeMapping TypeName="TBTracingModel.common_ContactPriority">
+        <MappingFragment StoreEntitySet="common_ContactPriority">
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_ContactReason">
+      <EntityTypeMapping TypeName="TBTracingModel.common_ContactReason">
+        <MappingFragment StoreEntitySet="common_ContactReason">
+          <ScalarProperty Name="ContactReason" ColumnName="ContactReason" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_ContactType">
+      <EntityTypeMapping TypeName="TBTracingModel.common_ContactType">
+        <MappingFragment StoreEntitySet="common_ContactType">
+          <ScalarProperty Name="ContactType" ColumnName="ContactType" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_DocumentType">
+      <EntityTypeMapping TypeName="TBTracingModel.common_DocumentType">
+        <MappingFragment StoreEntitySet="common_DocumentType">
+          <ScalarProperty Name="DocumentTypeMime" ColumnName="DocumentTypeMime" />
+          <ScalarProperty Name="DocumentType" ColumnName="DocumentType" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_Followup">
+      <EntityTypeMapping TypeName="TBTracingModel.common_Followup">
+        <MappingFragment StoreEntitySet="common_Followup">
+          <ScalarProperty Name="FollowupType" ColumnName="FollowupType" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_Gender">
+      <EntityTypeMapping TypeName="TBTracingModel.common_Gender">
+        <MappingFragment StoreEntitySet="common_Gender">
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_GeographicLocation">
+      <EntityTypeMapping TypeName="TBTracingModel.common_GeographicLocation">
+        <MappingFragment StoreEntitySet="common_GeographicLocation">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="SiteName" ColumnName="SiteName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_HivStatus">
+      <EntityTypeMapping TypeName="TBTracingModel.common_HivStatus">
+        <MappingFragment StoreEntitySet="common_HivStatus">
+          <ScalarProperty Name="HIVStatus" ColumnName="HIVStatus" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_IGRAResult">
+      <EntityTypeMapping TypeName="TBTracingModel.common_IGRAResult">
+        <MappingFragment StoreEntitySet="common_IGRAResult">
+          <ScalarProperty Name="IGRATestResult" ColumnName="IGRATestResult" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_InjectionBodySite">
+      <EntityTypeMapping TypeName="TBTracingModel.common_InjectionBodySite">
+        <MappingFragment StoreEntitySet="common_InjectionBodySite">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="BodyPart" ColumnName="BodyPart" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_InjectionRoute">
+      <EntityTypeMapping TypeName="TBTracingModel.common_InjectionRoute">
+        <MappingFragment StoreEntitySet="common_InjectionRoute">
+          <ScalarProperty Name="Route" ColumnName="Route" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_InvestigationType">
+      <EntityTypeMapping TypeName="TBTracingModel.common_InvestigationType">
+        <MappingFragment StoreEntitySet="common_InvestigationType">
+          <ScalarProperty Name="InvestigationType" ColumnName="InvestigationType" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_Language">
+      <EntityTypeMapping TypeName="TBTracingModel.common_Language">
+        <MappingFragment StoreEntitySet="common_Language">
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_MedicalLot">
+      <EntityTypeMapping TypeName="TBTracingModel.common_MedicalLot">
+        <MappingFragment StoreEntitySet="common_MedicalLot">
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="LotNumber" ColumnName="LotNumber" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_Medication">
+      <EntityTypeMapping TypeName="TBTracingModel.common_Medication">
+        <MappingFragment StoreEntitySet="common_Medication">
+          <ScalarProperty Name="MedicationName" ColumnName="MedicationName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_MedicationFrequency">
+      <EntityTypeMapping TypeName="TBTracingModel.common_MedicationFrequency">
+        <MappingFragment StoreEntitySet="common_MedicationFrequency">
+          <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_MedicationStatus">
+      <EntityTypeMapping TypeName="TBTracingModel.common_MedicationStatus">
+        <MappingFragment StoreEntitySet="common_MedicationStatus">
+          <ScalarProperty Name="MedicationStatus" ColumnName="MedicationStatus" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_PregnancyStatus">
+      <EntityTypeMapping TypeName="TBTracingModel.common_PregnancyStatus">
+        <MappingFragment StoreEntitySet="common_PregnancyStatus">
+          <ScalarProperty Name="PregnantStatus" ColumnName="PregnantStatus" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_Product">
+      <EntityTypeMapping TypeName="TBTracingModel.common_Product">
+        <MappingFragment StoreEntitySet="common_Product">
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_Province">
+      <EntityTypeMapping TypeName="TBTracingModel.common_Province">
+        <MappingFragment StoreEntitySet="common_Province">
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="ProvinceMnemonic" ColumnName="ProvinceMnemonic" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_SkinTestResult">
+      <EntityTypeMapping TypeName="TBTracingModel.common_SkinTestResult">
+        <MappingFragment StoreEntitySet="common_SkinTestResult">
+          <ScalarProperty Name="SkinTestResult" ColumnName="SkinTestResult" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_SkinTestSite">
+      <EntityTypeMapping TypeName="TBTracingModel.common_SkinTestSite">
+        <MappingFragment StoreEntitySet="common_SkinTestSite">
+          <ScalarProperty Name="SkinTestSite" ColumnName="SkinTestSite" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_SputumCultureResult">
+      <EntityTypeMapping TypeName="TBTracingModel.common_SputumCultureResult">
+        <MappingFragment StoreEntitySet="common_SputumCultureResult">
+          <ScalarProperty Name="CultureResult" ColumnName="CultureResult" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_SputumRequestBy">
+      <EntityTypeMapping TypeName="TBTracingModel.common_SputumRequestBy">
+        <MappingFragment StoreEntitySet="common_SputumRequestBy">
+          <ScalarProperty Name="RequestedBy" ColumnName="RequestedBy" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_SputumSmearResult">
+      <EntityTypeMapping TypeName="TBTracingModel.common_SputumSmearResult">
+        <MappingFragment StoreEntitySet="common_SputumSmearResult">
+          <ScalarProperty Name="SmearResult" ColumnName="SmearResult" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_Status">
+      <EntityTypeMapping TypeName="TBTracingModel.common_Status">
+        <MappingFragment StoreEntitySet="common_Status">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_Symptoms">
+      <EntityTypeMapping TypeName="TBTracingModel.common_Symptoms">
+        <MappingFragment StoreEntitySet="common_Symptoms">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Symptom" ColumnName="Symptom" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_TBOutcome">
+      <EntityTypeMapping TypeName="TBTracingModel.common_TBOutcome">
+        <MappingFragment StoreEntitySet="common_TBOutcome">
+          <ScalarProperty Name="SortOrder" ColumnName="SortOrder" />
+          <ScalarProperty Name="AssociatedStatus" ColumnName="AssociatedStatus" />
+          <ScalarProperty Name="TBOutcome" ColumnName="TBOutcome" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_TBTypes">
+      <EntityTypeMapping TypeName="TBTracingModel.common_TBTypes">
+        <MappingFragment StoreEntitySet="common_TBTypes">
+          <ScalarProperty Name="TBType" ColumnName="TBType" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_TBUser">
+      <EntityTypeMapping TypeName="TBTracingModel.common_TBUser">
+        <MappingFragment StoreEntitySet="common_TBUser">
+          <ScalarProperty Name="AspNetUserID" ColumnName="AspNetUserID" />
+          <ScalarProperty Name="AspNetID" ColumnName="AspNetID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ClinicianID" ColumnName="ClinicianID" />
+          <ScalarProperty Name="NameLabel" ColumnName="NameLabel" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_TestReason">
+      <EntityTypeMapping TypeName="TBTracingModel.common_TestReason">
+        <MappingFragment StoreEntitySet="common_TestReason">
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="TestReason" ColumnName="TestReason" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_TestReasonType">
+      <EntityTypeMapping TypeName="TBTracingModel.common_TestReasonType">
+        <MappingFragment StoreEntitySet="common_TestReasonType">
+          <ScalarProperty Name="ReasonType" ColumnName="ReasonType" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_TreatmentAdherence">
+      <EntityTypeMapping TypeName="TBTracingModel.common_TreatmentAdherence">
+        <MappingFragment StoreEntitySet="common_TreatmentAdherence">
+          <ScalarProperty Name="Adherence" ColumnName="Adherence" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_TreatmentMode">
+      <EntityTypeMapping TypeName="TBTracingModel.common_TreatmentMode">
+        <MappingFragment StoreEntitySet="common_TreatmentMode">
+          <ScalarProperty Name="ModeTreatment" ColumnName="ModeTreatment" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_XrayArea">
+      <EntityTypeMapping TypeName="TBTracingModel.common_XrayArea">
+        <MappingFragment StoreEntitySet="common_XrayArea">
+          <ScalarProperty Name="XrayArea" ColumnName="XrayArea" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_XrayIndication">
+      <EntityTypeMapping TypeName="TBTracingModel.common_XrayIndication">
+        <MappingFragment StoreEntitySet="common_XrayIndication">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="XrayIndication" ColumnName="XrayIndication" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_XrayResult">
+      <EntityTypeMapping TypeName="TBTracingModel.common_XrayResult">
+        <MappingFragment StoreEntitySet="common_XrayResult">
+          <ScalarProperty Name="XrayResult" ColumnName="XrayResult" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_XrayView">
+      <EntityTypeMapping TypeName="TBTracingModel.common_XrayView">
+        <MappingFragment StoreEntitySet="common_XrayView">
+          <ScalarProperty Name="XrayView" ColumnName="XrayView" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_YesNoNotdoneUnknown">
+      <EntityTypeMapping TypeName="TBTracingModel.common_YesNoNotdoneUnknown">
+        <MappingFragment StoreEntitySet="common_YesNoNotdoneUnknown">
+          <ScalarProperty Name="AnswerText" ColumnName="AnswerText" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_YesNoUnknown">
+      <EntityTypeMapping TypeName="TBTracingModel.common_YesNoUnknown">
+        <MappingFragment StoreEntitySet="common_YesNoUnknown">
+          <ScalarProperty Name="StrValue" ColumnName="StrValue" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_YesNoUnknownRefused">
+      <EntityTypeMapping TypeName="TBTracingModel.common_YesNoUnknownRefused">
+        <MappingFragment StoreEntitySet="common_YesNoUnknownRefused">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Audit">
+      <EntityTypeMapping TypeName="TBTracingModel.Audit">
+        <MappingFragment StoreEntitySet="Audit">
+          <ScalarProperty Name="AuditUser" ColumnName="AuditUser" />
+          <ScalarProperty Name="AuditDate" ColumnName="AuditDate" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="AuditDetails" ColumnName="AuditDetails" />
+          <ScalarProperty Name="AuditTitle" ColumnName="AuditTitle" />
+          <ScalarProperty Name="AuditType" ColumnName="AuditType" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuditType">
+      <EntityTypeMapping TypeName="TBTracingModel.AuditType">
+        <MappingFragment StoreEntitySet="AuditType">
+          <ScalarProperty Name="AuditType1" ColumnName="AuditType" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwClientList">
+      <EntityTypeMapping TypeName="TBTracingModel.vwClientList">
+        <MappingFragment StoreEntitySet="vwClientList">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="strDOB" ColumnName="strDOB" />
+          <ScalarProperty Name="DateofBirth" ColumnName="DateofBirth" />
+          <ScalarProperty Name="ProfileID" ColumnName="ProfileID" />
+          <ScalarProperty Name="HealthCareNumber" ColumnName="HealthCareNumber" />
+          <ScalarProperty Name="OtherIdentifier" ColumnName="OtherIdentifier" />
+          <ScalarProperty Name="CaseNumber" ColumnName="CaseNumber" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwClients">
+      <EntityTypeMapping TypeName="TBTracingModel.vwClients">
+        <MappingFragment StoreEntitySet="vwClients">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="strDOB" ColumnName="strDOB" />
+          <ScalarProperty Name="TBOutcome" ColumnName="TBOutcome" />
+          <ScalarProperty Name="Outcome" ColumnName="Outcome" />
+          <ScalarProperty Name="DateofBirth" ColumnName="DateofBirth" />
+          <ScalarProperty Name="ProfileID" ColumnName="ProfileID" />
+          <ScalarProperty Name="HealthCareNumber" ColumnName="HealthCareNumber" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwContactTracingConsolidated">
+      <EntityTypeMapping TypeName="TBTracingModel.vwContactTracingConsolidated">
+        <MappingFragment StoreEntitySet="vwContactTracingConsolidated">
+          <ScalarProperty Name="ContactReason" ColumnName="ContactReason" />
+          <ScalarProperty Name="ToDate" ColumnName="ToDate" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CommunityID" ColumnName="CommunityID" />
+          <ScalarProperty Name="Community" ColumnName="Community" />
+          <ScalarProperty Name="RelationshipID" ColumnName="RelationshipID" />
+          <ScalarProperty Name="RelationshipText" ColumnName="RelationshipText" />
+          <ScalarProperty Name="PriorityID" ColumnName="PriorityID" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="ContactTypeID" ColumnName="ContactTypeID" />
+          <ScalarProperty Name="ContactType" ColumnName="ContactType" />
+          <ScalarProperty Name="IdentifiedClientID" ColumnName="IdentifiedClientID" />
+          <ScalarProperty Name="IdentifiedLastName" ColumnName="IdentifiedLastName" />
+          <ScalarProperty Name="IdentifiedFirstName" ColumnName="IdentifiedFirstName" />
+          <ScalarProperty Name="SourceClientID" ColumnName="SourceClientID" />
+          <ScalarProperty Name="SourceLastName" ColumnName="SourceLastName" />
+          <ScalarProperty Name="SourceFirstName" ColumnName="SourceFirstName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="common_Ethnicity">
+      <EntityTypeMapping TypeName="TBTracingModel.common_Ethnicity">
+        <MappingFragment StoreEntitySet="common_Ethnicity">
+          <ScalarProperty Name="Ethnicity" ColumnName="Ethnicity" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="client_DemographicEthnicity" TypeName="TBTracingModel.client_DemographicEthnicity" StoreEntitySet="client_DemographicEthnicity">
+      <EndProperty Name="common_Ethnicity">
+        <ScalarProperty Name="ID" ColumnName="EthnicityID" />
+      </EndProperty>
+      <EndProperty Name="client_Demographic">
+        <ScalarProperty Name="ID" ColumnName="ClientID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="client_SputumResistence" TypeName="TBTracingModel.client_SputumResistence" StoreEntitySet="client_SputumResistence">
+      <EndProperty Name="common_Antibiotic">
+        <ScalarProperty Name="ID" ColumnName="AntibioticID" />
+      </EndProperty>
+      <EndProperty Name="client_Sputum">
+        <ScalarProperty Name="ID" ColumnName="SputumID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="client_Outcome">
+      <EntityTypeMapping TypeName="TBTracingModel.client_Outcome">
+        <MappingFragment StoreEntitySet="client_Outcome">
+          <ScalarProperty Name="ClientDeathDate" ColumnName="ClientDeathDate" />
+          <ScalarProperty Name="ClientDeathTBNoContribute" ColumnName="ClientDeathTBNoContribute" />
+          <ScalarProperty Name="ClientDeathTBContribute" ColumnName="ClientDeathTBContribute" />
+          <ScalarProperty Name="ClientDeathTBCause" ColumnName="ClientDeathTBCause" />
+          <ScalarProperty Name="TransferDestination" ColumnName="TransferDestination" />
+          <ScalarProperty Name="TreatmentID" ColumnName="TreatmentID" />
+          <ScalarProperty Name="DeterminedByID" ColumnName="DeterminedByID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="TBType" ColumnName="TBType" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="OutcomeDeterminationDate" ColumnName="OutcomeDeterminationDate" />
+          <ScalarProperty Name="Outcome" ColumnName="Outcome" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="client_OutcomeTreatment">
+      <EntityTypeMapping TypeName="TBTracingModel.client_OutcomeTreatment">
+        <MappingFragment StoreEntitySet="client_OutcomeTreatment">
+          <ScalarProperty Name="ClientDeathTBNoContribute" ColumnName="ClientDeathTBNoContribute" />
+          <ScalarProperty Name="ClientDeathTBContribute" ColumnName="ClientDeathTBContribute" />
+          <ScalarProperty Name="ClientDeathTBCause" ColumnName="ClientDeathTBCause" />
+          <ScalarProperty Name="ClientDateDate" ColumnName="ClientDateDate" />
+          <ScalarProperty Name="ClientDeath" ColumnName="ClientDeath" />
+          <ScalarProperty Name="OutcomeID" ColumnName="OutcomeID" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="AdherenceID" ColumnName="AdherenceID" />
+          <ScalarProperty Name="TransferedDestination" ColumnName="TransferedDestination" />
+          <ScalarProperty Name="TreatmentModeID" ColumnName="TreatmentModeID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="client_OutcomeTreatmentDOT">
+      <EntityTypeMapping TypeName="TBTracingModel.client_OutcomeTreatmentDOT">
+        <MappingFragment StoreEntitySet="client_OutcomeTreatmentDOT">
+          <ScalarProperty Name="TreatmentID" ColumnName="TreatmentID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ClientNoShow" ColumnName="ClientNoShow" />
+          <ScalarProperty Name="CompletedBy" ColumnName="CompletedBy" />
+          <ScalarProperty Name="DOTDate" ColumnName="DOTDate" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="client_OutcomeTreatmentRegimen">
+      <EntityTypeMapping TypeName="TBTracingModel.client_OutcomeTreatmentRegimen">
+        <MappingFragment StoreEntitySet="client_OutcomeTreatmentRegimen">
+          <ScalarProperty Name="MedicationID" ColumnName="MedicationID" />
+          <ScalarProperty Name="FrequencyID" ColumnName="FrequencyID" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="OutcomeID" ColumnName="OutcomeID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="NumberDoses" ColumnName="NumberDoses" />
+          <ScalarProperty Name="Doseage" ColumnName="Doseage" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="client_OutcomeMedications" TypeName="TBTracingModel.client_OutcomeMedications" StoreEntitySet="client_OutcomeMedications">
+      <EndProperty Name="common_Medication">
+        <ScalarProperty Name="ID" ColumnName="medID" />
+      </EndProperty>
+      <EndProperty Name="client_OutcomeTreatmentDOT">
+        <ScalarProperty Name="ID" ColumnName="dotID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="client_OutcomeTreatmentDOTSymptoms" TypeName="TBTracingModel.client_OutcomeTreatmentDOTSymptoms" StoreEntitySet="client_OutcomeTreatmentDOTSymptoms">
+      <EndProperty Name="common_Symptoms">
+        <ScalarProperty Name="ID" ColumnName="symptomID" />
+      </EndProperty>
+      <EndProperty Name="client_OutcomeTreatmentDOT">
+        <ScalarProperty Name="ID" ColumnName="dotID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="common_ContactRelationship">
+      <EntityTypeMapping TypeName="TBTracingModel.common_ContactRelationship">
+        <MappingFragment StoreEntitySet="common_ContactRelationship">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="RelationshipText" ColumnName="RelationshipText" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

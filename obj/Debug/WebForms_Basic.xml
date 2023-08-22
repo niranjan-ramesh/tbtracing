@@ -1,0 +1,4926 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+TBTracing
+</name>
+</assembly>
+<members>
+<member name="T:TBTracing.My.MyWebExtension">
+ <summary>
+ Module used to define the properties that are available in the My Namespace for Web projects.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:TBTracing.My.MyWebExtension.Computer">
+ <summary>
+ Returns information about the host computer.
+ </summary>
+</member>
+<member name="P:TBTracing.My.MyWebExtension.User">
+ <summary>
+ Returns information for the current Web user.
+ </summary>
+</member>
+<member name="P:TBTracing.My.MyWebExtension.Request">
+ <summary>
+ Returns Request object.
+ </summary>
+</member>
+<member name="P:TBTracing.My.MyWebExtension.Response">
+ <summary>
+ Returns Response object.
+ </summary>
+</member>
+<member name="P:TBTracing.My.MyWebExtension.Log">
+ <summary>
+ Returns the Asp log object.
+ </summary>
+</member>
+<member name="F:TBTracing.Login._ErrorMessage">
+<summary>
+ErrorMessage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Login._FailureText">
+<summary>
+FailureText control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Login._UserName">
+<summary>
+UserName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Login._Password">
+<summary>
+Password control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Login._RememberMe">
+<summary>
+RememberMe control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Manage._SuccessMessagePlaceHolder">
+<summary>
+SuccessMessagePlaceHolder control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Manage._CurrentPassword">
+<summary>
+CurrentPassword control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Manage._NewPassword">
+<summary>
+NewPassword control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Manage._ConfirmNewPassword">
+<summary>
+ConfirmNewPassword control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OpenAuthProviders._providerDetails">
+<summary>
+providerDetails control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.AddEditLot._pnlSuccess">
+<summary>
+pnlSuccess control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.AddEditLot._ltStatusMessage">
+<summary>
+ltStatusMessage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.AddEditLot._noteValidationSummary">
+<summary>
+noteValidationSummary control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.AddEditLot._ddLots">
+<summary>
+ddLots control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.AddEditLot._fvLot">
+<summary>
+fvLot control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.AddEditLot._dsLots">
+<summary>
+dsLots control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._lbTabUserList">
+<summary>
+lbTabUserList control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._btnAddNew">
+<summary>
+btnAddNew control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._userGridviewPanel">
+<summary>
+userGridviewPanel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._userCount">
+<summary>
+userCount control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._gvUserList">
+<summary>
+gvUserList control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._userDetailPanel">
+<summary>
+userDetailPanel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._userDetailFormTitle">
+<summary>
+userDetailFormTitle control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._ErrorMessage">
+<summary>
+ErrorMessage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._StatusMessagePanel">
+<summary>
+StatusMessagePanel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._UserValidation">
+<summary>
+UserValidation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._Username">
+<summary>
+Username control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._UsernameRFV">
+<summary>
+UsernameRFV control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._Password">
+<summary>
+Password control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._PasswordRFV">
+<summary>
+PasswordRFV control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._ConfirmPassword">
+<summary>
+ConfirmPassword control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._ConfirmPasswordRFV">
+<summary>
+ConfirmPasswordRFV control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._PasswordCV">
+<summary>
+PasswordCV control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._Email">
+<summary>
+Email control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._emailrfv">
+<summary>
+emailrfv control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._FirstName">
+<summary>
+FirstName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._FirstNameRFV">
+<summary>
+FirstNameRFV control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._LastName">
+<summary>
+LastName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._LastNameRFV">
+<summary>
+LastNameRFV control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._cblRoles">
+<summary>
+cblRoles control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._btnSave">
+<summary>
+btnSave control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._btnCancel">
+<summary>
+btnCancel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._ChangePasswordPanel">
+<summary>
+ChangePasswordPanel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._litUserName">
+<summary>
+litUserName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._hdnChangePasswordUserID">
+<summary>
+hdnChangePasswordUserID control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._ChangePasswordStatusMessagePanel">
+<summary>
+ChangePasswordStatusMessagePanel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._ChangePasswordValidation">
+<summary>
+ChangePasswordValidation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._txtPassword">
+<summary>
+txtPassword control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._tbPasswordRFV">
+<summary>
+tbPasswordRFV control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._btnSavePassword">
+<summary>
+btnSavePassword control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._btnCancelPassword">
+<summary>
+btnCancelPassword control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._Role">
+<summary>
+Role control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default1._CreateRole">
+<summary>
+CreateRole control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="P:TBTracing.ExcelExtract.IsReusable">
+ <summary>
+  You will need to configure this handler in the Web.config file of your 
+  web and register it with IIS before being able to use it. For more information
+  see the following link: http://go.microsoft.com/?linkid=8101007
+ </summary>
+</member>
+<member name="F:TBTracing.UserAdministration._noteValidationSummary">
+<summary>
+noteValidationSummary control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._lbTabUserList">
+<summary>
+lbTabUserList control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._btnAddUser">
+<summary>
+btnAddUser control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._userGridviewPanel">
+<summary>
+userGridviewPanel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._userCount">
+<summary>
+userCount control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._gvUserList">
+<summary>
+gvUserList control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._passwordPanel">
+<summary>
+passwordPanel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._litUserName">
+<summary>
+litUserName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._txtPassword">
+<summary>
+txtPassword control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._btnSavePassword">
+<summary>
+btnSavePassword control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._btnCancelPassword">
+<summary>
+btnCancelPassword control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._userDetailPanel">
+<summary>
+userDetailPanel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._userDetailFormTitle">
+<summary>
+userDetailFormTitle control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._ErrorMessage">
+<summary>
+ErrorMessage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._StatusMessagePanel">
+<summary>
+StatusMessagePanel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._UserValidation">
+<summary>
+UserValidation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._Username">
+<summary>
+Username control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._UsernameRFV">
+<summary>
+UsernameRFV control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._Password">
+<summary>
+Password control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._PasswordRFV">
+<summary>
+PasswordRFV control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._minLengthValidation">
+<summary>
+minLengthValidation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._ConfirmPassword">
+<summary>
+ConfirmPassword control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._ConfirmPasswordRFV">
+<summary>
+ConfirmPasswordRFV control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._PasswordCV">
+<summary>
+PasswordCV control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._Email">
+<summary>
+Email control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._emailrfv">
+<summary>
+emailrfv control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._FirstName">
+<summary>
+FirstName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._FirstNameRFV">
+<summary>
+FirstNameRFV control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._cblRoles">
+<summary>
+cblRoles control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._btnSave">
+<summary>
+btnSave control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._btnCancel">
+<summary>
+btnCancel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._newPasswordReq">
+<summary>
+newPasswordReq control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.UserAdministration._updateValidation">
+<summary>
+updateValidation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.AllFollowups._ValidationSummary1">
+<summary>
+ValidationSummary1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.AllFollowups._tbFromDate">
+<summary>
+tbFromDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.AllFollowups._tbToDate">
+<summary>
+tbToDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.AllFollowups._ddResponsible">
+<summary>
+ddResponsible control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.AllFollowups._ddFollowUpType">
+<summary>
+ddFollowUpType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.AllFollowups._lbSearch">
+<summary>
+lbSearch control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.AllFollowups._gvFollowUps">
+<summary>
+gvFollowUps control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.AllFollowups._dsFollowType">
+<summary>
+dsFollowType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.AllFollowups._dsUsers">
+<summary>
+dsUsers control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.AddOutcome._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.AddOutcome._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.AddOutcome._ValidationSummary1">
+<summary>
+ValidationSummary1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.AddOutcome._fvTBOutcome">
+<summary>
+fvTBOutcome control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.AddOutcome._dsUsers">
+<summary>
+dsUsers control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.AddOutcome._dsOutcome">
+<summary>
+dsOutcome control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.AddOutcome._dsTBTypes">
+<summary>
+dsTBTypes control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Bloodwork._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Bloodwork._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Bloodwork._ValidationSummary1">
+<summary>
+ValidationSummary1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Bloodwork._BloodworkFormView">
+<summary>
+BloodworkFormView control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Bloodwork._dsReasons">
+<summary>
+dsReasons control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Bloodwork._ApplicationUsers">
+<summary>
+ApplicationUsers control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Bloodwork._dsCollectionMethod">
+<summary>
+dsCollectionMethod control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientDemographic._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientDemographic._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientDemographic._ValidationSummary1">
+<summary>
+ValidationSummary1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientDemographic._pnlSuccess">
+<summary>
+pnlSuccess control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientDemographic._DemographicFormView">
+<summary>
+DemographicFormView control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientDemographic._Communities">
+<summary>
+Communities control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientDemographic._EthnicDictionary">
+<summary>
+EthnicDictionary control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientDemographic._GenderDictionary">
+<summary>
+GenderDictionary control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientDemographic._PregnancyDictionary">
+<summary>
+PregnancyDictionary control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientDemographic._StatusDictionary">
+<summary>
+StatusDictionary control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientDemographic._ProvinceDictionary">
+<summary>
+ProvinceDictionary control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientDemographicHistory._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientDemographicHistory._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientDemographicHistory._ValidationSummary1">
+<summary>
+ValidationSummary1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientDemographicHistory._rptDemoDetails">
+<summary>
+rptDemoDetails control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientDemographicHistory._lnkHistory">
+<summary>
+lnkHistory control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientDemographicHistory._Community">
+<summary>
+Community control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientDemographicHistory._EthnicDictionary">
+<summary>
+EthnicDictionary control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientDemographicHistory._GenderDictionary">
+<summary>
+GenderDictionary control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientDemographicHistory._PregnancyDictionary">
+<summary>
+PregnancyDictionary control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientDemographicHistory._StatusDictionary">
+<summary>
+StatusDictionary control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientDemographicHistory._ProvinceDictionary">
+<summary>
+ProvinceDictionary control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientInfoControl._pnlClientInformation">
+<summary>
+pnlClientInformation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientInfoControl._litClientName">
+<summary>
+litClientName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientInfoControl._litClientStatus">
+<summary>
+litClientStatus control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientInfoControl._litClientHCN">
+<summary>
+litClientHCN control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientInfoControl._litClientDOB">
+<summary>
+litClientDOB control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientInfoControl._litLastUpdate">
+<summary>
+litLastUpdate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientTabsControl._demoLi">
+<summary>
+demoLi control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientTabsControl._lnkDemo">
+<summary>
+lnkDemo control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientTabsControl._symptomsLi">
+<summary>
+symptomsLi control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientTabsControl._lnkSymp">
+<summary>
+lnkSymp control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientTabsControl._skinTestLI">
+<summary>
+skinTestLI control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientTabsControl._lnkSkinTest">
+<summary>
+lnkSkinTest control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientTabsControl._sputmLI">
+<summary>
+sputmLI control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientTabsControl._lnkSputum">
+<summary>
+lnkSputum control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientTabsControl._investigationLI">
+<summary>
+investigationLI control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientTabsControl._lnkInvestigations">
+<summary>
+lnkInvestigations control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientTabsControl._diagnosisLI">
+<summary>
+diagnosisLI control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientTabsControl._lnkDiagnosisTreatment">
+<summary>
+lnkDiagnosisTreatment control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientTabsControl._treatmentLI">
+<summary>
+treatmentLI control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientTabsControl._lnkTreatment">
+<summary>
+lnkTreatment control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientTabsControl._riskLI">
+<summary>
+riskLI control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientTabsControl._lnkRiskFactors">
+<summary>
+lnkRiskFactors control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientTabsControl._communicationLI">
+<summary>
+communicationLI control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientTabsControl._lnkCommunication">
+<summary>
+lnkCommunication control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientTabsControl._contactLI">
+<summary>
+contactLI control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientTabsControl._lnkContactTrace">
+<summary>
+lnkContactTrace control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientTabsControl._docsLI">
+<summary>
+docsLI control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientTabsControl._lnkDocsNotes">
+<summary>
+lnkDocsNotes control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientTabsControl._followupLI">
+<summary>
+followupLI control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClientTabsControl._lnkFollowUps">
+<summary>
+lnkFollowUps control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Communication._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Communication._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Communication._ForViewCommunication">
+<summary>
+ForViewCommunication control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Communication._dsCommunicationMethod">
+<summary>
+dsCommunicationMethod control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Communication._dsCommunicationReason">
+<summary>
+dsCommunicationReason control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Communication._dsContactedBy">
+<summary>
+dsContactedBy control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Communication._dsCommResults">
+<summary>
+dsCommResults control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.CommunicationHistory._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.CommunicationHistory._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.CommunicationHistory._pnlSuccess">
+<summary>
+pnlSuccess control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.CommunicationHistory._ValidationSummary1">
+<summary>
+ValidationSummary1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.CommunicationHistory._tbHomePhone">
+<summary>
+tbHomePhone control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.CommunicationHistory._tbMobilePhone">
+<summary>
+tbMobilePhone control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.CommunicationHistory._tbOtherPhone">
+<summary>
+tbOtherPhone control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.CommunicationHistory._tbEmail">
+<summary>
+tbEmail control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.CommunicationHistory._tbContactBulletin">
+<summary>
+tbContactBulletin control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.CommunicationHistory._lbSaveBulletin">
+<summary>
+lbSaveBulletin control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.CommunicationHistory._gvHistory">
+<summary>
+gvHistory control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.CommunicationHistory._lnkAddNew">
+<summary>
+lnkAddNew control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactHistory._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactHistory._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactHistory._pnlSuccess">
+<summary>
+pnlSuccess control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactHistory._ValidationSummary1">
+<summary>
+ValidationSummary1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactHistory._gvHistory">
+<summary>
+gvHistory control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactHistory._lnkAddNew">
+<summary>
+lnkAddNew control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactHistory._gvNotes">
+<summary>
+gvNotes control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactHistory._fvContactNotes">
+<summary>
+fvContactNotes control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingAdd._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingAdd._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingAdd._ValidationSummary1">
+<summary>
+ValidationSummary1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingAdd._tbName">
+<summary>
+tbName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingAdd._tbMCP">
+<summary>
+tbMCP control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingAdd._tbDOB">
+<summary>
+tbDOB control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingAdd._tbAliast">
+<summary>
+tbAliast control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingAdd._tbCity">
+<summary>
+tbCity control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingAdd._tbProv">
+<summary>
+tbProv control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingAdd._tbAddress">
+<summary>
+tbAddress control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingAdd._fvContactTracing">
+<summary>
+fvContactTracing control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingAdd._dsContactType">
+<summary>
+dsContactType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingAdd._dsReason">
+<summary>
+dsReason control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingAdd._dsPriority">
+<summary>
+dsPriority control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingAdd._dsCommunity">
+<summary>
+dsCommunity control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingSearch._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingSearch._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingSearch._pnlSuccess">
+<summary>
+pnlSuccess control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingSearch._lblSuccessMessage">
+<summary>
+lblSuccessMessage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingSearch._ValidationSummary1">
+<summary>
+ValidationSummary1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingSearch._tbMCP">
+<summary>
+tbMCP control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingSearch._tbFirstName">
+<summary>
+tbFirstName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingSearch._tbLastName">
+<summary>
+tbLastName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingSearch._tbDOB">
+<summary>
+tbDOB control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingSearch._ddStatus">
+<summary>
+ddStatus control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingSearch._lbSearch">
+<summary>
+lbSearch control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingSearch._gvClients">
+<summary>
+gvClients control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingSearch._lnkHome">
+<summary>
+lnkHome control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingSearch._lnkAddNewClient">
+<summary>
+lnkAddNewClient control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingSearch._dsStatus">
+<summary>
+dsStatus control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ContactTracingSearch._dsClientList">
+<summary>
+dsClientList control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.DiagnosticImage._lblHeaderType">
+<summary>
+lblHeaderType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.DiagnosticImage._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.DiagnosticImage._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.DiagnosticImage._ValidationSummary1">
+<summary>
+ValidationSummary1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.DiagnosticImage._fvDiagnosticImage">
+<summary>
+fvDiagnosticImage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.DiagnosticImage._dsXrayArea">
+<summary>
+dsXrayArea control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.DiagnosticImage._dsXrayView">
+<summary>
+dsXrayView control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.DiagnosticImage._dsXrayIndication">
+<summary>
+dsXrayIndication control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.DiagnosticImage._dsXrayResult">
+<summary>
+dsXrayResult control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.DiagnosticImage._dsReasons">
+<summary>
+dsReasons control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.DocsNotes._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.DocsNotes._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.DocsNotes._pnlSuccess">
+<summary>
+pnlSuccess control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.DocsNotes._gvDocumentsHistory">
+<summary>
+gvDocumentsHistory control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.DocsNotes._docValidationSummary">
+<summary>
+docValidationSummary control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.DocsNotes._DocumentFormView">
+<summary>
+DocumentFormView control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.DocsNotes._gvNotesHistory">
+<summary>
+gvNotesHistory control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.DocsNotes._lnkAddNote">
+<summary>
+lnkAddNote control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Followups._ClientInfo1">
+<summary>
+ClientInfo1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Followups._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Followups._ValidationSummary1">
+<summary>
+ValidationSummary1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Followups._gvFollowUps">
+<summary>
+gvFollowUps control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Followups._fvAddFollowUp">
+<summary>
+fvAddFollowUp control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Followups._dsFollowType">
+<summary>
+dsFollowType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Followups._dsUsers">
+<summary>
+dsUsers control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.IGRA._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.IGRA._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.IGRA._ValidationSummary1">
+<summary>
+ValidationSummary1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.IGRA._IGRAFormView">
+<summary>
+IGRAFormView control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.IGRA._dsReasons">
+<summary>
+dsReasons control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.IGRA._dsIGRAResults">
+<summary>
+dsIGRAResults control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.InvestigationHistory._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.InvestigationHistory._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.InvestigationHistory._pnlSuccess">
+<summary>
+pnlSuccess control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.InvestigationHistory._gvIGRAHistory">
+<summary>
+gvIGRAHistory control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.InvestigationHistory._lnkAddIGRA">
+<summary>
+lnkAddIGRA control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.InvestigationHistory._gvBloodworkHistory">
+<summary>
+gvBloodworkHistory control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.InvestigationHistory._lnkAddBloodwork">
+<summary>
+lnkAddBloodwork control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.InvestigationHistory._gvDiagnosticImages">
+<summary>
+gvDiagnosticImages control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.InvestigationHistory._lnkAddDiagnosticImage">
+<summary>
+lnkAddDiagnosticImage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Notes._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Notes._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Notes._ValidationSummary1">
+<summary>
+ValidationSummary1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Notes._NotesFormView">
+<summary>
+NotesFormView control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeHistory._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeHistory._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeHistory._pnlSuccess">
+<summary>
+pnlSuccess control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeHistory._ltStatusMessage">
+<summary>
+ltStatusMessage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeHistory._gvHistory">
+<summary>
+gvHistory control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeHistory._lnkAddNew">
+<summary>
+lnkAddNew control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeTreatment._ClientInfo1">
+<summary>
+ClientInfo1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeTreatment._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeTreatment._ValidationSummary1">
+<summary>
+ValidationSummary1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeTreatment._gvTreatments">
+<summary>
+gvTreatments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeTreatment._fvAddMedicatin">
+<summary>
+fvAddMedicatin control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeTreatment._fvTreatmentOutcomeDetails">
+<summary>
+fvTreatmentOutcomeDetails control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeTreatment._dsMedications">
+<summary>
+dsMedications control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeTreatment._dsFrequency">
+<summary>
+dsFrequency control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeTreatment._dsTreatStatus">
+<summary>
+dsTreatStatus control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeTreatment._dsTreatmentMode">
+<summary>
+dsTreatmentMode control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeTreatment._dsAdherence">
+<summary>
+dsAdherence control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeTreatment._dsOutcome">
+<summary>
+dsOutcome control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeTreatmentAddDOT._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeTreatmentAddDOT._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeTreatmentAddDOT._ValidationSummary1">
+<summary>
+ValidationSummary1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeTreatmentAddDOT._pnlSuccess">
+<summary>
+pnlSuccess control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeTreatmentAddDOT._fvDOT">
+<summary>
+fvDOT control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeTreatmentAddDOT._dsSymptoms">
+<summary>
+dsSymptoms control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeTreatmentAddDOT._dsUsers">
+<summary>
+dsUsers control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeTreatmentSchedule._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeTreatmentSchedule._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeTreatmentSchedule._pnlSuccess">
+<summary>
+pnlSuccess control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeTreatmentSchedule._gvDOTHistory">
+<summary>
+gvDOTHistory control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeTreatmentSchedule._lnkAddDOT">
+<summary>
+lnkAddDOT control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.OutcomeTreatmentSchedule._dsDOTHistory">
+<summary>
+dsDOTHistory control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.RiskHistory._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.RiskHistory._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.RiskHistory._pnlSuccess">
+<summary>
+pnlSuccess control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.RiskHistory._pnlEmptyRisks">
+<summary>
+pnlEmptyRisks control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.RiskHistory._rptDetails">
+<summary>
+rptDetails control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.RiskHistory._lnkAddNew">
+<summary>
+lnkAddNew control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.RiskHistory._dsYesNoUnknownRefused">
+<summary>
+dsYesNoUnknownRefused control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Risks._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Risks._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Risks._ValidationSummary1">
+<summary>
+ValidationSummary1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Risks._FormViewRisks">
+<summary>
+FormViewRisks control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Risks._dsUsers">
+<summary>
+dsUsers control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Risks._dsCompletionMethod">
+<summary>
+dsCompletionMethod control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Risks._dsYesNoUnknownRefused">
+<summary>
+dsYesNoUnknownRefused control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SeachClient._tbMCP">
+<summary>
+tbMCP control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SeachClient._tbOtherIdentifier">
+<summary>
+tbOtherIdentifier control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SeachClient._tbFirstName">
+<summary>
+tbFirstName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SeachClient._tbLastName">
+<summary>
+tbLastName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SeachClient._tbDOB">
+<summary>
+tbDOB control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SeachClient._ddStatus">
+<summary>
+ddStatus control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SeachClient._tbCaseNumber">
+<summary>
+tbCaseNumber control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SeachClient._ddCommunity">
+<summary>
+ddCommunity control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SeachClient._lbSearch">
+<summary>
+lbSearch control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SeachClient._gvClients">
+<summary>
+gvClients control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SeachClient._lnkHome">
+<summary>
+lnkHome control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SeachClient._lnkAddNewClient">
+<summary>
+lnkAddNewClient control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SeachClient._dsStatus">
+<summary>
+dsStatus control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SeachClient._dsClientList">
+<summary>
+dsClientList control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SeachClient._dsCommunities">
+<summary>
+dsCommunities control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SkinTest._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SkinTest._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SkinTest._ValidationSummary1">
+<summary>
+ValidationSummary1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SkinTest._SkinTestFormView">
+<summary>
+SkinTestFormView control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SkinTest._dsMedicalLot">
+<summary>
+dsMedicalLot control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SkinTest._dsLocationAdministered">
+<summary>
+dsLocationAdministered control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SkinTest._dsResult">
+<summary>
+dsResult control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SkinTest._dsProduct">
+<summary>
+dsProduct control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SkinTest._dsSite">
+<summary>
+dsSite control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SkinTest._dsRoute">
+<summary>
+dsRoute control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SkinTest._dsReasons">
+<summary>
+dsReasons control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SkinTest._dsClinicians">
+<summary>
+dsClinicians control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Sputum._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Sputum._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Sputum._ValidationSummary1">
+<summary>
+ValidationSummary1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Sputum._SputumFormView">
+<summary>
+SputumFormView control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Sputum._dsApplicationUsers">
+<summary>
+dsApplicationUsers control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Sputum._dsRequestBy">
+<summary>
+dsRequestBy control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Sputum._dsReasons">
+<summary>
+dsReasons control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Sputum._dsSmearResults">
+<summary>
+dsSmearResults control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Sputum._dsCultureResults">
+<summary>
+dsCultureResults control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Sputum._dsAntibiotic">
+<summary>
+dsAntibiotic control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SkinTestHistory._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SkinTestHistory._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SkinTestHistory._pnlSuccess">
+<summary>
+pnlSuccess control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SkinTestHistory._gvHistory">
+<summary>
+gvHistory control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SkinTestHistory._lnkAddNew">
+<summary>
+lnkAddNew control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SkinTestHistory._ValidationSummary1">
+<summary>
+ValidationSummary1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SkinTestHistory._rblBCGStatus">
+<summary>
+rblBCGStatus control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SkinTestHistory._tbImmuneDate">
+<summary>
+tbImmuneDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SkinTestHistory._updateButton">
+<summary>
+updateButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SkinTestHistory._RangeValidator1">
+<summary>
+RangeValidator1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SkinTestHistory._dsBCGStatus">
+<summary>
+dsBCGStatus control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SputumXRayHistory._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SputumXRayHistory._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SputumXRayHistory._pnlSuccess">
+<summary>
+pnlSuccess control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SputumXRayHistory._gvSputumHistory">
+<summary>
+gvSputumHistory control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SputumXRayHistory._lnkAddSputum">
+<summary>
+lnkAddSputum control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SputumXRayHistory._gvChestXrayHistory">
+<summary>
+gvChestXrayHistory control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SputumXRayHistory._lnkAddChestXRay">
+<summary>
+lnkAddChestXRay control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SputumXRayHistory._gvXrayHistory">
+<summary>
+gvXrayHistory control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SputumXRayHistory._lnkAddXRay">
+<summary>
+lnkAddXRay control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SymptomHistory._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SymptomHistory._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SymptomHistory._pnlSuccess">
+<summary>
+pnlSuccess control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SymptomHistory._pnlEmptySymptoms">
+<summary>
+pnlEmptySymptoms control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SymptomHistory._rptDetails">
+<summary>
+rptDetails control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SymptomHistory._lnkAddNew">
+<summary>
+lnkAddNew control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SymptomHistory._dsYesNoUnknownRefused">
+<summary>
+dsYesNoUnknownRefused control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Symptoms._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Symptoms._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Symptoms._ValidationSummary1">
+<summary>
+ValidationSummary1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Symptoms._FormViewSymptoms">
+<summary>
+FormViewSymptoms control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Symptoms._dsUsers">
+<summary>
+dsUsers control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Symptoms._dsCompletionMethod">
+<summary>
+dsCompletionMethod control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Symptoms._dsYesNoUnknownRefused">
+<summary>
+dsYesNoUnknownRefused control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.TreatmentHistory._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.TreatmentHistory._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.TreatmentHistory._pnlSuccess">
+<summary>
+pnlSuccess control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.TreatmentHistory._gvHistory">
+<summary>
+gvHistory control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.XRay._lblHeaderType">
+<summary>
+lblHeaderType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.XRay._ClientInfoControl">
+<summary>
+ClientInfoControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.XRay._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.XRay._ValidationSummary1">
+<summary>
+ValidationSummary1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.XRay._XRayFormView">
+<summary>
+XRayFormView control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.XRay._dsXrayArea">
+<summary>
+dsXrayArea control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.XRay._dsXrayView">
+<summary>
+dsXrayView control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.XRay._dsXrayIndication">
+<summary>
+dsXrayIndication control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.XRay._dsXrayResult">
+<summary>
+dsXrayResult control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.XRay._dsReasons">
+<summary>
+dsReasons control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Clinic._ValidationSummary1">
+<summary>
+ValidationSummary1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Clinic._ClinicFormView">
+<summary>
+ClinicFormView control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Clinic._dsApplicationUsers">
+<summary>
+dsApplicationUsers control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClinicAppointments._litClinicDate">
+<summary>
+litClinicDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClinicAppointments._litPhysician">
+<summary>
+litPhysician control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClinicAppointments._lnkClinicHomeTop">
+<summary>
+lnkClinicHomeTop control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClinicAppointments._pnlSuccess">
+<summary>
+pnlSuccess control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClinicAppointments._gvClinicAppointments">
+<summary>
+gvClinicAppointments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClinicAppointments._ValidationSummary1">
+<summary>
+ValidationSummary1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClinicAppointments._fvAddAppointment">
+<summary>
+fvAddAppointment control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClinicAppointments._lnkClinicHome">
+<summary>
+lnkClinicHome control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClinicAppointments._dsClients">
+<summary>
+dsClients control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClinicAppointments._dsApplicationUsers">
+<summary>
+dsApplicationUsers control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClinicAppointments._dsReasons">
+<summary>
+dsReasons control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClinicAppointments._dsLanguages">
+<summary>
+dsLanguages control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClinicAppointments._dsClientNames">
+<summary>
+dsClientNames control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClinicList._gvClinicList">
+<summary>
+gvClinicList control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ClinicList._lnkAddClinic">
+<summary>
+lnkAddClinic control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default._lblClientCount">
+<summary>
+lblClientCount control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default._lblClinicCount">
+<summary>
+lblClinicCount control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default._AdminBlockPH">
+<summary>
+AdminBlockPH control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._Default._LotBlockPH">
+<summary>
+LotBlockPH control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ErrorPage._lblErrorMessage">
+<summary>
+lblErrorMessage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ErrorPage._homeButton">
+<summary>
+homeButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._003_ClientList._tbMCP">
+<summary>
+tbMCP control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._003_ClientList._tbFirstName">
+<summary>
+tbFirstName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._003_ClientList._tbLastName">
+<summary>
+tbLastName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._003_ClientList._tbDOB">
+<summary>
+tbDOB control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._003_ClientList._lbSearch">
+<summary>
+lbSearch control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._003_ClientList._gvContacts">
+<summary>
+gvContacts control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._003_ClientList._lbHome">
+<summary>
+lbHome control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._003_ClientList._lbAddClient">
+<summary>
+lbAddClient control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._004a_AddClinic._tbClinicDate">
+<summary>
+tbClinicDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._004a_AddClinic._tbStartTime">
+<summary>
+tbStartTime control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._004a_AddClinic._tbEndTime">
+<summary>
+tbEndTime control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._004a_AddClinic._tbMaxAppointments">
+<summary>
+tbMaxAppointments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._004a_AddClinic._tbComments">
+<summary>
+tbComments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._004a_AddClinic._lbAdd">
+<summary>
+lbAdd control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._005_demo_Contact._tbFirstName">
+<summary>
+tbFirstName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._005_demo_Contact._tbMiddleInitial">
+<summary>
+tbMiddleInitial control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._005_demo_Contact._tbLastName">
+<summary>
+tbLastName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._005_demo_Contact._tbAlias">
+<summary>
+tbAlias control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._005_demo_Contact._tbMCP">
+<summary>
+tbMCP control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._005_demo_Contact._tbOtherNumber">
+<summary>
+tbOtherNumber control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._005_demo_Contact._tbStreetAddress">
+<summary>
+tbStreetAddress control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._005_demo_Contact._tbCommunity">
+<summary>
+tbCommunity control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._005_demo_Contact._tbPostalCode">
+<summary>
+tbPostalCode control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._005_demo_Contact._tbProvince">
+<summary>
+tbProvince control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._005_demo_Contact._tbMobilePhone">
+<summary>
+tbMobilePhone control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._005_demo_Contact._tbHomePhone">
+<summary>
+tbHomePhone control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._005_demo_Contact._tbOtherPhone">
+<summary>
+tbOtherPhone control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._005_demo_Contact._tbEmail">
+<summary>
+tbEmail control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._005_demo_Contact._tbDOB">
+<summary>
+tbDOB control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._005_demo_Contact._tbAge">
+<summary>
+tbAge control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._005_demo_Contact._tbOccupation">
+<summary>
+tbOccupation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._005_demo_Contact._tbEthnicityOther">
+<summary>
+tbEthnicityOther control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._005_demo_Contact._tbBodyWeight">
+<summary>
+tbBodyWeight control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._005_demo_Contact._tbOtherInformation">
+<summary>
+tbOtherInformation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._005_demo_Contact._lbHistory">
+<summary>
+lbHistory control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._005_demo_Contact._lbUpdate">
+<summary>
+lbUpdate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._006a_contactattempts_Contact._tbMobilePhone">
+<summary>
+tbMobilePhone control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._006a_contactattempts_Contact._tbHomePhone">
+<summary>
+tbHomePhone control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._006a_contactattempts_Contact._tbOtherPhone">
+<summary>
+tbOtherPhone control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._006a_contactattempts_Contact._tbEmail">
+<summary>
+tbEmail control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._006a_contactattempts_Contact._tbContactBulletin">
+<summary>
+tbContactBulletin control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._006a_contactattempts_Contact._lbAddNew">
+<summary>
+lbAddNew control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._006a_contactattempts_Contact._modalAddNewValidationSummary">
+<summary>
+modalAddNewValidationSummary control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._006a_contactattempts_Contact._tbDOB">
+<summary>
+tbDOB control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._006a_contactattempts_Contact._tbTime">
+<summary>
+tbTime control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._006a_contactattempts_Contact._tbOtherInformation">
+<summary>
+tbOtherInformation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._006a_contactattempts_Contact._CreateRole">
+<summary>
+CreateRole control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._007a_skintest_Contact._LinkButton4">
+<summary>
+LinkButton4 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._007a_skintest_Contact._LinkButton1">
+<summary>
+LinkButton1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._007b_skintest_new_Contact._tbDatePlaced">
+<summary>
+tbDatePlaced control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._007b_skintest_new_Contact._tbDateRead">
+<summary>
+tbDateRead control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._007b_skintest_new_Contact._tbInduration">
+<summary>
+tbInduration control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._007b_skintest_new_Contact._tbComments">
+<summary>
+tbComments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._007b_skintest_new_Contact._tbDateOfConsent">
+<summary>
+tbDateOfConsent control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._007b_skintest_new_Contact._tbDOB">
+<summary>
+tbDOB control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._007b_skintest_new_Contact._lbUpdate">
+<summary>
+lbUpdate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._009d_investigations_sputum_Contact._ClientTabsControl">
+<summary>
+ClientTabsControl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._009d_investigations_sputum_Contact._ValidationSummary1">
+<summary>
+ValidationSummary1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._009d_investigations_sputum_Contact._tbCollectedDate">
+<summary>
+tbCollectedDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._009d_investigations_sputum_Contact._tbResultDate">
+<summary>
+tbResultDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._009d_investigations_sputum_Contact._ddlCompletedBy">
+<summary>
+ddlCompletedBy control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._009d_investigations_sputum_Contact._ddlRequestedBy">
+<summary>
+ddlRequestedBy control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._009d_investigations_sputum_Contact._cbRefused">
+<summary>
+cbRefused control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._009d_investigations_sputum_Contact._cbUnableToProduce">
+<summary>
+cbUnableToProduce control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._009d_investigations_sputum_Contact._cbCollected">
+<summary>
+cbCollected control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._009d_investigations_sputum_Contact._cbNotResulted">
+<summary>
+cbNotResulted control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._009d_investigations_sputum_Contact._cbSmearComplete">
+<summary>
+cbSmearComplete control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._009d_investigations_sputum_Contact._cbPendingCulture">
+<summary>
+cbPendingCulture control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._009d_investigations_sputum_Contact._cbComplete">
+<summary>
+cbComplete control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._009d_investigations_sputum_Contact._addButton">
+<summary>
+addButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._009d_investigations_sputum_Contact._updateButton">
+<summary>
+updateButton control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._009d_investigations_sputum_Contact._TBUserDictionary">
+<summary>
+TBUserDictionary control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._010b_symptoms_addedit_Contact._tbStartDate">
+<summary>
+tbStartDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._010b_symptoms_addedit_Contact._tbEndDate">
+<summary>
+tbEndDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._010b_symptoms_addedit_Contact._tbNotes">
+<summary>
+tbNotes control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._010b_symptoms_addedit_Contact._TextBox1">
+<summary>
+TextBox1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._010b_symptoms_addedit_Contact._TextBox2">
+<summary>
+TextBox2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._010b_symptoms_addedit_Contact._TextBox3">
+<summary>
+TextBox3 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._010b_symptoms_addedit_Contact._TextBox4">
+<summary>
+TextBox4 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._010b_symptoms_addedit_Contact._TextBox5">
+<summary>
+TextBox5 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._010b_symptoms_addedit_Contact._TextBox6">
+<summary>
+TextBox6 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._010b_symptoms_addedit_Contact._tbComments">
+<summary>
+tbComments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing._010b_symptoms_addedit_Contact._lbSave">
+<summary>
+lbSave control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Demographics._tbFirstName">
+<summary>
+tbFirstName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Demographics._tbMiddleInitial">
+<summary>
+tbMiddleInitial control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Demographics._tbLastName">
+<summary>
+tbLastName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Demographics._tbAlias">
+<summary>
+tbAlias control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Demographics._tbMCP">
+<summary>
+tbMCP control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Demographics._tbOtherNumber">
+<summary>
+tbOtherNumber control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Demographics._tbStreetAddress">
+<summary>
+tbStreetAddress control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Demographics._tbCommunity">
+<summary>
+tbCommunity control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Demographics._tbPostalCode">
+<summary>
+tbPostalCode control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Demographics._tbProvince">
+<summary>
+tbProvince control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Demographics._tbMobilePhone">
+<summary>
+tbMobilePhone control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Demographics._tbHomePhone">
+<summary>
+tbHomePhone control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Demographics._tbOtherPhone">
+<summary>
+tbOtherPhone control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Demographics._tbEmail">
+<summary>
+tbEmail control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Demographics._tbDOB">
+<summary>
+tbDOB control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Demographics._tbAge">
+<summary>
+tbAge control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Demographics._tbOccupation">
+<summary>
+tbOccupation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Demographics._tbEthnicityOther">
+<summary>
+tbEthnicityOther control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Demographics._tbBodyWeight">
+<summary>
+tbBodyWeight control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Demographics._tbOtherInformation">
+<summary>
+tbOtherInformation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Demographics._lbHistory">
+<summary>
+lbHistory control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Demographics._lbUpdate">
+<summary>
+lbUpdate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.DiagnosisHome._tbFromDate">
+<summary>
+tbFromDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.DiagnosisHome._tbToDate">
+<summary>
+tbToDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.DiagnosisHome._cblOutcome">
+<summary>
+cblOutcome control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.DiagnosisHome._cblFiels">
+<summary>
+cblFiels control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.DiagnosisHome._lbSearch">
+<summary>
+lbSearch control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.DiagnosisHome._sqlOutcomeTypes">
+<summary>
+sqlOutcomeTypes control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ReportHome._LinkButton1">
+<summary>
+LinkButton1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.ReportHome._lblClientCount">
+<summary>
+lblClientCount control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SiteMaster._PageBody">
+<summary>
+PageBody control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SiteMaster._ltTest">
+<summary>
+ltTest control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SiteMaster._displayName">
+<summary>
+displayName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SiteMaster._AdminMenuPH">
+<summary>
+AdminMenuPH control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SiteMaster._MainContent">
+<summary>
+MainContent control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.SiteMaster._hdnState">
+<summary>
+hdnState control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Site_Mobile._Head1">
+<summary>
+Head1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Site_Mobile._HeadContent">
+<summary>
+HeadContent control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Site_Mobile._form1">
+<summary>
+form1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Site_Mobile._FeaturedContent">
+<summary>
+FeaturedContent control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Site_Mobile._MainContent">
+<summary>
+MainContent control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TBTracing.Site_Mobile._ViewSwitcher1">
+<summary>
+ViewSwitcher1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+</members>
+</doc>

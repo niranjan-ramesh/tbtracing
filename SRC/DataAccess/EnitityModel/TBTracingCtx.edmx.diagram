@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="731e6221b54c422e86ad8aa407d7e153" Name="TBTracing" ZoomLevel="98">
+        </Diagram>
+      <Diagram DiagramId="eefa365b3a6e4107aa9af741ecc3bf17" Name="Audit" >
+        <EntityTypeShape EntityType="TBTracingModel.Audit" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="TBTracingModel.AuditType" Width="1.5" PointX="0.75" PointY="1.5" />
+        <AssociationConnector Association="TBTracingModel.FK_Audit_AuditType" />
+      </Diagram>
+      <Diagram DiagramId="252f82ac57ea4bb3a780adf63ae89361" Name="ContactTracing" >
+        <EntityTypeShape EntityType="TBTracingModel.client_ContactTracing" Width="1.5" PointX="0.75" PointY="0.75" />
+      </Diagram>
+      <Diagram DiagramId="6b6b8a51ae2e490d9dae49be098cb437" Name="ClientDemographic" ZoomLevel="55" >
+        <EntityTypeShape EntityType="TBTracingModel.client_ContactNote" Width="1.5" PointX="3" PointY="12.25" />
+        <EntityTypeShape EntityType="TBTracingModel.client_Demographic" Width="1.875" PointX="3" PointY="1.375" />
+        <EntityTypeShape EntityType="TBTracingModel.client_Profile" Width="1.5" PointX="0.75" PointY="5.75" />
+        <AssociationConnector Association="TBTracingModel.FK_client_ContactNote_client_Profile" />
+        <AssociationConnector Association="TBTracingModel.FK_client_Demographic_client_Profile" />
+        <EntityTypeShape EntityType="TBTracingModel.common_Ethnicity" Width="1.5" PointX="5.375" PointY="0.75" />
+        <AssociationConnector Association="TBTracingModel.client_DemographicEthnicity" />
+      </Diagram>
+      <Diagram DiagramId="7b30f78303aa448b817a29ee75603a97" Name="ClientTests" ZoomLevel="80" >
+        <EntityTypeShape EntityType="TBTracingModel.client_IGRA" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TBTracingModel.client_Investigation" Width="1.5" PointX="2.75" PointY="5.75" />
+        <EntityTypeShape EntityType="TBTracingModel.client_RiskFactors" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="TBTracingModel.client_SkinTest" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TBTracingModel.client_Sputum" Width="1.5" PointX="0.75" PointY="1.125" />
+        <EntityTypeShape EntityType="TBTracingModel.client_Symptoms" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TBTracingModel.client_Xray" Width="1.5" PointX="11.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TBTracingModel.client_DiagnosticImage" Width="1.5" PointX="0.75" PointY="11.75" />
+      </Diagram>
+      <Diagram DiagramId="0295c97e520e482a9842adeefb575358" Name="Common" >
+        <EntityTypeShape EntityType="TBTracingModel.common_Antibiotic" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_BloodworkCollectionMethod" Width="1.5" PointX="7.75" PointY="4.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_Clinicians" Width="1.5" PointX="0.75" PointY="5.375" />
+        <EntityTypeShape EntityType="TBTracingModel.common_ClinicReason" Width="1.5" PointX="5.75" PointY="7.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_CommunicationMethod" Width="1.5" PointX="7.75" PointY="7.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_CommunicationReason" Width="1.5" PointX="9.75" PointY="4.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_CommunicationResult" Width="1.5" PointX="9.75" PointY="7.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_Community" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_CompletionMethod" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_ContactPriority" Width="1.5" PointX="2.75" PointY="10.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_ContactReason" Width="1.5" PointX="4.75" PointY="10.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_ContactType" Width="1.5" PointX="8.75" PointY="10.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_DocumentType" Width="1.5" PointX="10.75" PointY="10.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_Followup" Width="1.5" PointX="11.75" PointY="6.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_Gender" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_GeographicLocation" Width="1.5" PointX="12.75" PointY="9.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_HivStatus" Width="1.5" PointX="12.75" PointY="12.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_IGRAResult" Width="1.5" PointX="0.75" PointY="13.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_InjectionBodySite" Width="1.5" PointX="2.75" PointY="13.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_InjectionRoute" Width="1.5" PointX="13.75" PointY="3.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_InvestigationType" Width="1.5" PointX="4.75" PointY="13.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_Language" Width="1.5" PointX="13.75" PointY="6.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_MedicalLot" Width="1.5" PointX="6.75" PointY="13.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_Medication" Width="1.5" PointX="8.75" PointY="13.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_MedicationFrequency" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_MedicationStatus" Width="1.5" PointX="14.75" PointY="9.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_PregnancyStatus" Width="1.5" PointX="14.75" PointY="12.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_Product" Width="1.5" PointX="15.75" PointY="3.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_Province" Width="1.5" PointX="15.75" PointY="6.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_SkinTestResult" Width="1.5" PointX="10.75" PointY="15.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_SkinTestSite" Width="1.5" PointX="12.75" PointY="15.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_SputumCultureResult" Width="1.5" PointX="14.75" PointY="15.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_SputumRequestBy" Width="1.5" PointX="16.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_SputumSmearResult" Width="1.5" PointX="0.75" PointY="16.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_Status" Width="1.5" PointX="5.75" PointY="1.125" />
+        <EntityTypeShape EntityType="TBTracingModel.common_Symptoms" Width="1.5" PointX="2.75" PointY="16.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_TBOutcome" Width="1.5" PointX="8" PointY="0.875" />
+        <EntityTypeShape EntityType="TBTracingModel.common_TBTypes" Width="1.5" PointX="4.75" PointY="16.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_TBUser" Width="1.5" PointX="3" PointY="5" />
+        <EntityTypeShape EntityType="TBTracingModel.common_TestReason" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="TBTracingModel.common_TestReasonType" Width="1.5" PointX="0.75" PointY="1.625" />
+        <EntityTypeShape EntityType="TBTracingModel.common_TreatmentAdherence" Width="1.5" PointX="6.75" PointY="16.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_TreatmentMode" Width="1.5" PointX="16.75" PointY="9.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_XrayArea" Width="1.5" PointX="16.75" PointY="12.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_XrayIndication" Width="1.5" PointX="16.75" PointY="15.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_XrayResult" Width="1.5" PointX="17.75" PointY="3.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_XrayView" Width="1.5" PointX="17.75" PointY="6.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_YesNoNotdoneUnknown" Width="1.5" PointX="8.75" PointY="18.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_YesNoUnknown" Width="1.5" PointX="18.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TBTracingModel.common_YesNoUnknownRefused" Width="1.5" PointX="18.75" PointY="9.75" />
+        <AssociationConnector Association="TBTracingModel.FK_common_TBUser_common_Clinicians" />
+        <AssociationConnector Association="TBTracingModel.FK_common_TBOutcome_common_Status" />
+        <AssociationConnector Association="TBTracingModel.FK_common_TestReason_common_TestReasonType" />
+        <EntityTypeShape EntityType="TBTracingModel.common_ContactRelationship" Width="1.5" PointX="11.375" PointY="18.75" />
+      </Diagram>
+      <Diagram DiagramId="c603190f5b944e2d9f60c0a62fb178fe" Name="ClientOutcomeTreatment" >
+        <EntityTypeShape EntityType="TBTracingModel.client_Outcome" Width="1.5" PointX="3" PointY="1.25" />
+        <EntityTypeShape EntityType="TBTracingModel.client_OutcomeTreatment" Width="1.5" PointX="0.75" PointY="3" />
+        <EntityTypeShape EntityType="TBTracingModel.client_OutcomeTreatmentDOT" Width="1.5" PointX="3" PointY="5.875" />
+        <EntityTypeShape EntityType="TBTracingModel.client_OutcomeTreatmentRegimen" Width="1.5" PointX="5.25" PointY="1.25" />
+        <AssociationConnector Association="TBTracingModel.FK_client_Outcome_client_OutcomeTreatment" />
+        <AssociationConnector Association="TBTracingModel.FK_client_OutcomeTreatmentRegimen_client_Outcome" />
+        <AssociationConnector Association="TBTracingModel.FK_client_OutcomeTreatmentDOT_client_OutcomeTreatment" />
+      </Diagram>
+      <Diagram DiagramId="8431f193d8ca40e68fa39c17d24a355f" Name="Clinics" >
+        <EntityTypeShape EntityType="TBTracingModel.clinic_TBClinic" Width="1.5" PointX="0.75" PointY="1.875" />
+        <EntityTypeShape EntityType="TBTracingModel.clinic_TBClinicAppointments" Width="1.5" PointX="3" PointY="1" />
+        <AssociationConnector Association="TBTracingModel.FK_clinic_TBClinicAppointments_clinic_TBClinic" />
+      </Diagram>
+      <Diagram DiagramId="67b72f00fb684e63b143a8ad1b3a472a" Name="Views" >
+        <EntityTypeShape EntityType="TBTracingModel.vwClientList" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TBTracingModel.vwClients" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TBTracingModel.vwContactTracingConsolidated" Width="1.5" PointX="4.75" PointY="0.75" />
+      </Diagram>
+      <Diagram DiagramId="682c67f230314c49b1a3ba23feb86f6d" Name="ClientMiscDocumentation" >
+        <EntityTypeShape EntityType="TBTracingModel.client_Communication" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TBTracingModel.client_CommunicationBulletin" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TBTracingModel.client_Document" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="TBTracingModel.client_Followup" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TBTracingModel.client_Notes" Width="1.5" PointX="4.75" PointY="4.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
